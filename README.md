@@ -1,5 +1,3 @@
+# Mobile Accessibility Task Force (MATF)
 
-# Specification 'matf'
-
-This is the repository for matf. You're welcome to contribute! Let's make the Web rock our socks
-off!
+This repository will be used to work on new resources.
