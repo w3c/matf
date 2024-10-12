@@ -1,9 +1,9 @@
-name: Deploy Index HTML
+name: Generate, Upload, Deploy
 
 on:
   push:
     branches:
-      - feature/automation
+      - feature/automation  # Change to your target branch
 
 jobs:
   build:
@@ -18,21 +18,28 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20' # Specify the Node.js version you need
+          node-version: '20'
 
-      # Install dependencies (if any)
+      # Install dependencies
       - name: Install dependencies
         run: |
           npm install
 
-      # Run your Node.js script
-      - name: Run Node.js script
+      # Run Node.js script
+      - name: Run matf.js script
         run: |
           node matf.js
 
-      # Deploy to a static hosting service
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      # Upload artifacts
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          name: generated-files
+          path: |
+            index.html
+            matf.css
+
+      # Deploy
+      - name: Deploy to Netlify
+        run: |
+          npx netlify-cli deploy --prod --token ${{ secrets.NETLIFY_TOKEN }} --site matfdraft --dir ./
