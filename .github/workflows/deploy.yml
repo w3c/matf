@@ -43,7 +43,16 @@ jobs:
             index.html
             matf.css
 
-      # Deploy
+      # Deploy to Netlify
       - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
         run: |
-          npx netlify-cli deploy --prod --token ${{ secrets.NETLIFY_TOKEN }} --site matfdraft --dir ./
+          npx netlify-cli deploy --prod --site matfdraft --dir ./
+
+      # Deploy to Github Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
