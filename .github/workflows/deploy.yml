@@ -50,6 +50,15 @@ jobs:
           name: build-artifacts
           path: ./
 
+      # Commit generated index.html
+      - name: Commit generated file
+        run: |
+          git add index.html
+          git commit -m "Generate index.html"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       # Deploy to Netlify
       - name: Deploy to Netlify
         env:
