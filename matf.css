@@ -1,0 +1,38 @@
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --link-color: #00f;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+      --background-color: #111;
+      --text-color: #eee;
+      --link-color: #aaf;
+  }
+}
+body {
+  font-family: sans-serif;
+  margin: 1em;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: var(--text-color);
+  margin: 1em 0 0 0;
+}
+
+section {
+  margin: 2.5em 0;
+}
+
+.container {
+  max-width: 70em;
+  margin: 0 auto;
+}

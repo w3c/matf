@@ -1,0 +1,17 @@
+{
+  "name": "matf",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "This repository will be used to work on new resources.",
+  "main": "matf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "markdown-it": "^14.1.0",
+    "semver": "^7.6.3"
+  }
+}

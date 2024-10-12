@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Applying WCAG 2.2 to Mobile</title>
+  <link rel="stylesheet" href="matf.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Applying WCAG 2.2 to Mobile</h1>
+    <p>
+      This is a draft document, created by the <a href="https://www.w3.org/groups/tf/mobile-a11y-tf/">Mobile Accessibility Task Force (MATF)</a> at the <a href="https://www.w3.org/">W3C</a>.
+    </p>
+    <p>
+      You can find our working repository at <a href="https://github.com/w3c/matf">Github</a>.
+    </p>
+
+    <div class="guidance">
+      <% files.forEach(file => { %>
+        <section>
+          <%- file.html %>
+        </section>
+      <% }); %>
+    </div>
+  </div>
+</body>
+</html>
