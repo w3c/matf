@@ -9,7 +9,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write
+
     steps:
+      - uses: actions/checkout@v4
+
       # Check out the repository
       - name: Checkout code
         uses: actions/checkout@v2
@@ -34,6 +39,12 @@ jobs:
         run: |
           node matf.js
 
+      # Commit changes
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Add generated index.html
+          
       # Upload artifacts
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
@@ -48,29 +59,18 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build-artifacts
-          path: ./
-
-      # Commit generated index.html
-      - name: Commit generated file
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add index.html
-          git commit -m "Generate index.html"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          path: ./generated
 
       # Deploy to Netlify
       - name: Deploy to Netlify
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
         run: |
-          npx netlify-cli deploy --prod --site matfdraft --dir ./
+          npx netlify-cli deploy --prod --site matfdraft --dir ./generated
 
       # Deploy to Github Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./generated
