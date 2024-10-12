@@ -25,6 +25,10 @@ jobs:
         run: |
           npm install
 
+      # Install Netlify
+      - name: Install Netlify
+        run: npm install netlify-cli -g
+
       # Run Node.js script
       - name: Run matf.js script
         run: |
