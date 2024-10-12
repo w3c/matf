@@ -3,7 +3,7 @@ name: Generate, Upload, Deploy
 on:
   push:
     branches:
-      - feature/automation  # Change to your target branch
+      - main
 
 jobs:
   build:
@@ -38,10 +38,17 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: generated-files
+          name: build-artifacts
           path: |
             index.html
             matf.css
+
+      # Download artifacts to use in deployment
+      - name: Download Artifacts
+        uses: actions/download-artifact@v2
+        with:
+          name: build-artifacts
+          path: ./
 
       # Deploy to Netlify
       - name: Deploy to Netlify
