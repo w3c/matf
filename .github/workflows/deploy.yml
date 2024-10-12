@@ -53,6 +53,8 @@ jobs:
       # Commit generated index.html
       - name: Commit generated file
         run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html
           git commit -m "Generate index.html"
           git push
