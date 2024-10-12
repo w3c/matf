@@ -2,4 +2,5 @@
 
 This repository will be used to work on new resources.
 
-- [Applying WCAG to Native Mobile Applications](/wcag)
+The newest draft can be found at: [https://matfdraft.netlify.app/](matfdraft.netlify.app)
+
