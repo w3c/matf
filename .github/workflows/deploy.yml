@@ -1,0 +1,38 @@
+name: Deploy Index HTML
+
+on:
+  push:
+    branches:
+      - feature/automation
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20' # Specify the Node.js version you need
+
+      # Install dependencies (if any)
+      - name: Install dependencies
+        run: |
+          npm install
+
+      # Run your Node.js script
+      - name: Run Node.js script
+        run: |
+          node matf.js
+
+      # Deploy to a static hosting service
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
