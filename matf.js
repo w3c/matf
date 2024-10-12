@@ -4,7 +4,9 @@ import semver from 'semver';
 import markdownit from 'markdown-it'
 import ejs from 'ejs';
 
-const md = markdownit()
+const md = markdownit({
+  html: true
+});
 const root = process.cwd()
 
 // Read files with given extension from given folder
