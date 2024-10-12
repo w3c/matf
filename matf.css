@@ -1,25 +1,25 @@
 :root {
   --background-color: #fff;
+  --background-secondary-color: #eee;
   --text-color: #000;
   --link-color: #00f;
 }
 @media (prefers-color-scheme: dark) {
   :root {
       --background-color: #111;
+      --background-secondary-color: #333;
       --text-color: #eee;
       --link-color: #aaf;
   }
 }
 body {
   font-family: sans-serif;
+  font-size: max(16px, 1rem);
   margin: 1em;
   padding: 0;
   background-color: var(--background-color);
   color: var(--text-color);
-}
-
-a {
-  color: var(--link-color);
+  line-height: 2;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -28,11 +28,25 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1em 0 0 0;
 }
 
+a {
+  color: var(--link-color);
+}
+
+p {
+  margin: 0 0 1em 0;
+}
+
+blockquote {
+  margin: 0;
+  padding-left: 1em;
+  border-left: 0.5em solid var(--background-secondary-color);
+}
+
 section {
   margin: 2.5em 0;
 }
 
 .container {
-  max-width: 70em;
+  max-width: 60em;
   margin: 0 auto;
 }

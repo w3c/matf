@@ -28,10 +28,10 @@ const readFiles = async (folder, extension) => {
 
 // Execute
 readFiles('wcag', '.md').then(async map => {
-  console.log(`File map: ${map}`);
+  console.log('File map:', map);
 
   const keys = Array.from(map.keys()).sort(semver.compare);
-  console.log(`Sorted keys: ${keys}`);
+  console.log('Sorted keys', keys);
 
   let files = [];
   for (const key of keys) {
