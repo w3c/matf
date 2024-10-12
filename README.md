@@ -2,5 +2,4 @@
 
 This repository will be used to work on new resources.
 
-The newest draft can be found at: [https://matfdraft.netlify.app/](matfdraft.netlify.app)
-
+The newest draft can be found at: [matfdraft.netlify.app](https://matfdraft.netlify.app/)
