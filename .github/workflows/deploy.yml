@@ -18,23 +18,23 @@ jobs:
       name: github-pages
 
     steps:
-      # Check out the repository
-      - name: Checkout code
+      # Checkout repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Set up Node.js environment
-      - name: Set up Node.js
+      # Set up Node environment
+      - name: Set up Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # Install dependencies
-      - name: Install dependencies
+      # Install Node dependencies
+      - name: Install Node dependencies
         run: |
           npm install
 
-      # Run Node.js script
-      - name: Run matf.js script
+      # Run Node script
+      - name: Run Node script
         run: |
           node matf.js
 
@@ -45,7 +45,7 @@ jobs:
           commit_message: Add generated index.html
 
       # Upload artifacts
-      - name: Upload Artifacts
+      - name: Upload artifacts
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./
