@@ -13,11 +13,9 @@ jobs:
       contents: write
 
     steps:
-      - uses: actions/checkout@v4
-
       # Check out the repository
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Set up Node.js environment
       - name: Set up Node.js
@@ -29,10 +27,6 @@ jobs:
       - name: Install dependencies
         run: |
           npm install
-
-      # Install Netlify
-      - name: Install Netlify
-        run: npm install netlify-cli --save-dev
 
       # Run Node.js script
       - name: Run matf.js script
@@ -61,16 +55,9 @@ jobs:
           name: build-artifacts
           path: ./generated
 
-      # Deploy to Netlify
-      - name: Deploy to Netlify
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-        run: |
-          npx netlify-cli deploy --prod --site matfdraft --dir ./generated
-
       # Deploy to Github Pages
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        id: deployment
+        uses: actions/deploy-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./generated
+          artifact_name: build-artifacts
