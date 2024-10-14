@@ -8,7 +8,9 @@ This repository is used to work on guidance for mobile accessibility.
 
 ## Setup
 
-Upon push to the `main` branch, the `index.html` gets generated based on the `.md` files in the `wcag` folder.
+Upon push to the `main` branch, the `index.html` gets generated based on the `.md` files in the `wcag` folder. Next, the `index.html` file gets commited, and then deployed to Github Pages.
+
+![Generate, Update, Deploy workflow](https://github.com/w3c/matf/actions/workflows/deploy.yml/badge.svg)
 
 For local development:
 
