@@ -23,7 +23,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
 
       # Install dependencies
       - name: Install dependencies
@@ -43,16 +43,11 @@ jobs:
 
       # Upload artifacts
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
           path: |
             index.html
             matf.css
-
-      # Download artifacts
-      - name: Download Artifacts
-        uses: actions/download-artifact@v4
 
       # Deploy to Github Pages
       - name: Deploy to GitHub Pages
