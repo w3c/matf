@@ -2,7 +2,7 @@
 
 This repository is used to work on guidance for mobile accessibility.
 
-- The newest draft can be found at: [w3c.github.io/matf](https://w3c.github.io/matf/)
+- Our most recent [Editor's draft](https://www.w3.org/standards/types/#ED) is published at: [w3c.github.io/matf](https://w3c.github.io/matf/)
 - Discussions are tracked in [MATF issues](https://github.com/w3c/matf/issues)
 - Read more about the MATF on the [W3C website](https://www.w3.org/WAI/about/groups/task-forces/matf/)
 
