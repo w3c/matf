@@ -65,4 +65,6 @@ var respecConfig = {
     wgPublicList: "public-mobile-a11y-tf",
 
 	maxTocLevel: 3,
+
+	postProcess: [postRespec],
 };
