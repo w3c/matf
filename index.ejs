@@ -3,26 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Applying WCAG 2.2 to Mobile</title>
+  <title>Guidance on Applying WCAG 2.2 to Mobile (WCAG2Mobile)</title>
+  <script src="wcag2mobile.js" class="remove"></script>
+  <script src="respec-config.js" class="remove"></script>
+  <script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
   <link rel="stylesheet" href="matf.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Applying WCAG 2.2 to Mobile</h1>
+  <section id="abstract">
     <p>
       This is an <a href="https://www.w3.org/standards/types/#ED">Editor's draft</a>, created by the <a href="https://www.w3.org/WAI/about/groups/task-forces/matf/">Mobile Accessibility Task Force (MATF)</a> at the <a href="https://www.w3.org/">W3C</a>.
     </p>
-    <p>
-      You can find our working repository at <a href="https://github.com/w3c/matf">Github</a>.
-    </p>
+  </section>
 
-    <div class="guidance">
-      <% files.forEach(file => { %>
-        <section>
-          <%- file.html %>
-        </section>
-      <% }); %>
-    </div>
-  </div>
+  <section id="sotd">
+    <p>To comment, <a href="https://github.com/w3c/matf/issues/new">file an issue in the W3C matf GitHub repository</a>. The Task Force requests that public comments be filed as new issues, one issue per discrete comment. It is free to create a GitHub account to file issues. If filing issues in GitHub is not feasible, send email to <a href="mailto:public-agwg-comments@w3.org?subject=WCAG%203.0%20public%20comment">public-agwg-comments@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-agwg-comments/">comment archive</a>). In-progress updates to the guidelines can be viewed in the <a href="https://w3c.github.io/wcag3/guidelines/">public editors’ draft</a>.</p>
+  </section>
+
+  <section>
+    <h2>Introduction</h2>
+    <p>TBD</p>
+  </section>
+
+  <section id="guidance">
+    <h2>Comments by Guideline and Success Criterion</h2>
+
+    <% files.forEach(file => { %>
+      <section>
+        <%- file.html %>
+      </section>
+    <% }); %>
+  </section>
+
+  <section class="appendix">
+    <h2>Acknowledgements</h2>
+    <p>Additional information about participation in the Mobile Accessibility Task Force (MATF) can be found on the <a href="https://www.w3.org/groups/tf/mobile-a11y-tf/participants/">Task Force home page</a>.</p>
+    <div data-include="acknowledgements/current-contributors.html" data-include-replace="true"></div>
+    <div data-include="acknowledgements/funders.html" data-include-replace="true"></div>			
+  </section>
 </body>
 </html>
