@@ -5,8 +5,7 @@ var respecConfig = {
 	includePermalinks: true,
 	permalinkEdge: true,
 	permalinkHide: false,
-
-    noRecTrack: true,
+  noRecTrack: true,
 
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
 	specStatus: "DNOTE",
@@ -16,7 +15,6 @@ var respecConfig = {
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
 	shortName: "wcag2mobile",
-	
 	
 	// if you wish the publication date to be other than today, set this
 	// publishDate:  "2009-08-06",
@@ -31,13 +29,24 @@ var respecConfig = {
 	
 	// editors, add as many as you like
 	// only "name" is required
-	editors:[ {
-		name: "Jan Jaap de Groot",
-		mailto: "janjaap@abra.nl  preferred email address",
-		company: "Abra",
-		companyURI: "https://abra.ai",
-		w3cid: 137024
-	}],
+	editors: [ 
+    {
+      name: "Jan Jaap de Groot",
+      mailto: "janjaap@abra.nl",
+      company: "Abra",
+      companyURI: "https://abra.ai",
+      w3cid: 137024
+	  },
+    {
+      name: "Jamie Herrera"
+    },
+    {
+      name: "Joe Humbert"
+    },
+    {
+      name: "Julian Kittelson-Aldred"
+    }
+  ],
 	
 	// authors, add as many as you like.
 	// This is optional, uncomment if you have authors as well as editors.
@@ -61,8 +70,8 @@ var respecConfig = {
 	group: "ag",
 	github: "w3c/matf",
   
-    // name (without the @w3.org) of the public mailing to which comments are due
-    wgPublicList: "public-mobile-a11y-tf",
+  // name (without the @w3.org) of the public mailing to which comments are due
+  wgPublicList: "public-mobile-a11y-tf",
 
 	maxTocLevel: 3,
 
