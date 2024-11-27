@@ -40,11 +40,14 @@ function wcagPlugin(tag, url) {
       return `
         <details>
           <summary>${token.tag}: ${token.id}</summary>
-          <a href="${token.link}" target="_blank">
-            ${token.link}
-          </a>
-          <blockquote>
+          <blockquote cite="${token.link}">
             <p>Placeholder for quoted content</p>
+            <footer>
+              <cite>
+                —
+                <a href="${token.link}" target="_blank">${token.link}</a>            
+              </cite>
+            </footer>
           </blockquote>
         </details>
       `;
