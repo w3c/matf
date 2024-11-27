@@ -43,6 +43,9 @@ function wcagPlugin(tag, url) {
           <a href="${token.link}" target="_blank">
             ${token.link}
           </a>
+          <blockquote>
+            <p>Placeholder for quoted content</p>
+          </blockquote>
         </details>
       `;
     };
