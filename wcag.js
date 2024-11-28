@@ -96,6 +96,8 @@ export class WcagPlugin {
         }
       });
 
+      // TODO: fix double note rendering by respec
+
       // Return the modified HTML of the section
       return section.html();
     } else {
@@ -139,7 +141,7 @@ export class WcagPlugin {
       md.renderer.rules[`${this.tag}_details`] = (tokens, id) => {
         const token = tokens[id];
         return `
-          <details>
+          <details class="exclude">
             <summary>${token.tag}: ${token.id}</summary>
             <blockquote cite="${token.link}">
               ${token.content} <!-- Insert the section content here -->
