@@ -66,21 +66,24 @@ export class WcagPlugin {
    * Extracts the specific section of HTML based on the given id, removes the header-wrapper within that section, 
    * and ensures all anchors have `target="_blank"` with relative links updated to full URLs.
    * @param {string} id - The ID of the section to extract from the fetched HTML.
-   * @returns {string} - The outer HTML of the section or an error message if not found.
+   * @returns {object} - The `header` and `html` of the section or an error message if not found.
+   * @throws {error} - When section with given ID is not found.
    */
   extract(id) {
     // Find the section by its ID
-    const section = this.$(`#${id}`);
+    const $section = this.$(`#${id}`);
 
     // If the section exists, remove the header-wrapper from within it
-    if (section.length > 0) {
+    if ($section.length > 0) {
+      const header = $section.find('h1, h2, h3, h4, h5, h6').first().text();
+
       // Remove .header-wrapper, .doclinks and .conformance-level
-      section.find('.header-wrapper').remove();
-      section.find('.doclinks').remove();
-      section.find('.conformance-level').remove();
+      $section.find('.header-wrapper').remove();
+      $section.find('.doclinks').remove();
+      $section.find('.conformance-level').remove();
 
       // Update all anchor links to include target="_blank", and handle relative links
-      section.find('a').each((_, anchor) => {
+      $section.find('a').each((_, anchor) => {
         const href = this.$(anchor).attr('href');
         
         // If the anchor has a href attribute, add target="_blank"
@@ -98,10 +101,13 @@ export class WcagPlugin {
 
       // TODO: fix double note rendering by respec
 
-      // Return the modified HTML of the section
-      return section.html();
+      // Return the header and modified HTML
+      return {
+        header: header,
+        html: $section.html()
+      };
     } else {
-      return `<p>Section not found: ${id}</p>`;
+      throw new Error(`Section not found: ${id}`);
     }
   }
 
@@ -131,7 +137,9 @@ export class WcagPlugin {
         token.link = link;
 
         // Fetch the content from the cached HTML and remove the header-wrapper inside the section
-        token.content = this.extract(id);
+        const extraction = this.extract(id);
+        token.header = extraction.header;
+        token.content = extraction.html;
 
         state.pos += match[0].length; // Move the parser position forward
         return true;
@@ -141,10 +149,14 @@ export class WcagPlugin {
       md.renderer.rules[`${this.tag}_details`] = (tokens, id) => {
         const token = tokens[id];
         return `
-          <details class="exclude">
-            <summary>${token.tag}: ${token.id}</summary>
+          <details class="${this.tag}-details">
+            <summary>
+              <strong>${token.tag.toUpperCase()}:</strong> ${token.header}
+            </summary>
             <blockquote cite="${token.link}">
-              ${token.content} <!-- Insert the section content here -->
+              <div class="${this.tag}-content">
+                ${token.content}
+              </div>
               <footer>
                 <cite>
                   —
