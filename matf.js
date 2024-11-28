@@ -48,6 +48,7 @@ const execute = async () => {
   console.log(`Rendering HTML for ${keys.length} files...`)
   const files = [];
   for (const key of keys) {
+    console.log(`Rendering HTML for ${key}...`)
     const html = md.render(map.get(key));
     files.push({
       key,

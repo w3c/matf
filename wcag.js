@@ -1,5 +1,5 @@
 import fetch from 'node-fetch';
-import { JSDOM } from 'jsdom';
+import * as cheerio from 'cheerio';
 
 /**
  * The WCAG plugin adds a new markdown tag which can render sections of WCAG.
@@ -7,7 +7,7 @@ import { JSDOM } from 'jsdom';
  */
 export class WcagPlugin {
   /**
-   * Internal constructor to initializes with tag, url, html.
+   * Internal constructor to initialize with tag, url, html.
    * @param {string} tag - The tag used in markdown, e.g. `wcag`
    * @param {string} url - The URL to fetch content from, e.g. `https://www.w3.org/TR/WCAG22/`
    * @param {string} html - The fetched HTML content.
@@ -16,6 +16,9 @@ export class WcagPlugin {
     this.tag = tag;
     this.url = url;
     this.html = html;
+
+    // Initialize cheerio once for the HTML content
+    this.$ = cheerio.load(this.html);
   }
 
   /**
@@ -25,17 +28,17 @@ export class WcagPlugin {
    * @returns {Promise<function>} - Returns a function to be used as a markdown-it plugin.
    */
   static async init(tag, url) {
-    const html = await fetch(url);
+    const html = await WcagPlugin.get(url);
     const plugin = new WcagPlugin(tag, url, html);
     return plugin.create();
   }
 
   /**
-   * Fetches HTML content from the given URL.
+   * Retrieves HTML content from the given URL using node-fetch and parses it with cheerio.
    * @param {string} url - The URL to fetch the content from.
    * @returns {Promise<string>} - The HTML content of the URL.
    */
-  static async fetch(url) {
+  static async get(url) {
     try {
       const response = await fetch(url);
       if (!response.ok) throw new Error(`Failed to fetch: ${response.statusText}`);
@@ -45,19 +48,49 @@ export class WcagPlugin {
       return `
         <p>Error loading content from ${url}</p>
         <p>${error}</p>
-      `; 
+      `;
     }
   }
 
   /**
-   * Extracts the specific section of HTML based on the given id.
+   * Extracts the specific section of HTML based on the given id, removes the header-wrapper within that section, 
+   * and ensures all anchors have `target="_blank"` with relative links updated to full URLs.
    * @param {string} id - The ID of the section to extract from the fetched HTML.
    * @returns {string} - The outer HTML of the section or an error message if not found.
    */
   extract(id) {
-    const dom = new JSDOM(this.html);
-    const element = dom.window.document.querySelector(`[id="${id}"]`);
-    return element ? element.outerHTML : `<p>Section not found: ${id}</p>`;
+    // Find the section by its ID
+    const section = this.$(`#${id}`);
+
+    // If the section exists, remove the header-wrapper from within it
+    if (section.length > 0) {
+      // Remove .header-wrapper, .doclinks and .conformance-level
+      section.find('.header-wrapper').remove();
+      section.find('.doclinks').remove();
+      section.find('.conformance-level').remove();
+
+      // Update all anchor links to include target="_blank", and handle relative links
+      section.find('a').each((_, anchor) => {
+        const href = this.$(anchor).attr('href');
+        
+        // If the anchor has a href attribute, add target="_blank"
+        if (href) {
+          this.$(anchor).attr('target', '_blank'); // Add target="_blank"
+
+          // Check if href starts with a valid protocol (e.g., https://)
+          if (!/^[\w]+:\/\//.test(href)) {
+            // Replace relative URL with full URL
+            const fullUrl = new URL(href, this.url).href;
+            this.$(anchor).attr('href', fullUrl);
+          }
+        }
+      });
+
+      // Return the modified HTML of the section
+      return section.html();
+    } else {
+      return `<p>Section not found: ${id}</p>`;
+    }
   }
 
   /**
@@ -85,7 +118,7 @@ export class WcagPlugin {
         token.id = id;
         token.link = link;
 
-        // Fetch the content from the cached HTML
+        // Fetch the content from the cached HTML and remove the header-wrapper inside the section
         token.content = this.extract(id);
 
         state.pos += match[0].length; // Move the parser position forward

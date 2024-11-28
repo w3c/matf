@@ -10,8 +10,8 @@
   "author": "W3C",
   "license": "W3C",
   "dependencies": {
+    "cheerio": "^1.0.0",
     "ejs": "^3.1.10",
-    "jsdom": "^25.0.1",
     "markdown-it": "^14.1.0",
     "node-fetch": "^3.3.2",
     "open": "^10.1.0",
