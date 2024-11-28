@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
 import * as cheerio from 'cheerio';
+import * as puppeteer from 'puppeteer';
 
 /**
  * The WCAG plugin adds a new markdown tag which can render sections of WCAG.
@@ -39,10 +39,20 @@ export class WcagPlugin {
    * @returns {Promise<string>} - The HTML content of the URL.
    */
   static async get(url) {
+    console.log(`Fetching rendered HTML for: ${url}`)
     try {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error(`Failed to fetch: ${response.statusText}`);
-      return await response.text();
+      const browser = await puppeteer.launch({ headless: true });
+      const page = await browser.newPage();
+
+      // Wait for page to load
+      await page.goto(url, {
+        waitUntil: ['load', 'networkidle0']
+      });
+      await new Promise(resolve => setTimeout(resolve, 1000));
+  
+      const html = await page.content();
+      await browser.close();
+      return html;
     } catch (error) {
       console.error(`Error fetching ${url}:`, error);
       return `
