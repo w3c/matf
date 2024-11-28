@@ -149,7 +149,7 @@ export class WcagPlugin {
       md.renderer.rules[`${this.tag}_details`] = (tokens, id) => {
         const token = tokens[id];
         return `
-          <details class="exclude">
+          <details class="wcag">
             <summary>
               <strong>${token.tag.toUpperCase()}:</strong> ${token.header}
             </summary>
@@ -157,13 +157,12 @@ export class WcagPlugin {
               <div>
                 ${token.content}
               </div>
-              <footer>
+            </blockquote>
+            <footer>
                 <cite>
-                  —
                   <a href="${token.link}" target="_blank">${token.link}</a>            
                 </cite>
               </footer>
-            </blockquote>
           </details>
         `;
       };
