@@ -118,18 +118,14 @@ export class WcagPlugin {
   create() {
     return (md) => {
       md.inline.ruler.before('emphasis', this.tag, (state, silent) => {
-        const startPos = state.pos;
-        const maxPos = state.posMax;
-
         const regex = new RegExp(`\\[${this.tag}:([a-zA-Z0-9-_\\.]+)\\]`);
-        const match = state.src.slice(startPos, maxPos).match(regex);
+        const match = state.src.slice(state.pos, state.posMax).match(regex);
 
         if (!match) return false; // No match found
+        if (silent) return true; // Validate without modifying state
 
         const id = match[1]; // Extract the id from the markdown tag
         const link = `${this.url}#${id}`; // Generate the link to the section
-
-        if (silent) return true; // Validate without modifying state
 
         const token = state.push(`${this.tag}_details`, '', 0);
         token.tag = this.tag;
