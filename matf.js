@@ -5,8 +5,9 @@ import markdownit from 'markdown-it';
 import ejs from 'ejs';
 import open from 'open';
 
-import { GithubPlugin } from './github.js';
-import { WcagPlugin } from './wcag.js';
+import { GithubPlugin } from './plugins/github.js';
+import { NotePlugin } from './plugins/note.js';
+import { WcagPlugin } from './plugins/wcag.js';
 
 const root = process.cwd();
 
@@ -33,7 +34,8 @@ const readFiles = async (folder, extension) => {
 // Execute: init plugins, read files, render HTML
 const execute = async () => {
   console.log(`Initializing custom plugins...`);
-  const githubPlugin = GithubPlugin.init('https://github.com/w3c/matf');
+  const githubPlugin = await GithubPlugin.init('https://github.com/w3c/matf');
+  const notePlugin = await NotePlugin.init();
   const wcagPlugin = await WcagPlugin.init('wcag', 'https://www.w3.org/TR/WCAG22/');
   const wcag2ictPlugin = await WcagPlugin.init('wcag2ict', 'https://www.w3.org/TR/wcag2ict-22/');
 
@@ -42,6 +44,7 @@ const execute = async () => {
     html: true 
   })
   .use(githubPlugin)
+  .use(notePlugin)
   .use(wcagPlugin)
   .use(wcag2ictPlugin);
 
