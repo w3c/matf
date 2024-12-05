@@ -47,9 +47,11 @@ export class GithubPlugin extends Plugin {
   render(token) {
     return `
       <div class="note" title="Work In Progress">
-        <a href="${token.link}" target="_blank">
-          Read issue #${token.number} on GitHub
-        </a>
+        <p>
+          <a href="${token.link}" target="_blank">
+            Read issue #${token.number} on GitHub
+          </a>
+        </p>
       </div>
     `;
   }
