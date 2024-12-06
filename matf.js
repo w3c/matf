@@ -59,24 +59,24 @@ const renderFiles = async (folder, md) => {
   return result;
 };
 
-// Render files in `guidance` and `sections` folders
+// Render files in `comments` and `sections` folders
 const renderFolders = async (md) => {
-  // Render guidance, sorted by semantic version (e.g. 1.4.10 after 1.4.9)
-  const files = await renderFiles('guidance', md);
-  const guidance = Object.keys(files).sort(semver.compare).map((key) => files[key]);
+  // Render comments, sorted by semantic version (e.g. 1.4.10 after 1.4.9)
+  const files = await renderFiles('comments', md);
+  const comments = Object.keys(files).sort(semver.compare).map((key) => files[key]);
 
   // Render sections
   const sections = await renderFiles('sections', md);
 
-  return { guidance, sections };
+  return { comments, sections };
 };
 
 // Render `index.ejs` template with data
-const renderTemplate = async (guidance, sections) => {
+const renderTemplate = async (comments, sections) => {
   const templateFile = path.join(root, 'index.ejs');
   console.log(`Rendering template ${templateFile}...`);
   const template = await fs.readFile(templateFile, 'utf8');
-  return ejs.render(template, { guidance, sections });
+  return ejs.render(template, { comments, sections });
 };
 
 // Write content to the given file
@@ -92,10 +92,10 @@ const execute = async () => {
   try {
     // 1. Init markdown renderer
     const md = await initMarkdown();
-    // 2. Render guidance and sections folders
-    const { guidance, sections } = await renderFolders(md);
+    // 2. Render comments and sections folders
+    const { comments, sections } = await renderFolders(md);
     // 3. Render HTML from template
-    const html = await renderTemplate(guidance, sections);
+    const html = await renderTemplate(comments, sections);
     // 4. Write index.html file
     const indexFile = await writeFile('index.html', html);
     // 5. Open file in browser
