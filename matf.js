@@ -11,6 +11,17 @@ import { WcagPlugin } from './plugins/wcag.js';
 
 const root = process.cwd();
 
+// Initialize `markdownit` with custom plugins
+const initMarkdown = async () => {
+  console.log(`Initializing markdownit and custom plugins...`);
+
+  return markdownit({ html: true })
+    .use(await GithubPlugin.init('https://github.com/w3c/matf'))
+    .use(await NotePlugin.init())
+    .use(await WcagPlugin.init('wcag', 'https://www.w3.org/TR/WCAG22/'))
+    .use(await WcagPlugin.init('wcag2ict', 'https://www.w3.org/TR/wcag2ict-22/'));
+};
+
 // Read files with given extension from given folder
 const readFiles = async (folder, extension) => {
   const directory = path.join(root, folder);
@@ -48,65 +59,51 @@ const renderFiles = async (folder, md) => {
   return result;
 };
 
-// Render `guidance` folder contents as HTML
-const renderGuidance = async (md) => {
+// Render files in `guidance` and `sections` folders
+const renderFolders = async (md) => {
+  // Render guidance, sorted by semantic version (e.g. 1.4.10 after 1.4.9)
   const files = await renderFiles('guidance', md);
+  const guidance = Object.keys(files).sort(semver.compare).map((key) => files[key]);
 
-  // Create array sorted by semantic version (e.g. 1.4.10 after 1.4.9)
-  return Object.keys(files)
-    .sort(semver.compare)
-    .map((key) => files[key]);
-}
+  // Render sections
+  const sections = await renderFiles('sections', md);
 
-// Render `sections` folder contents as HTML
-const renderSections = async (md) => {
-  return await renderFiles('sections', md);
-}
+  return { guidance, sections };
+};
 
-// Execute: init plugins, read files, render HTML
-const execute = async () => {
-  console.log(`Initializing custom plugins...`);
-  const githubPlugin = await GithubPlugin.init('https://github.com/w3c/matf');
-  const notePlugin = await NotePlugin.init();
-  const wcagPlugin = await WcagPlugin.init('wcag', 'https://www.w3.org/TR/WCAG22/');
-  const wcag2ictPlugin = await WcagPlugin.init('wcag2ict', 'https://www.w3.org/TR/wcag2ict-22/');
-
-  console.log(`Initializing markdownit...`);
-  const md = markdownit({ 
-    html: true 
-  })
-  .use(githubPlugin)
-  .use(notePlugin)
-  .use(wcagPlugin)
-  .use(wcag2ictPlugin);
-
-  // Read files from `guidance` and `sections` folder
-  const guidance = await renderGuidance(md);
-  const sections = await renderSections(md);
-
-  // Render `index.ejs` template
+// Render `index.ejs` template with data
+const renderTemplate = async (guidance, sections) => {
   const templateFile = path.join(root, 'index.ejs');
   console.log(`Rendering template ${templateFile}...`);
   const template = await fs.readFile(templateFile, 'utf8');
-  const html = ejs.render(template, { guidance, sections });
-
-  // Overwrite `index.html` file
-  const indexFile = path.join(root, 'index.html');
-  console.log(`Writing output to ${indexFile}`);
-  await fs.writeFile(indexFile, html, 'utf8');
-
-  // Open `index.html` in browser
-  console.log(`Opening ${indexFile} in browser...`)
-  await open(indexFile, { wait: false });
+  return ejs.render(template, { guidance, sections });
 };
 
-// Run the script and ensure completion
-execute()
-  .then(() => {
+// Write content to the given file
+const writeFile = async (name, content) => {
+  const file = path.join(root, name);
+  console.log(`Writing ${content.length} characters to ${file}`);
+  await fs.writeFile(file, content, 'utf8');
+  return file;
+};
+
+// Execute function
+const execute = async () => {
+  try {
+    // 1. Init markdown renderer
+    const md = await initMarkdown();
+    // 2. Render guidance and sections folders
+    const { guidance, sections } = await renderFolders(md);
+    // 3. Render HTML from template
+    const html = await renderTemplate(guidance, sections);
+    // 4. Write index.html file
+    const indexFile = await writeFile('index.html', html);
+    // 5. Open file in browser
+    await open(indexFile, { wait: false });
+    
     console.log('Script completed successfully!');
-    process.exit(0);
-  })
-  .catch((error) => {
+  } catch (error) {
     console.error(`Script encountered error: ${error}`);
-    process.exit(1);
-  });
+  }
+};
+execute();

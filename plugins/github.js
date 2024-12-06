@@ -13,7 +13,7 @@ export class GithubPlugin extends Plugin {
   /**
    * Initializes the plugin with the specified GitHub repository URL.
    * @param {string} url - The GitHub repository URL (e.g., `https://github.com/w3c/matf`).
-   * @returns {function} - An initialized `GithubPlugin` function.
+   * @returns {Promise<{function}>} - An initialized `GithubPlugin` function.
    */
   static async init(url) {
     return new GithubPlugin(url).plugin();
