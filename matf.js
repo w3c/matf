@@ -48,6 +48,7 @@ const execute = async () => {
   .use(wcagPlugin)
   .use(wcag2ictPlugin);
 
+  // Read files from `wcag` folder
   console.log(`Reading markdown files...`);
   const map = await readFiles('wcag', '.md');
   const keys = Array.from(map.keys()).sort(semver.compare);
@@ -64,15 +65,30 @@ const execute = async () => {
   }
   console.log(`Successfully rendered ${files.length} files to HTML...`);
 
+  // Read files from `sections` folder
+  const sectionFiles = await readFiles('sections', '.md');
+  console.log(`Rendering HTML for ${sectionFiles.length} sections...`)
+  const sections = {};
+  for (const [key, content] of sectionFiles.entries()) {
+    console.log(`Rendering HTML for section ${key}...`);
+    sections[key] = md.render(content);
+  }
+
+  // Render `index.ejs` template
   const templateFile = path.join(root, 'index.ejs');
   console.log(`Rendering template ${templateFile}...`);
   const template = await fs.readFile(templateFile, 'utf8');
-  const html = ejs.render(template, { files });
+  const html = ejs.render(template, { 
+    files: files,
+    sections: sections
+  });
 
+  // Overwrite `index.html` file
   const indexFile = path.join(root, 'index.html');
   console.log(`Writing output to ${indexFile}`);
   await fs.writeFile(indexFile, html, 'utf8');
 
+  // Open `index.html` in browser
   console.log(`Opening ${indexFile} in browser...`)
   await open(indexFile, { wait: false });
 };

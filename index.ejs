@@ -12,6 +12,7 @@
 </head>
 <body>
   <section id="abstract">
+    <%- sections.abstract %>
     <p>
       This is an <a href="https://www.w3.org/standards/types/#ED">Editor's draft</a>, created by the <a href="https://www.w3.org/WAI/about/groups/task-forces/matf/">Mobile Accessibility Task Force (MATF)</a> at the <a href="https://www.w3.org/">W3C</a>.
     </p>
@@ -23,7 +24,7 @@
 
   <section>
     <h2>Introduction</h2>
-    <p>TBD</p>
+    <%- sections.introduction %>
   </section>
 
   <section id="guidance">
@@ -39,8 +40,9 @@
   <section class="appendix">
     <h2>Acknowledgements</h2>
     <p>Additional information about participation in the Mobile Accessibility Task Force (MATF) can be found on the <a href="https://www.w3.org/groups/tf/mobile-a11y-tf/participants/">Task Force home page</a>.</p>
-    <div data-include="acknowledgements/current-contributors.html" data-include-replace="true"></div>
-    <div data-include="acknowledgements/funders.html" data-include-replace="true"></div>			
+
+    <%- sections.contributors %>
+    <%- sections.funders %>	
   </section>
 </body>
 </html>

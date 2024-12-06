@@ -8,7 +8,7 @@ var respecConfig = {
   noRecTrack: true,
 
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-	specStatus: "DNOTE",
+	specStatus: "ED",
 	//crEnd:                "2012-04-30",
 	//perEnd:               "2013-07-23",
 	//publishDate:          "2024-05-28",
