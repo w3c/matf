@@ -12,22 +12,49 @@
 </head>
 <body>
   <section id="abstract">
-    <p>
-      This is an <a href="https://www.w3.org/standards/types/#ED">Editor's draft</a>, created by the <a href="https://www.w3.org/WAI/about/groups/task-forces/matf/">Mobile Accessibility Task Force (MATF)</a> at the <a href="https://www.w3.org/">W3C</a>.
-    </p>
+    <p>This document, “Guidance on Applying WCAG 2.2 to Mobile (WCAG2Mobile)”, describes how the Web Content Accessibility Guidelines (WCAG) version 2.2 [<a href="https://www.w3.org/TR/WCAG22/">WCAG22</a>] principles, guidelines, and success criteria can be applied to Mobile Applications, including but not limited to native mobile apps, mobile web apps, mobile web content, and hybrid apps using web components inside native mobile apps. It provides informative guidance (guidance that is not normative and does not set requirements).</p>
+<p>This document is part of a series of technical and educational documents published by the <a href="https://www.w3.org/WAI/">W3C Web Accessibility Initiative (WAI)</a> and available from the <a href="https://www.w3.org/WAI/standards-guidelines/mobile/">Mobile Accessibility Overview</a>.</p>
+
   </section>
 
   <section id="sotd">
-    <p>To comment, <a href="https://github.com/w3c/matf/issues/new">file an issue in the W3C matf GitHub repository</a>. The Task Force requests that public comments be filed as new issues, one issue per discrete comment. It is free to create a GitHub account to file issues. If filing issues in GitHub is not feasible, send email to <a href="mailto:public-agwg-comments@w3.org?subject=WCAG%203.0%20public%20comment">public-agwg-comments@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-agwg-comments/">comment archive</a>). In-progress updates to the guidelines can be viewed in the <a href="https://w3c.github.io/wcag3/guidelines/">public editors’ draft</a>.</p>
+    <p>To comment, <a href="https://github.com/w3c/matf/issues/new">file an issue in the W3C <code>matf</code> GitHub repository</a>. The Task Force requests that public comments be filed as new issues, one issue per discrete comment. It is free to create a GitHub account to file issues. If filing issues in GitHub is not feasible, send email to <a href="mailto:public-agwg-comments@w3.org?subject=WCAG2Mobile%20public%20comment">public-agwg-comments@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-agwg-comments/">comment archive</a>). In-progress updates to the guidelines can be viewed in the <a href="https://w3c.github.io/matf/">public editors’ draft</a>.</p>
+
   </section>
 
-  <section>
+  <section id="introduction">
     <h2>Introduction</h2>
-    <p>TBD</p>
+<p><em>This section is non-normative.</em></p>
+
+    <h3>Background</h3>
+<p>The <a href="https://www.w3.org/WAI/about/groups/task-forces/matf/">Mobile Accessibility Task Force (MATF)</a> is a task force of the <a href="https://www.w3.org/WAI/about/groups/agwg/">Accessibility Guidelines Working Group (AG WG)</a>. The MATF produces resources for applying WCAG to Mobile, including but not limited to native mobile apps, mobile web apps, mobile web content, and hybrid apps using web components inside native mobile apps.</p>
+<p>This document is an iteration on <a href="https://www.w3.org/TR/mobile-accessibility-mapping/">Mobile Accessibility: How WCAG 2.0 and Other W3C/WAI Guidelines Apply to Mobile</a>, published in February 2015 as <a href="https://www.w3.org/standards/types/#x4-1-1-first-public-working-draft">First Public Working Draft</a>. The document was intended to become a <a href="https://www.w3.org/standards/types/#x2-5-2-group-note">Group Note</a> but it did not move to the next maturity stage. The most recent publication was an <a href="https://w3c.github.io/Mobile-A11y-TF-Note/">Editor's Draft</a> in December 2018.</p>
+<p>In the next years, the MATF ensured that mobile considerations were included in WCAG 2.1 and WCAG 2.2, such as:</p>
+<ul>
+<li>1.3.4 Orientation (AA), to support multiple display orientations;</li>
+<li>1.4.10 Reflow (AA), to improve presentation on small screens;</li>
+<li>2.5.1 Pointer Gestures (A), to provide single-pointer alternatives for touch gestures;</li>
+<li>2.5.4 Motion Actuation (A), to provide alternatives for device motion;</li>
+<li>2.5.7 Dragging Movements (AA), to provide single-pointer alternatives for dragging;</li>
+<li>2.5.8 Target Size (Minimum) (AA), to providing minimum touch target sizes;</li>
+<li>3.3.7 Redundant Entry (A), to reduce the amount of repetitive typing.</li>
+</ul>
+<p>In January 2024, the MATF regrouped and welcomed new participants to work on updated guidance for applying WCAG 2.2 to Mobile. Since then, the group has worked on creating this updated document, with the intention of publishing it as a Group Note.</p>
+
+    <h3>Guidance in this Document</h3>
+<p>This document provides informative guidance (guidance that is not <a href="https://www.w3.org/TR/WCAG22/#dfn-normative">normative</a> and that does not set requirements) with regard to the interpretation and application of Web Content Accessibility Guidelines (WCAG) to Mobile Applications. This document is a <a href="https://www.w3.org/standards/types/#x2-5-2-group-note">Group Note</a> (in contrast to WCAG 2.2, which is a <a href="https://www.w3.org/standards/types/#REC">W3C Recommendation</a>). Specifically, this document provides informative guidance on applying WCAG 2.2 Level A and AA success criteria to Mobile Applications, including but not limited to native mobile apps, mobile web apps, mobile web content, and hybrid apps using web components inside native mobile apps.</p>
+
   </section>
 
-  <section id="guidance">
-    <h2>Comments by Guideline and Success Criterion</h2>
+  <section id="comments">
+    <h2>Comments by Principle, Guideline and Success Criterion</h2>
+<p>The sections that follow are organized according to the principles, guidelines and success criteria from WCAG 2.2. The text of each principle, guideline and success criterion from WCAG 2.2 is provided as quoted text. Following that, the WCAG2ICT guidance is provided as quoted text. Lastly, the WCAG2Mobile guidance is provided.</p>
+<div class="note" title="Work In Progress">
+  <p>
+    The document currently only includes guidance for success criteria. The guidance for principles and guidelines will be added at a later stage.
+  </p>
+</div>
+
 
     
       <section>
@@ -4209,9 +4236,47 @@ The cognitive function test is to identify <a href="https://www.w3.org/TR/WCAG22
 
   <section class="appendix">
     <h2>Acknowledgements</h2>
-    <p>Additional information about participation in the Mobile Accessibility Task Force (MATF) can be found on the <a href="https://www.w3.org/groups/tf/mobile-a11y-tf/participants/">Task Force home page</a>.</p>
-    <div data-include="acknowledgements/current-contributors.html" data-include-replace="true"></div>
-    <div data-include="acknowledgements/funders.html" data-include-replace="true"></div>			
+<p>Additional information about participation in the Mobile Accessibility Task Force (MATF) can be found on the <a href="https://www.w3.org/groups/tf/mobile-a11y-tf/participants/">MATF home page</a>.</p>
+
+    <h3>Contributors to the development of this document</h3>
+<ul>
+<li>Aashutosh Kulkarni</li>
+<li>Alain Vagner</li>
+<li>Alastair Campbell</li>
+<li>Audrey Maniez</li>
+<li>Bram Janssens</li>
+<li>Carolina Crespo</li>
+<li>Charles Adams</li>
+<li>Detlev Fischer</li>
+<li>Devanshu Chandra</li>
+<li>Gert-Jan Vercauteren</li>
+<li>Gleidson Ramos</li>
+<li>Hidde de Vries</li>
+<li>Illai Zeevi</li>
+<li>Jamie Herrera</li>
+<li>Jan Jaap de Groot</li>
+<li>Jeanne Erickson Cooley</li>
+<li>Jeroen Hulscher</li>
+<li>Joe Humbert</li>
+<li>Jon Gibbins</li>
+<li>Julian Kittelson-Aldred</li>
+<li>Karen Herr</li>
+<li>Karla Rubiano</li>
+<li>Kevin White</li>
+<li>Kimberly Patch</li>
+<li>Michael (Mick) Keane</li>
+<li>Patrick Lauke</li>
+<li>Quintin Balsdon</li>
+<li>Rachael Bradley Montgomery</li>
+<li>Rachele DiTullio</li>
+<li>Steve Faulkner</li>
+<li>Tim Gravemaker</li>
+<li>Victoria (Tori) Clark</li>
+</ul>
+
+    <h3>Enabling funders</h3>
+<p>This publication has been funded in part with U.S. Federal funds from the Health and Human Services, National Institute on Disability, Independent Living, and Rehabilitation Research (NIDILRR), initially under contract number ED-OSE-10-C-0067, then under contract number HHSP23301500054C, and now under HHS75P00120P00168. The content of this publication does not necessarily reflect the views or policies of the U.S. Department of Health and Human Services or the U.S. Department of Education, nor does mention of trade names, commercial products, or organizations imply endorsement by the U.S. Government.</p>
+	
   </section>
 </body>
 </html>

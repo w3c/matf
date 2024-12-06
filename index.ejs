@@ -12,35 +12,33 @@
 </head>
 <body>
   <section id="abstract">
-    <p>
-      This is an <a href="https://www.w3.org/standards/types/#ED">Editor's draft</a>, created by the <a href="https://www.w3.org/WAI/about/groups/task-forces/matf/">Mobile Accessibility Task Force (MATF)</a> at the <a href="https://www.w3.org/">W3C</a>.
-    </p>
+    <%- sections.abstract %>
   </section>
 
   <section id="sotd">
-    <p>To comment, <a href="https://github.com/w3c/matf/issues/new">file an issue in the W3C matf GitHub repository</a>. The Task Force requests that public comments be filed as new issues, one issue per discrete comment. It is free to create a GitHub account to file issues. If filing issues in GitHub is not feasible, send email to <a href="mailto:public-agwg-comments@w3.org?subject=WCAG%203.0%20public%20comment">public-agwg-comments@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-agwg-comments/">comment archive</a>). In-progress updates to the guidelines can be viewed in the <a href="https://w3c.github.io/wcag3/guidelines/">public editors’ draft</a>.</p>
+    <%- sections.sotd %>
   </section>
 
-  <section>
-    <h2>Introduction</h2>
-    <p>TBD</p>
+  <section id="introduction">
+    <%- sections.introduction %>
+    <%- sections.background %>
+    <%- sections.guidance %>
   </section>
 
-  <section id="guidance">
-    <h2>Comments by Guideline and Success Criterion</h2>
+  <section id="comments">
+    <%- sections.comments %>
 
-    <% files.forEach(file => { %>
+    <% guidance.forEach(content => { %>
       <section>
-        <%- file.html %>
+        <%- content %>
       </section>
     <% }); %>
   </section>
 
   <section class="appendix">
-    <h2>Acknowledgements</h2>
-    <p>Additional information about participation in the Mobile Accessibility Task Force (MATF) can be found on the <a href="https://www.w3.org/groups/tf/mobile-a11y-tf/participants/">Task Force home page</a>.</p>
-    <div data-include="acknowledgements/current-contributors.html" data-include-replace="true"></div>
-    <div data-include="acknowledgements/funders.html" data-include-replace="true"></div>			
+    <%- sections.acknowledgements %>
+    <%- sections.contributors %>
+    <%- sections.funders %>	
   </section>
 </body>
 </html>

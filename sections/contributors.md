@@ -1,0 +1,34 @@
+### Contributors to the development of this document
+
+- Aashutosh Kulkarni
+- Alain Vagner
+- Alastair Campbell
+- Audrey Maniez
+- Bram Janssens
+- Carolina Crespo
+- Charles Adams
+- Detlev Fischer
+- Devanshu Chandra
+- Gert-Jan Vercauteren
+- Gleidson Ramos
+- Hidde de Vries
+- Illai Zeevi
+- Jamie Herrera
+- Jan Jaap de Groot
+- Jeanne Erickson Cooley
+- Jeroen Hulscher
+- Joe Humbert
+- Jon Gibbins
+- Julian Kittelson-Aldred
+- Karen Herr
+- Karla Rubiano
+- Kevin White
+- Kimberly Patch
+- Michael (Mick) Keane
+- Patrick Lauke
+- Quintin Balsdon
+- Rachael Bradley Montgomery
+- Rachele DiTullio
+- Steve Faulkner
+- Tim Gravemaker
+- Victoria (Tori) Clark
