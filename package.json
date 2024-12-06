@@ -10,8 +10,11 @@
   "author": "W3C",
   "license": "W3C",
   "dependencies": {
+    "cheerio": "^1.0.0",
     "ejs": "^3.1.10",
     "markdown-it": "^14.1.0",
+    "open": "^10.1.0",
+    "puppeteer": "^23.9.0",
     "semver": "^7.6.3"
   }
 }

@@ -1,14 +1,29 @@
-:root {
-  --background-color: #fff;
-  --background-secondary-color: #eee;
-  --text-color: #000;
-  --link-color: #00f;
+details.wcag {
+  border: 0.1em solid var(--text);
+  padding: 0.5em 0.5em 0;
+  margin: 0.5em 0;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-      --background-color: #111;
-      --background-secondary-color: #333;
-      --text-color: #eee;
-      --link-color: #aaf;
-  }
+
+details.wcag summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+details.wcag blockquote > div {
+  margin-top: -0.5em;
+}
+details.wcag footer {
+  border-top: 1px solid var(--text);
+  padding: 0.5em;
+  margin: 0 -0.5em -0.5em -0.5em;
+}
+
+details.wcag[open] {
+  padding: 0.5em;
+}
+
+details.wcag[open] summary {
+  border-bottom: 0.1em solid var(--text);
+  margin-bottom: 0.5em;
 }
