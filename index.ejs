@@ -21,10 +21,12 @@
 
   <section id="introduction">
     <%- sections.introduction %>
+    <%- sections.background %>
+    <%- sections.guidance %>
   </section>
 
-  <section id="guidance">
-    <h2>Comments by Success Criterion</h2>
+  <section id="comments">
+    <%- sections.comments %>
 
     <% guidance.forEach(content => { %>
       <section>

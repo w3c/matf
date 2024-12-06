@@ -12,35 +12,44 @@
 </head>
 <body>
   <section id="abstract">
-    <p>This document, [updated name], describes how the Web Content Accessibility Guidelines (WCAG) versions 2.0 [WCAG20], 2.1 [WCAG21], and 2.2 [WCAG22] principles, guidelines, and success criteria can be applied to [native mobile applications]. It provides informative guidance (guidance that is not normative and does not set requirements).
-This document is part of a series of technical and educational documents published by the W3C Web Accessibility Initiative (WAI) and available from the WCAG2Mobile Overview (link).</p>
-<p>Abstract (WCAG2ICT)
-This document, “Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT)” describes how the Web Content Accessibility Guidelines (WCAG) versions 2.0 [WCAG20], 2.1 [WCAG21], and 2.2 [WCAG22] principles, guidelines, and success criteria can be applied to non-web Information and Communications Technologies (ICT), specifically to non-web documents and software. It provides informative guidance (guidance that is not normative and does not set requirements).
-This document is part of a series of technical and educational documents published by the W3C Web Accessibility Initiative (WAI) and available from the WCAG2ICT Overview.</p>
+    <p>This document, “Guidance on Applying WCAG 2.2 to Mobile (WCAG2Mobile)”, describes how the Web Content Accessibility Guidelines (WCAG) version 2.2 [<a href="https://www.w3.org/TR/WCAG22/">WCAG22</a>] principles, guidelines, and success criteria can be applied to Mobile Applications, including but not limited to native mobile apps, mobile web apps, mobile web content, and hybrid apps using web components inside native mobile apps. It provides informative guidance (guidance that is not normative and does not set requirements).</p>
+<p>This document is part of a series of technical and educational documents published by the <a href="https://www.w3.org/WAI/">W3C Web Accessibility Initiative (WAI)</a> and available from the <a href="https://www.w3.org/WAI/standards-guidelines/mobile/">Mobile Accessibility Overview</a>.</p>
 
   </section>
 
   <section id="sotd">
-    <p>To comment, <a href="https://github.com/w3c/matf/issues/new">file an issue in the W3C matf GitHub repository</a>. The Task Force requests that public comments be filed as new issues, one issue per discrete comment. It is free to create a GitHub account to file issues. If filing issues in GitHub is not feasible, send email to <a href="mailto:public-agwg-comments@w3.org?subject=WCAG%203.0%20public%20comment">public-agwg-comments@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-agwg-comments/">comment archive</a>). In-progress updates to the guidelines can be viewed in the <a href="https://w3c.github.io/wcag3/guidelines/">public editors’ draft</a>.</p>
+    <p>To comment, <a href="https://github.com/w3c/matf/issues/new">file an issue in the W3C <code>matf</code> GitHub repository</a>. The Task Force requests that public comments be filed as new issues, one issue per discrete comment. It is free to create a GitHub account to file issues. If filing issues in GitHub is not feasible, send email to <a href="mailto:public-agwg-comments@w3.org?subject=WCAG2Mobile%20public%20comment">public-agwg-comments@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-agwg-comments/">comment archive</a>). In-progress updates to the guidelines can be viewed in the <a href="https://w3c.github.io/matf/">public editors’ draft</a>.</p>
 
   </section>
 
   <section id="introduction">
     <h2>Introduction</h2>
-<p>WCAG2ICT:
-This document is an update to a W3C Working Group Note to incorporate new guidelines, success criteria, and definitions added in WCAG 2.1 and 2.2.d
-Guidance on Applying WCAG 2.0 to Non-Web Information and Communications Technologies (WCAG2ICT), approved in September 2013, described how WCAG 2.0 could be applied to non-web documents and software. WCAG2ICT was organized to mirror WCAG's sections: Perceivable, Operable, Understandable, and Robust. WCAG2ICT clarified when and how WCAG success criteria could be applied to non-web documents and software. Some were applicable without modification and some were applicable with edits and/or notes. Glossary terms were also reviewed. Level AAA success criteria were not addressed in the 2013 WCAG2ICT Working Group Note.
-The 2013 WCAG2ICT has been relied upon in regulations and legislation. One example is [etsi-en-301-549] (Europe) and other standards that reference or incorporate EN 301 549 (e.g., India, Kenya, Australia). Another example is Section 508 (U.S.) Application of WCAG 2.0 to Non-Web ICT, which looked to WCAG2ICT for detailed direction with providing specific guidance and exceptions to particular criteria from being applied to non-web technology. Section 508 incorporated by reference WCAG as the Accessibility Standard applicable to non-web documents and requires WCAG Conformance for non-web software.</p>
-<p>WCAG2Mobile:
-This document is a reinterpretation of the requirements for WCAG to the context of native mobile applications.
-[2015 version], published in 2015, described the user experience for the web for WCAG 2.0, when using a mobile device. Some of the principles from WCAG were included, but not all of the success criterion at any given Level (A, AA, AAA). [1-2 sentences more about the 2015 version and maybe earlier history]
-A more recent [working draft], published in 2018, [explanation here].
-[1-2 sentences about the W3C efforts and discussions about “mobile” from 2018 to 2024 and instigation for this draft]</p>
+<p><em>This section is non-normative.</em></p>
+
+    <h3>Background</h3>
+<p>The <a href="https://www.w3.org/WAI/about/groups/task-forces/matf/">Mobile Accessibility Task Force (MATF)</a> is a task force of the <a href="https://www.w3.org/WAI/about/groups/agwg/">Accessibility Guidelines Working Group (AG WG)</a>. The MATF produces resources for applying WCAG to Mobile, including but not limited to native mobile apps, mobile web apps, mobile web content, and hybrid apps using web components inside native mobile apps.</p>
+<p>This document is an iteration on <a href="https://www.w3.org/TR/mobile-accessibility-mapping/">Mobile Accessibility: How WCAG 2.0 and Other W3C/WAI Guidelines Apply to Mobile</a>, published in February 2015 as <a href="https://www.w3.org/standards/types/#x4-1-1-first-public-working-draft">First Public Working Draft</a>. The document was intended to become a <a href="https://www.w3.org/standards/types/#x2-5-2-group-note">Group Note</a> but it did not move to the next maturity stage. The most recent publication was an <a href="https://w3c.github.io/Mobile-A11y-TF-Note/">Editor's Draft</a> in December 2018.</p>
+<p>In the next years, the MATF ensured that mobile considerations were included in WCAG 2.1 and WCAG 2.2, such as:</p>
+<ul>
+<li>1.3.4 Orientation (AA), to support multiple display orientations;</li>
+<li>1.4.10 Reflow (AA), to improve presentation on small screens;</li>
+<li>2.5.1 Pointer Gestures (A), to provide single-pointer alternatives for touch gestures;</li>
+<li>2.5.4 Motion Actuation (A), to provide alternatives for device motion;</li>
+<li>2.5.7 Dragging Movements (AA), to provide single-pointer alternatives for dragging;</li>
+<li>2.5.8 Target Size (Minimum) (AA), to providing minimum touch target sizes;</li>
+<li>3.3.7 Redundant Entry (A), to reduce the amount of repetitive typing.</li>
+</ul>
+<p>In January 2024, the MATF regrouped and welcomed new participants to work on updated guidance for applying WCAG 2.2 to Mobile. Since then, the group has worked on creating this updated document, with the intention of publishing it as a Group Note.</p>
+
+    <h3>Guidance in this Document</h3>
+<p>This document provides informative guidance (guidance that is not <a href="https://www.w3.org/TR/WCAG22/#dfn-normative">normative</a> and that does not set requirements) with regard to the interpretation and application of Web Content Accessibility Guidelines (WCAG) to Mobile Applications. This document is a <a href="https://www.w3.org/standards/types/#x2-5-2-group-note">Group Note</a> (in contrast to WCAG 2.2, which is a <a href="https://www.w3.org/standards/types/#REC">W3C Recommendation</a>). Specifically, this document provides informative guidance on applying WCAG 2.2 Level A and AA success criteria to Mobile Applications, including but not limited to native mobile apps, mobile web apps, mobile web content, and hybrid apps using web components inside native mobile apps.</p>
 
   </section>
 
-  <section id="guidance">
-    <h2>Comments by Success Criterion</h2>
+  <section id="comments">
+    <h2>Comments by Principle, Guideline and Success Criterion</h2>
+<p>The sections that follow are organized according to the principles, guidelines and success criteria from WCAG 2.2. The text of each principle, guideline and success criterion from WCAG 2.2 is provided as quoted text. Following that, the WCAG2ICT guidance is provided as quoted text. Lastly, the WCAG2Mobile guidance is provided.</p>
+
 
     
       <section>
@@ -4222,12 +4231,13 @@ The cognitive function test is to identify <a href="https://www.w3.org/TR/WCAG22
 
   <section class="appendix">
     <h2>Acknowledgements</h2>
-<p>Additional information about participation in the Mobile Accessibility Task Force (MATF) can be found on the <a href="https://www.w3.org/groups/tf/mobile-a11y-tf/participants/">Mobile Accessibility Task Force home page</a>.</p>
+<p>Additional information about participation in the Mobile Accessibility Task Force (MATF) can be found on the <a href="https://www.w3.org/groups/tf/mobile-a11y-tf/participants/">MATF home page</a>.</p>
 
     <h3>Contributors to the development of this document</h3>
 <ul>
 <li>Aashutosh Kulkarni</li>
 <li>Alain Vagner</li>
+<li>Alastair Campbell</li>
 <li>Audrey Maniez</li>
 <li>Bram Janssens</li>
 <li>Carolina Crespo</li>
