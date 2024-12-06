@@ -31,6 +31,38 @@ const readFiles = async (folder, extension) => {
   );
 };
 
+// Render markdown files in the given folder
+const renderFiles = async (folder, md) => {
+  console.log(`Rendering markdown files in '${folder}'...`);
+
+  const files = await readFiles(folder, '.md');
+  console.log(`Rendering HTML for ${files.size} files...`);
+
+  const result = {};
+  for (const [key, content] of files.entries()) {
+    console.log(`Rendering HTML for ${key}...`);
+    result[key] = md.render(content);
+  }
+
+  console.log(`Successfully rendered ${Object.keys(result).length} files to HTML`);
+  return result;
+};
+
+// Render `guidance` folder contents as HTML
+const renderGuidance = async (md) => {
+  const files = await renderFiles('guidance', md);
+
+  // Create array sorted by semantic version (e.g. 1.4.10 after 1.4.9)
+  return Object.keys(files)
+    .sort(semver.compare)
+    .map((key) => files[key]);
+}
+
+// Render `sections` folder contents as HTML
+const renderSections = async (md) => {
+  return await renderFiles('sections', md);
+}
+
 // Execute: init plugins, read files, render HTML
 const execute = async () => {
   console.log(`Initializing custom plugins...`);
@@ -48,40 +80,15 @@ const execute = async () => {
   .use(wcagPlugin)
   .use(wcag2ictPlugin);
 
-  // Read files from `wcag` folder
-  console.log(`Reading markdown files...`);
-  const map = await readFiles('wcag', '.md');
-  const keys = Array.from(map.keys()).sort(semver.compare);
-
-  console.log(`Rendering HTML for ${keys.length} files...`)
-  const files = [];
-  for (const key of keys) {
-    console.log(`Rendering HTML for ${key}...`)
-    const html = md.render(map.get(key));
-    files.push({
-      key,
-      html,
-    });
-  }
-  console.log(`Successfully rendered ${files.length} files to HTML...`);
-
-  // Read files from `sections` folder
-  const sectionFiles = await readFiles('sections', '.md');
-  console.log(`Rendering HTML for ${sectionFiles.length} sections...`)
-  const sections = {};
-  for (const [key, content] of sectionFiles.entries()) {
-    console.log(`Rendering HTML for section ${key}...`);
-    sections[key] = md.render(content);
-  }
+  // Read files from `guidance` and `sections` folder
+  const guidance = await renderGuidance(md);
+  const sections = await renderSections(md);
 
   // Render `index.ejs` template
   const templateFile = path.join(root, 'index.ejs');
   console.log(`Rendering template ${templateFile}...`);
   const template = await fs.readFile(templateFile, 'utf8');
-  const html = ejs.render(template, { 
-    files: files,
-    sections: sections
-  });
+  const html = ejs.render(template, { guidance, sections });
 
   // Overwrite `index.html` file
   const indexFile = path.join(root, 'index.html');
@@ -96,7 +103,7 @@ const execute = async () => {
 // Run the script and ensure completion
 execute()
   .then(() => {
-    console.log('Script completed successfully');
+    console.log('Script completed successfully!');
     process.exit(0);
   })
   .catch((error) => {
