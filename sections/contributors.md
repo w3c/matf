@@ -2,6 +2,7 @@
 
 - Aashutosh Kulkarni
 - Alain Vagner
+- Alastair Campbell
 - Audrey Maniez
 - Bram Janssens
 - Carolina Crespo
