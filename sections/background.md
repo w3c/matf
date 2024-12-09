@@ -14,4 +14,4 @@ In the next years, the MATF ensured that mobile considerations were included in 
 - 2.5.8 Target Size (Minimum) (AA), to providing minimum touch target sizes;
 - 3.3.7 Redundant Entry (A), to reduce the amount of repetitive typing.
 
-In January 2024, the MATF regrouped and welcomed new participants to work on updated guidance for applying WCAG 2.2 to Mobile. Since then, the group has worked on creating this updated document, with the intention of publishing it as a Group Note.
+In January 2024, the MATF regrouped and welcomed new participants to work on updated guidance for applying WCAG 2.2 to Mobile Applications. Since then, the group has worked on creating this updated document, with the intention of publishing it as a Group Note.
