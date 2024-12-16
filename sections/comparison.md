@@ -1,6 +1,8 @@
 ### Comparison with the 2015 Mobile Accessibility Working Draft Note
 
-The following changes and additions have been made to update the 2015 Mobile Accessibility Mapping document to incorporate the new features in WCAG 2.1, the new features in WCAG 2.2, and the change to 4.1.1 Parsing listed in the Comparison with WCAG 2.1 section:
+In this Editor's Draft, most of the existing sections have undergone significant Mobile Accessibility Task Force review and updates, to align with WCAG2ICT rather than continue with the structure and format of the 2015 Mobile Accessibility Mapping document. 
+
+With this perspective in mind, the following list highlights where this current document (WCAG2Mobile) differs from the 2015 Mobile Accessibility Mapping document to apply all success criteria of WCAG 2.0, WCAG 2.1, WCAG 2.2, and acknowledge the change to 4.1.1 Parsing to Mobile Applications:
 
 - New Background section to explain the change in scope for the current document
 - Modifications to key terms introduced by WCAG2ICT:
@@ -10,7 +12,11 @@ The following changes and additions have been made to update the 2015 Mobile Acc
 * virtual keyboard
 - New key terms introduced by WCAG2Mobile:
 [pending]
-
+- Inclusion of all WCAG 2.0 success criteria and not just those specifically affected by mobile phone usage. (pending)
+*
+*
+*
+*
 - New WCAG 2.1 success criteria and guidelines
 * Success Criterion 1.3.4 Orientation
 * Success Criterion 1.3.5 Identify Input Purpose
@@ -50,5 +56,4 @@ The following changes and additions have been made to update the 2015 Mobile Acc
 * set of web pages
 * set of non-web documents
 * set of software programs
-- Updated sections
-In this Note, most of the existing sections have undergone significant Mobile Accessibility Task Force review and updates to align with WCAG2ICT rather than continue with the structure and format of the 2015 Mobile Accessibility Mapping document. 
+
