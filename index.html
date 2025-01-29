@@ -1450,14 +1450,32 @@
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/text-spacing">Intent from Understanding Success Criterion 1.4.12</a>, replacing &quot;content implemented using markup languages&quot; with &quot;content&quot;.</p>
+<p>With these substitutions, it would read:</p>
+<p><strong>1.4.12 Text Spacing:</strong> In <strong>content</strong> that support the following text style properties, no loss of content or functionality occurs by setting all of the following and by changing no other style property:</p>
+<ul>
+<li>Line height (line spacing) to at least 1.5 times the font size;</li>
+<li>Spacing following paragraphs to at least 2 times the font size;</li>
+<li>Letter spacing (tracking) to at least 0.12 times the font size;</li>
+<li>Word spacing to at least 0.16 times the font size.</li>
+</ul>
+<p>Exception: <a href="https://www.w3.org/WAI/WCAG22/Understanding/text-spacing#dfn-human-language">Human languages</a> and scripts that do not make use of one or more of these text style properties in written text can conform using only the properties that exist for that combination of language and script.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/5" target="_blank">
-            Read issue #5 on GitHub
-          </a>
-        </p>
+      <div class="note">
+        <p>Content is not required to use these text spacing values. The requirement is to ensure that when a user overrides the authored text spacing, content or functionality is not lost.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note">
+        <p>Writing systems for some languages use different text spacing settings, such as paragraph start indent. Authors are encouraged to follow locally available guidance for improving readability and legibility of text in their writing system.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note">
+        <p>If a mobile platform does not include a way for users to override text style properties, this success criterion is not applicable.</p>
+
       </div>
     </p>
 
