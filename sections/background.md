@@ -16,8 +16,8 @@ In the next years, the MATF ensured that mobile considerations were included in 
 
 In January 2024, the MATF regrouped and welcomed new participants to work on updated guidance for applying WCAG 2.2 to Mobile Applications.
 
-This current document, "Guidance on Applying WCAG 2.2 to Mobile (WCAG2Mobile)" is specific to how WCAG applies to Mobile Applications, including but not limited to native mobile apps, mobile web apps, mobile web content, and hybrid apps using web components inside native mobile apps.
+This current document, “Guidance on Applying WCAG 2.2 to Mobile (WCAG2Mobile)” is specific to how WCAG applies to Mobile Applications, including but not limited to native mobile apps, mobile web apps, mobile web content, and hybrid apps using web components inside native mobile apps.
 
-WCAG2Mobile maps directly to the W3C supporting document, "[Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT)](https://www.w3.org/TR/wcag2ict-22/)", which was published as a Group Note in October 2024, describing how WCAG 2.2 could be applied to non-web documents and software. The intention of the MATF is to publish WCAG2Mobile as a Group Note, just like WCAG2ICT.
+WCAG2Mobile maps directly to the W3C supporting document, “[Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT)](https://www.w3.org/TR/wcag2ict-22/)”, which was published as a Group Note in October 2024, describing how WCAG 2.2 could be applied to non-web documents and software. The intention of the MATF is to publish WCAG2Mobile as a Group Note, just like WCAG2ICT.
 
-WCAG2ICT is organized to mirror the Principle, Guideline and Success Criterion structure of WCAG; this model is also used in WCAG2Mobile. WCAG2ICT clarifies when and how WCAG Level A and Level AA success criteria could be applied to non-web documents and software; WCAG2Mobile narrows the scope of this work to mobile applications.
+WCAG2ICT is organized to mirror the Principle, Guideline and Success Criterion structure of WCAG; this model is also used in WCAG2Mobile. WCAG2ICT clarifies when and how WCAG Level A and Level AA success criteria could be applied to non-web documents and software; WCAG2Mobile narrows the scope of this work to Mobile Applications.

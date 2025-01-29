@@ -10,4 +10,4 @@ The following stylistic conventions are used in this document:
 - References to glossary items from WCAG 2 are presented in `<cite>` elements visually styled as ordinary text with a dotted underline, and contain title attributes noting these are WCAG definitions. They turn blue with a yellow background when mouse or keyboard focus is placed over them.
 - References to glossary items in this document are presented in `<cite>` elements visually styled as ordinary text with a dark gray underline.
 - Hereafter, the short title “WCAG2Mobile” is used to reference this document.
-- In headings the term "Success Criterion" has been shortened to “SC” for brevity.
+- In headings the term “Success Criterion” has been shortened to “SC” for brevity.
