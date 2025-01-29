@@ -24,11 +24,14 @@
 - Karla Rubiano
 - Kevin White
 - Kimberly Patch
+- Megan Pletzer
 - Michael (Mick) Keane
 - Patrick Lauke
 - Quintin Balsdon
 - Rachael Bradley Montgomery
 - Rachele DiTullio
+- Rob Whitaker
 - Steve Faulkner
+- Tanya van Workum
 - Tim Gravemaker
 - Victoria (Tori) Clark
