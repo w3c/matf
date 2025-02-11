@@ -104,6 +104,7 @@ const execute = async () => {
     console.log('Script completed successfully!');
   } catch (error) {
     console.error(`Script encountered error: ${error}`);
+    throw error;
   }
 };
 execute();
