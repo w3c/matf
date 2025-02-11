@@ -27,6 +27,7 @@
 - Megan Pletzer
 - Michael (Mick) Keane
 - Patrick Lauke
+- Paul J. Adam
 - Quintin Balsdon
 - Rachael Bradley Montgomery
 - Rachele DiTullio
