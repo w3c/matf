@@ -1,6 +1,6 @@
 ### Guidance in this Document
 
-This document provides informative guidance (guidance that is not [normative](https://www.w3.org/TR/WCAG22/#dfn-normative) and that does not set requirements) with regard to the interpretation and application of Web Content Accessibility Guidelines (WCAG) to Mobile Applications. This document is a [Group Note](https://www.w3.org/standards/types/#x2-5-2-group-note) (in contrast to WCAG 2.2, which is a [W3C Recommendation](https://www.w3.org/standards/types/#REC)). Specifically, this document provides informative guidance on applying WCAG 2.2 Level A and AA success criteria to Mobile Applications, including but not limited to native mobile apps, mobile web apps, mobile web content, and hybrid apps using web components inside native mobile apps.
+This document provides informative guidance (guidance that is not [normative](https://www.w3.org/TR/WCAG22/#dfn-normative) and that does not set requirements) with regard to the interpretation and application of Web Content Accessibility Guidelines (WCAG) to Mobile Applications. This document is a [Group Note](https://www.w3.org/standards/types/#x2-5-2-group-note) (in contrast to WCAG 2.2, which is a [W3C Recommendation](https://www.w3.org/standards/types/#REC)). Specifically, this document provides informative guidance on applying WCAG 2.2 Level A and AA success criteria to Mobile Applications, including but not limited to native mobile apps, mobile web apps and hybrid apps using web components inside native mobile apps.
 
 #### Interpretation of Web Terminology in a Mobile Context
 
