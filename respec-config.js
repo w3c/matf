@@ -32,7 +32,7 @@ var respecConfig = {
 	editors: [ 
     {
       name: "Jan Jaap de Groot",
-      mailto: "janjaap@abra.nl",
+      mailto: "janjaap@abra.ai",
       company: "Abra",
       companyURI: "https://abra.ai",
       w3cid: 137024
@@ -45,6 +45,9 @@ var respecConfig = {
     },
     {
       name: "Julian Kittelson-Aldred"
+    },
+    {
+      name: "Jon Gibbins"
     }
   ],
 	

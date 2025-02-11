@@ -315,14 +315,11 @@
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content">Intent from Understanding Success Criterion 1.1.1</a>.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/16" target="_blank">
-            Read issue #16 on GitHub
-          </a>
-        </p>
+      <div class="note">
+        <p>Not all mobile platforms provide a way to programmatically associate a <a href="https://www.w3.org/TR/WCAG22/#dfn-labels">label</a> with <a href="https://www.w3.org/TR/WCAG22/#dfn-non-text-content">non-text content</a>.</p>
+
       </div>
     </p>
 
@@ -775,14 +772,11 @@
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence">Intent from Understanding Success Criterion 1.3.4</a>.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/23" target="_blank">
-            Read issue #23 on GitHub
-          </a>
-        </p>
+      <div class="note">
+        <p>Grouping related elements using semantic containers helps ensure a meaningful reading sequence.</p>
+
       </div>
     </p>
 
@@ -900,14 +894,11 @@
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/orientation">Intent from Understanding Success Criterion 1.3.4</a>.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/25" target="_blank">
-            Read issue #25 on GitHub
-          </a>
-        </p>
+      <div class="note">
+        <p>It is considered a best practice to support all available orientations, such as as portrait, portrait (reversed), landscape, and landscape (reversed).</p>
+
       </div>
     </p>
 
@@ -1033,14 +1024,11 @@
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color">Intent from Understanding Success Criterion 1.4.1</a>.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/26" target="_blank">
-            Read issue #26 on GitHub
-          </a>
-        </p>
+      <div class="note">
+        <p>If a mobile platform’s built-in distinction relies only on color, additional visual means must convey the information.</p>
+
       </div>
     </p>
 
@@ -1605,14 +1593,32 @@
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/text-spacing">Intent from Understanding Success Criterion 1.4.12</a>, replacing &quot;content implemented using markup languages&quot; with &quot;content&quot;.</p>
+<p>With these substitutions, it would read:</p>
+<p><strong>1.4.12 Text Spacing:</strong> In <strong>content</strong> that support the following text style properties, no loss of content or functionality occurs by setting all of the following and by changing no other style property:</p>
+<ul>
+<li>Line height (line spacing) to at least 1.5 times the font size;</li>
+<li>Spacing following paragraphs to at least 2 times the font size;</li>
+<li>Letter spacing (tracking) to at least 0.12 times the font size;</li>
+<li>Word spacing to at least 0.16 times the font size.</li>
+</ul>
+<p>Exception: <a href="https://www.w3.org/WAI/WCAG22/Understanding/text-spacing#dfn-human-language">Human languages</a> and scripts that do not make use of one or more of these text style properties in written text can conform using only the properties that exist for that combination of language and script.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/5" target="_blank">
-            Read issue #5 on GitHub
-          </a>
-        </p>
+      <div class="note">
+        <p>Content is not required to use these text spacing values. The requirement is to ensure that when a user overrides the authored text spacing, content or functionality is not lost.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note">
+        <p>Writing systems for some languages use different text spacing settings, such as paragraph start indent. Authors are encouraged to follow locally available guidance for improving readability and legibility of text in their writing system.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note">
+        <p>If a mobile platform does not include a way for users to override text style properties, this success criterion is not applicable.</p>
+
       </div>
     </p>
 
@@ -1927,14 +1933,17 @@
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts">Intent from Understanding Success Criterion 2.1.4</a>.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/7" target="_blank">
-            Read issue #7 on GitHub
-          </a>
-        </p>
+      <div class="note">
+        <p>The WCAG2ICT interpretation is that a long press of a key (2 seconds or more) and other accessibility features provided by the platform do not meet the WCAG definition of a keyboard shortcut. See the <a href="https://www.w3.org/TR/wcag2ict-22/#dfn-keyboard-shortcuts">keyboard shortcut</a> definition for more details.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note">
+        <p>The WCAG2Mobile interpretation aligns with WCAG2ICT, emphasizing that long presses and other accessibility features are not addressed by this success criterion.</p>
+
       </div>
     </p>
 
@@ -3064,7 +3073,7 @@
         </footer>
       </details>
     </p>
-<p>This applies directly as written, and as described in Intent from <a href="https://www.w3.org/WAI/WCAG22/Understanding/label-in-name.html#intent">Understanding Success Criterion 2.5.3</a>.</p>
+<p>This applies directly as written, and as described in Intent from <a href="https://www.w3.org/WAI/WCAG22/Understanding/label-in-name#intent">Understanding Success Criterion 2.5.3</a>.</p>
 
       </section>
     
@@ -3121,7 +3130,7 @@
         </footer>
       </details>
     </p>
-<p>This applies directly as written, and as described in Intent from <a href="https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html#intent">Understanding Success Criterion 2.5.4</a>.</p>
+<p>This applies directly as written, and as described in Intent from <a href="https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation#intent">Understanding Success Criterion 2.5.4</a>.</p>
 
       </section>
     
@@ -3758,14 +3767,25 @@
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-help">Intent from Understanding Success Criterion 3.2.6</a>, replacing &quot;web page(s)&quot; and &quot;page(s)&quot; with &quot;view(s)&quot; and &quot;CSS break-point&quot; with &quot;break-point&quot;.</p>
+<p>With these substitutions, it would read:</p>
+<p><strong>3.2.6 Consistent Help:</strong> If a <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">view</a></strong> contains any of the following help mechanisms, and those mechanisms are repeated on multiple <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">views</a></strong> within a set of <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">views</a></strong>, they occur in the same order relative to other <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">view</a></strong> content, unless a change is initiated by the user:</p>
+<ul>
+<li>Human contact details;</li>
+<li>Human contact mechanism;</li>
+<li>Self-help option;</li>
+<li>A fully automated contact mechanism.</li>
+</ul>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/43" target="_blank">
-            Read issue #43 on GitHub
-          </a>
-        </p>
+      <div class="note">
+        <p>Help mechanisms may be provided directly on the <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">view</a></strong>, or may be provided via a direct link to a different <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">view</a></strong> containing the information.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note">
+        <p>For this success criterion, &quot;the same order relative to other <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">view</a></strong> content&quot; can be thought of as how the content is ordered when the <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">view</a></strong> is serialized. The visual position of a help mechanism is likely to be consistent across <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">views</a></strong> for the same <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">view</a></strong> variation (e.g., <strong>break-point</strong>). The user can initiate a change, such as changing the <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">view</a></strong>'s zoom or orientation, which may trigger a different <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">view</a></strong> variation. This criterion is concerned with relative order across <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">views</a></strong> displayed in the same <strong><a href="https://www.w3.org/TR/wcag-3.0/#dfn-views">view</a></strong> variation (e.g., same zoom level and orientation).</p>
+
       </div>
     </p>
 
@@ -4155,7 +4175,7 @@
         </footer>
       </details>
     </p>
-<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum.html">Intent from Understanding Success Criterion 3.3.8</a>, replacing “the Web site” with “a view”.</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">Intent from Understanding Success Criterion 3.3.8</a>, replacing “the Web site” with “a view”.</p>
 <p>A <a href="https://www.w3.org/TR/wcag2ict-22/#dfn-cognitive-function-test">cognitive function test</a> (such as remembering a password or solving a puzzle) is not required for any step in an authentication <a href="https://www.w3.org/TR/WCAG22/#dfn-processes">process</a> unless that step provides at least one of the following:</p>
 <p><strong>Alternative</strong>
 Another authentication method that does not rely on a cognitive function test.</p>
@@ -4229,7 +4249,14 @@ The cognitive function test is to identify <a href="https://www.w3.org/TR/WCAG22
         </footer>
       </details>
     </p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/parsing">Intent from Understanding Success Criterion 4.1.1</a>, meaning that it has been marked as <strong>obsolete and removed</strong>.</p>
 <p>(Obsolete and removed)</p>
+<p>
+      <div class="note">
+        <p>WCAG 2.2 has made this success criterion obsolete and removed it as a requirement in the standard. Therefore, the interpretation of this success criterion for Mobile Applications has been removed.</p>
+
+      </div>
+    </p>
 
       </section>
     
@@ -4359,14 +4386,13 @@ The cognitive function test is to identify <a href="https://www.w3.org/TR/WCAG22
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages">Intent from Understanding Success Criterion 4.1.3</a>, removing “implemented using markup languages”.</p>
+<p>With these substitutions, it would read:</p>
+<p><strong>4.1.3 Status Messages:</strong> In content, <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages#dfn-status-message">status messages</a> can be <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages#dfn-programmatically-determined">programmatically determined</a> through <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages#dfn-role">role</a> or properties such that they can be presented to the user by <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages#dfn-assistive-technology">assistive technologies</a> without receiving focus.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/61" target="_blank">
-            Read issue #61 on GitHub
-          </a>
-        </p>
+      <div class="note">
+        <p>This is typically enabled through the use of accessibility services of the <a href="https://www.w3.org/TR/wcag2ict-22/#user-agent">user agent</a> or <a href="https://www.w3.org/TR/wcag2ict-22/#platform-software">platform software</a>.</p>
+
       </div>
     </p>
 
@@ -4404,12 +4430,15 @@ The cognitive function test is to identify <a href="https://www.w3.org/TR/WCAG22
 <li>Karla Rubiano</li>
 <li>Kevin White</li>
 <li>Kimberly Patch</li>
+<li>Megan Pletzer</li>
 <li>Michael (Mick) Keane</li>
 <li>Patrick Lauke</li>
 <li>Quintin Balsdon</li>
 <li>Rachael Bradley Montgomery</li>
 <li>Rachele DiTullio</li>
+<li>Rob Whitaker</li>
 <li>Steve Faulkner</li>
+<li>Tanya van Workum</li>
 <li>Tim Gravemaker</li>
 <li>Victoria (Tori) Clark</li>
 </ul>
