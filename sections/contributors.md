@@ -1,38 +1,38 @@
 ### Contributors to the development of this document
 
-- Aashutosh Kulkarni
-- Alain Vagner
-- Alastair Campbell
-- Audrey Maniez
-- Bram Janssens
-- Carolina Crespo
-- Charles Adams
-- Detlev Fischer
-- Devanshu Chandra
-- Gert-Jan Vercauteren
-- Gleidson Ramos
-- Hidde de Vries
-- Illai Zeevi
-- Jamie Herrera
-- Jan Jaap de Groot
-- Jeanne Erickson Cooley
-- Jeroen Hulscher
-- Joe Humbert
-- Jon Gibbins
-- Julian Kittelson-Aldred
-- Karen Herr
-- Karla Rubiano
-- Kevin White
-- Kimberly Patch
-- Megan Pletzer
-- Michael (Mick) Keane
-- Patrick Lauke
-- Paul J. Adam
-- Quintin Balsdon
-- Rachael Bradley Montgomery
-- Rachele DiTullio
-- Rob Whitaker
-- Steve Faulkner
-- Tanya van Workum
-- Tim Gravemaker
-- Victoria (Tori) Clark
+- Aashutosh Kulkarni (Invited Expert)
+- Alain Vagner (Invited Expert)
+- Alastair Campbell (Nomensa)
+- Audrey Maniez (Invited Expert)
+- Bram Janssens (Invited Expert)
+- Carolina Crespo (TPGi)
+- Charles Adams (Oracle Corporation)
+- Detlev Fischer (Invited Expert)
+- Devanshu Chandra (Deque Systems, Inc.)
+- Gert-Jan Vercauteren (Invited Expert)
+- Gleidson Ramos (Invited Expert)
+- Hidde de Vries (Invited Expert)
+- Illai Zeevi (Invited Expert)
+- Jamie Herrera (Invited Expert)
+- Jan Jaap de Groot (Abra)
+- Jeanne Erickson Cooley (TPGi)
+- Jeroen Hulscher (Logius)
+- Joe Humbert (Invited Expert)
+- Jon Gibbins (Invited Expert)
+- Julian Kittelson-Aldred (Invited Expert)
+- Karen Herr (Salesforce)
+- Karla Rubiano (Invited Expert)
+- Kevin White (W3C)
+- Kimberly Patch (Invited Expert)
+- Megan Pletzer (Deque Systems, Inc.)
+- Michael (Mick) Keane (UnitedHealth Group)
+- Patrick Lauke (TetraLogical Services Ltd)
+- Paul J. Adam (CVS Pharmacy, Inc.)
+- Quintin Balsdon (Invited Expert)
+- Rachael Bradley Montgomery (Library of Congress)
+- Rachele DiTullio (Invited Expert)
+- Rob Whitaker (Invited Expert)
+- Steve Faulkner (TetraLogical Services Ltd)
+- Tanya van Workum (Abra)
+- Tim Gravemaker (Invited Expert)
+- Victoria (Tori) Clark (Invited Expert)

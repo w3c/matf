@@ -38,16 +38,20 @@ var respecConfig = {
       w3cid: 137024
 	  },
     {
-      name: "Jamie Herrera"
+      name: "Jamie Herrera",
+      company: "Invited Expert"
     },
     {
-      name: "Joe Humbert"
+      name: "Joe Humbert",
+      company: "Invited Expert"
     },
     {
-      name: "Julian Kittelson-Aldred"
+      name: "Julian Kittelson-Aldred",
+      company: "Invited Expert"
     },
     {
-      name: "Jon Gibbins"
+      name: "Jon Gibbins",
+      company: "Invited Expert"
     }
   ],
 	
