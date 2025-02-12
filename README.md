@@ -11,11 +11,11 @@ This repository is used to work on guidance for mobile accessibility.
 - The [comments folder](/comments) contains Markdown files with our comments on each success criterion (and principle, guidelines in the future).
 - The [sections folder](/sections) contains Markdown files for each section, such as abstract, introduction, etc.
 - The [plugins folder](/plugins) contains Javascript files with Markdown extensions
-  - [`GithubPlugin`](/plugins/github.js): adds the `[issue:<issue>]` tag to render a `Note` linking to the given Github `<issue>`.
+  - [`GitHubPlugin`](/plugins/github.js): adds the `[issue:<issue>]` tag to render a `Note` linking to the given GitHub `<issue>`.
   - [`NotePlugin`](/plugins/note.js): adds the `[note:<markdown>]` tag to render a `Note` containing the given `<markdown>`.
   - [`WcagPlugin`](/plugins/wcag.js): adds the `[wcag|wcag2ict:<id>]` tag to render a `<details>` component containing the WCAG(2ICT) section identified by the given `<id>`.
 
-Upon push to the `main` branch, the [`index.html`](index.html) file gets generated based on the [comments](/comments) and [sections](/sections) folders. Next, the `index.html` file gets commited, and then deployed to Github Pages.
+Upon push to the `main` branch, the [`index.html`](index.html) file gets generated based on the [comments](/comments) and [sections](/sections) folders. Next, the `index.html` file gets commited, and then deployed to GitHub Pages.
 
 ![Generate, Update, Deploy workflow](https://github.com/w3c/matf/actions/workflows/deploy.yml/badge.svg)
 
