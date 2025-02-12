@@ -11,7 +11,7 @@ With this perspective in mind, the following list highlights where this current 
   - platform software
   - virtual keyboard
 - New key terms introduced by WCAG2Mobile:
-  - [note:Work In Progress]
+  - [note:**Work In Progress**. See: [Key Terms section](#key-terms)]
 - Inclusion of all WCAG 2.2 Level A and AA success criteria and not just those specifically affected by mobile phone usage.
 
 The prior 2015 Mobile Working Draft Note included specific guidance on the following WCAG 2.0 success criteria for mobile, primarily for a mobile web context:
