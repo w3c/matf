@@ -5,7 +5,7 @@ import markdownit from 'markdown-it';
 import ejs from 'ejs';
 import open from 'open';
 
-import { GithubPlugin } from './plugins/github.js';
+import { GitHubPlugin } from './plugins/github.js';
 import { NotePlugin } from './plugins/note.js';
 import { WcagPlugin } from './plugins/wcag.js';
 
@@ -16,7 +16,7 @@ const initMarkdown = async () => {
   console.log(`Initializing markdownit and custom plugins...`);
 
   return markdownit({ html: true })
-    .use(await GithubPlugin.init('https://github.com/w3c/matf'))
+    .use(await GitHubPlugin.init('https://github.com/w3c/matf'))
     .use(await NotePlugin.init())
     .use(await WcagPlugin.init('wcag', 'https://www.w3.org/TR/WCAG22/'))
     .use(await WcagPlugin.init('wcag2ict', 'https://www.w3.org/TR/wcag2ict-22/'));

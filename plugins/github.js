@@ -1,10 +1,10 @@
 import { Plugin } from './plugin.js';
 
 /**
- * The GithubPlugin adds a new markdown tag to render GitHub issues.
+ * The GitHubPlugin adds a new markdown tag to render GitHub issues.
  * For example, the `[issue:71]` markdown will render issue #71 as a note with a link.
  */
-export class GithubPlugin extends Plugin {
+export class GitHubPlugin extends Plugin {
   constructor(url) {
     super('issue');
     this.url = url;
@@ -13,10 +13,10 @@ export class GithubPlugin extends Plugin {
   /**
    * Initializes the plugin with the specified GitHub repository URL.
    * @param {string} url - The GitHub repository URL (e.g., `https://github.com/w3c/matf`).
-   * @returns {Promise<{function}>} - An initialized `GithubPlugin` function.
+   * @returns {Promise<{function}>} - An initialized `GitHubPlugin` function.
    */
   static async init(url) {
-    return new GithubPlugin(url).plugin();
+    return new GitHubPlugin(url).plugin();
   }
 
   /**
@@ -40,7 +40,7 @@ export class GithubPlugin extends Plugin {
   }
 
   /**
-   * Renders the token as a Note with a link to the issue on Github.
+   * Renders the token as a Note with a link to the issue on GitHub.
    * @param {object} token - The token to render.
    * @returns {string} - The rendered HTML string.
    */
