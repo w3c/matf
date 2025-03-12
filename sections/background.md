@@ -16,7 +16,7 @@ In the next years, the MATF ensured that mobile considerations were included in 
 
 In January 2024, the MATF regrouped and welcomed new participants to work on updated guidance for applying WCAG 2.2 to Mobile Applications.
 
-This current document, “Guidance on Applying WCAG 2.2 to Mobile (WCAG2Mobile)” is specific to how WCAG applies to Mobile Applications, including but not limited to native mobile apps, mobile web apps and hybrid apps using web components inside native mobile apps.
+This current document, “Guidance on Applying WCAG 2.2 to Mobile Applications (WCAG2Mobile)” is specific to how WCAG applies to Mobile Applications, including but not limited to native mobile apps, mobile web apps and hybrid apps using web components inside native mobile apps.
 
 WCAG2Mobile maps directly to the W3C supporting document, “[Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT)](https://www.w3.org/TR/wcag2ict-22/)”, which was published as a Group Note in October 2024, describing how WCAG 2.2 could be applied to non-web documents and software. The intention of the MATF is to publish WCAG2Mobile as a Group Note, just like WCAG2ICT.
 

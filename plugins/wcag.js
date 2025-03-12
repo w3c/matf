@@ -21,7 +21,7 @@ export class WcagPlugin extends Plugin {
    * @returns {Promise<{function}>} - An initialized `WcagPlugin` function.
    */
   static async init(tag, url) {
-    const html = await WcagPlugin.fetchHtml(url);
+    const html = await WcagPlugin.fetchHTML(url);
     return new WcagPlugin(tag, url, html).plugin();
   }
 
@@ -30,7 +30,7 @@ export class WcagPlugin extends Plugin {
    * @param {string} url - The URL to fetch.
    * @returns {Promise<string>} - The rendered HTML content.
    */
-  static async fetchHtml(url) {
+  static async fetchHTML(url) {
     console.log(`Fetching rendered HTML for: ${url}`);
     const browser = await puppeteer.launch({ 
       headless: true,
@@ -46,7 +46,7 @@ export class WcagPlugin extends Plugin {
     } catch (error) {
       console.error(`Error fetching ${url}:`, error);
       await browser.close();
-      return `<p>Error loading content from ${url}</p><p>${error}</p>`;
+      throw new Error(`rror loading content from ${url}: ${error}`);
     }
   }
 

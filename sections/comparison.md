@@ -30,7 +30,7 @@ The prior 2015 Mobile Working Draft Note included specific guidance on the follo
 - Success Criterion 3.3.2 Labels or Instructions (Level A)
 - Success Criterion 3.3.5 Help (Level AAA)
 
-Supporting documentation in the Mobile Mapping Appendix included [WCAG 2.0 Techniques that Apply to Mobile](https://www.w3.org/WAI/GL/mobile-a11y-tf/MobileTechniques/) to address mobile web use cases for the rest of the WCAG 2.0 success criterion at the Level A, AA, and AAA levels as they were available in 2015 when the webpage was published. However, most listed techniques have limited application to native mobile applications and cross-platform frameworks like Flutter and React Native.
+Supporting documentation in the Mobile Mapping Appendix included [WCAG 2.0 Techniques that Apply to Mobile](https://www.w3.org/WAI/GL/mobile-a11y-tf/MobileTechniques/) to address mobile web use cases for the rest of the WCAG 2.0 success criterion at the Level A, AA, and AAA levels as they were available in 2015 when the webpage was published. However, most listed techniques have limited application to native Mobile Applications and cross-platform frameworks like Flutter and React Native.
 
 This document includes all WCAG 2.1 Level A and AA success criteria and guidelines:
 
