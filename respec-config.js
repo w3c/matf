@@ -14,7 +14,7 @@ var respecConfig = {
 	//publishDate:          "2024-05-28",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName: "wcag2mobile",
+	shortName: "wcag2mobile-22",
 	
 	// if you wish the publication date to be other than today, set this
 	// publishDate:  "2009-08-06",
