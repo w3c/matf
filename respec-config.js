@@ -55,7 +55,7 @@ var respecConfig = {
     }
   ],
 
-  formetEditors: [
+  formerEditors: [
 	{
 		name: "Kim Patch",
 		company: "Redstart Systems",
