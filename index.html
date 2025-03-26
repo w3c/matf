@@ -13,12 +13,14 @@
 <body>
   <section id="abstract">
     <p>This document describes how Web Content Accessibility Guidelines (WCAG) 2.2 [[WCAG22]] principles, guidelines, and success criteria can be applied to mobile applications, including native mobile apps, mobile web apps and hybrid apps using web components inside native mobile apps. It provides informative guidance (guidance that is not normative and does not set requirements).</p>
+
   </section>
 
   <section id="sotd">
-<p>This is a W3C Group Note on “Guidance on Applying WCAG 2.2 to Mobile Applications (WCAG2Mobile)”. The purpose of this work is to build upon "Mobile Accessibility: How WCAG 2.0 and Other W3C/WAI Guidelines Apply to Mobile" [[mobile-accessibility-mapping]], but also to have a stronger focus on mobile applications and include changes made in WCAG 2.1 and 2.2.</p>
-<p>To comment, <a href="https://github.com/w3c/matf/issues/new">file an issue in the W3C MATF GitHub repository</a>. The Mobile Accessibility Task Force (MATF) requests that public comments be filed as new issues, one issue per discrete comment. It is free to create a GitHub account to file issues. If filing issues in GitHub is not feasible, email <a href="mailto:public-agwg-comments@w3.org?subject=WCAG2Mobile%20public%20comment">public-agwg-comments@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-agwg-comments/">comment archive</a>).</p> 
+    <p>This is a W3C Group Note on &quot;Guidance on Applying WCAG 2.2 to Mobile Applications (WCAG2Mobile)&quot;. The purpose of this work is to build upon &quot;Mobile Accessibility: How WCAG 2.0 and Other W3C/WAI Guidelines Apply to Mobile&quot; [mobile-accessibility-mapping], but also to have a stronger focus on mobile applications and include changes made in WCAG 2.1 and 2.2.</p>
+<p>To comment, <a href="https://github.com/w3c/matf/issues/new">file an issue in the W3C MATF GitHub repository</a>. The Mobile Accessibility Task Force (MATF) requests that public comments be filed as new issues, one issue per discrete comment. It is free to create a GitHub account to file issues. If filing issues in GitHub is not feasible, email <a href="mailto:public-agwg-comments@w3.org?subject=WCAG2Mobile%20public%20comment">public-agwg-comments@w3.org</a> (<a href="https://lists.w3.org/Archives/Public/public-agwg-comments/">comment archive</a>).</p>
 <p>To view in-progress updates to the guidelines, see <a href="https://w3c.github.io/matf/">public editors’ draft</a>.</p>
+
   </section>
 
   <section id="introduction">
@@ -32,20 +34,20 @@
 <li>2.5.1 Pointer Gestures (A), to provide single-pointer alternatives for touch gestures;</li>
 <li>2.5.4 Motion Actuation (A), to provide alternatives for device motion;</li>
 <li>2.5.7 Dragging Movements (AA), to provide single-pointer alternatives for dragging;</li>
-<li>2.5.8 Target Size (Minimum) (AA), to provide minimum touch target sizes; and</li>
+<li>2.5.8 Target Size (Minimum) (AA), to providing minimum touch target sizes;</li>
 <li>3.3.7 Redundant Entry (A), to reduce the amount of repetitive typing.</li>
 </ul>
 <p>In January 2024, MATF regrouped and welcomed new participants to work on updated guidance for applying WCAG 2.2 to mobile applications.</p>
-<p>This current document, “Guidance on Applying WCAG 2.2 to Mobile Applications (WCAG2Mobile)” maps directly to the W3C supporting document, Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT) [[wcag2ict-22]], which was published as a Group Note in October 2024, describing how WCAG 2.2 could be applied to non-web documents and software.</p> 
+<p>This current document, “Guidance on Applying WCAG 2.2 to Mobile Applications (WCAG2Mobile)” maps directly to the W3C supporting document, Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT) [[wcag2ict-22]], which was published as a Group Note in October 2024, describing how WCAG 2.2 could be applied to non-web documents and software.</p>
 <p>The intention of MATF is to publish WCAG2Mobile as a <a href="https://www.w3.org/standards/types/#x2-5-2-group-note">Group Note</a>, just like WCAG2ICT.</p>
 <p>WCAG2ICT is organized to mirror the principle, guideline and success criterion structure of WCAG; this model is also used in WCAG2Mobile. WCAG2ICT clarifies when and how WCAG Level A and Level AA success criteria could be applied to non-web documents and software; WCAG2Mobile narrows the scope of this work to mobile applications.</p>
-<p>For information on related work, see <a href="https://www.w3.org/WAI/standards-guidelines/mobile/">Mobile Accessibility at W3C</a>.</p>	  
+<p>For information on related work, see <a href="https://www.w3.org/WAI/standards-guidelines/mobile/">Mobile Accessibility at W3C</a>.</p>
 
     <h3>Guidance in this document</h3>
 <p>This document provides informative guidance (guidance that is not <a href="https://www.w3.org/TR/WCAG22/#dfn-normative">normative</a> and that does not set requirements) with regard to the interpretation and application of Web Content Accessibility Guidelines (WCAG) to mobile applications. Specifically, this document provides informative guidance on applying WCAG 2.2 Level A and AA success criteria to mobile applications, including native mobile apps, mobile web apps and hybrid apps using web components inside native mobile apps.</p>
 <h4>Interpretation of Web Terminology in a Mobile Context</h4>
 <p>When certain Web-specific terms or phrases like “web page(s)” were used in success criteria, those were replaced with mobile terms or phrases like “screen(s)” or “view(s)”. Additional notes were also provided to explain the terminology replacements.</p>
-<p>A small number of success criteria are written to apply to “a set of web pages” or “multiple web pages” and depend upon all pages in the set to share some characteristic or behavior. Since the unit of conformance in WCAG 2 is a single web page, the task force agreed that the equivalent unit of conformance for mobile applications is a single screen within the application. It follows that an equivalent unit of evaluation for a “set of web pages” would be a “set of screens”, not &mdash; as previously interpreted in WCAG2ICT &mdash; as a “set of software”. These terms are defined in the <a href="#key-terms">Key Terms</a> section of this document. See “set of screens” to determine when a group of screens in a mobile application are considered a set.</p>
+<p>A small number of success criteria are written to apply to “a set of web pages” or “multiple web pages” and depend upon all pages in the set to share some characteristic or behavior. Since the unit of conformance in WCAG 2 is a single web page, the task force agreed that the equivalent unit of conformance for mobile applications is a single screen within the application. It follows that an equivalent unit of evaluation for a “set of web pages” would be a “set of screens”, not — as previously interpreted in WCAG2ICT — as a “set of software”. These terms are defined in the <a href="#key-terms">Key Terms</a> section of this document. See “set of screens” to determine when a group of screens in a mobile application are considered a set.</p>
 <p>The glossary terms were also reviewed and most of them applied to mobile applications, as written. Some applied with additional notes or edits (largely related to phrases like “Web page(s)”), and a small number of terms were only used in Level AAA success criteria, which are not addressed by the WCAG2Mobile Note at this time.</p>
 
     <h3>Excluded from scope</h3>
@@ -53,7 +55,7 @@
 <ul>
 <li>This document provides guidance specifically for mobile applications on phones and tablets; it does not include guidance for other types of mobile devices such as wearables and laptops.</li>
 <li>This document does not propose changes to WCAG 2 or its supporting documents; it does not include interpretations for implementing WCAG 2 in web technologies.</li>
-<li>This document is not sufficient by itself to ensure accessibility in mobile applications &mdash; as a web standard, WCAG does not fully cover all accessibility requirements for non-user interface aspects of platforms, user-interface components as individual items, or closed product software (where there is no assistive technology to communicate programmatic information).</li>
+<li>This document is not sufficient by itself to ensure accessibility in mobile applications — as a web standard, WCAG does not fully cover all accessibility requirements for non-user interface aspects of platforms, user-interface components as individual items, or closed product software (where there is no assistive technology to communicate programmatic information).</li>
 <li>This document does not comment on hardware aspects of products, because the basic constructs on which WCAG 2 is built do not apply to these.</li>
 <li>This document does not comment on WCAG Level AAA success criteria.</li>
 <li>This document does not provide supporting techniques for implementing WCAG 2 in mobile applications.</li>
@@ -72,7 +74,7 @@
 <li>In headings the term “Success Criterion” has been shortened to “SC” for brevity.</li>
 <li>Replacement text that is presented to show how an SC would read as modified by the advice in this document are in <code>&lt;ins&gt;</code> elements that are visually styled as bold green text with a dotted underline.</li>
 <li>Notes are slightly inset and begin with the phrase “NOTE”; each note is in its own inset box styled in pale green with a darker green line on the left side of the box.</li>
-<li>References to glossary items from WCAG 2 are presented in <code>&lt;cite&gt;</code> elements that are visually styled as ordinary text with a dotted underline, and contain title attributes noting these are WCAG definitions &mdash; when mouse or keyboard focus is placed over them, they turn blue with a yellow background.</li>
+<li>References to glossary items from WCAG 2 are presented in <code>&lt;cite&gt;</code> elements that are visually styled as ordinary text with a dotted underline, and contain title attributes noting these are WCAG definitions — when mouse or keyboard focus is placed over them, they turn blue with a yellow background.</li>
 <li>References to glossary items in this document are presented in <code>&lt;cite&gt;</code> elements that are visually styled as ordinary text with a dark gray underline.</li>
 <li>Hereafter, the short title “WCAG2Mobile” is used to reference this document.</li>
 </ul>
@@ -94,7 +96,7 @@
 <ul>
 <li>
       <div class="note">
-        <p>Work In Progress. See <a href="#key-terms">Key Terms section</a>.</p>
+        <p>Work In Progress. See <a href="#key-terms">Key Terms</a> section.</p>
 
       </div>
     </li>
@@ -118,7 +120,7 @@
 <li>Success Criterion 3.3.2 Labels or Instructions (Level A)</li>
 <li>Success Criterion 3.3.5 Help (Level AAA)</li>
 </ul>
-<p>Supporting documentation in the Mobile Mapping Appendix included <a href="https://www.w3.org/WAI/GL/mobile-a11y-tf/MobileTechniques/">WCAG 2.0 Techniques that Apply to Mobile</a> to address mobile web use cases for the rest of the WCAG 2.0 success critera at Level A, Level AA, and Level AAA, as they were available in 2015 when the webpage was published. However, most listed techniques have limited application to native mobile applications and cross-platform frameworks like Flutter and React Native.</p>
+<p>Supporting documentation in the Mobile Mapping Appendix included <a href="https://www.w3.org/WAI/GL/mobile-a11y-tf/MobileTechniques/">WCAG 2.0 Techniques that Apply to Mobile</a> to address mobile web use cases for the rest of the WCAG 2.0 success criteria at Level A, Level AA, and Level AAA, as they were available in 2015 when the webpage was published. However, most listed techniques have limited application to native mobile applications and cross-platform frameworks like Flutter and React Native.</p>
 <p>This document includes all the relevant WCAG 2.1 Level A and AA success criteria and guidelines:</p>
 <ul>
 <li>Success Criterion 1.3.4 Orientation</li>
@@ -142,48 +144,52 @@
 <li>Success Criterion 3.2.6 Consistent Help</li>
 <li>Success Criterion 3.3.7 Redundant Entry</li>
 <li>Success Criterion 3.3.8 Accessible Authentication (Minimum)</li>
-<li>Obsolete and Removed WCAG 2.2 success criteria that have errata for WCAG 2.0 and 2.1 &mdash; e.g., Success Criterion 4.1.1 Parsing</li>
+<li>Obsolete and Removed WCAG 2.2 success criteria that have errata for WCAG 2.0 and 2.1 — e.g., Success Criterion 4.1.1 Parsing</li>
 </ul>
 <p>New terms:</p>
 <ul>
 <li>Added to Glossary from WCAG 2.1 and 2.2 (<strong>Note:</strong> Glossary items used only in AAA Success Criteria have not been included in this current edition):
- <ul>
-  <li>dragging movements</li>
-  <li>encloses</li>
-  <li>focus indicator</li>
-  <li>minimum bounding box</li>
-  <li>pointer input</li>
-  <li>process</li>
-  <li>single pointer</li>
-  <li>state</li>
-  <li>status message</li>
- </ul>
+<ul>
+<li>dragging movements</li>
+<li>encloses</li>
+<li>focus indicator</li>
+<li>minimum bounding box</li>
+<li>pointer input</li>
+<li>process</li>
+<li>single pointer</li>
+<li>state</li>
+<li>status message</li>
+</ul>
+</li>
 <li>Added to Glossary from WCAG2ICT for any context:
- <ul>
-  <li>cognitive function test</li>
-  <li>css pixel</li>
-  <li>down event</li>
-  <li>keyboard shortcut</li>
-  <li>style property</li>
-  <li>target</li>
-  <li>up event</li>
- </ul>
+<ul>
+<li>cognitive function test</li>
+<li>css pixel</li>
+<li>down event</li>
+<li>keyboard shortcut</li>
+<li>style property</li>
+<li>target</li>
+<li>up event</li>
+</ul>
+</li>
 <li>Added to Glossary from WCAG2ICT for mobile context:
- <ul>
-  <li>change of context</li>
-  <li>dragging movements</li>
-  <li>keyboard interface</li>
-  <li>large scale</li>
-  <li>set of web pages</li>
-  <li>set of non-web documents</li>
-  <li>set of software programs</li>
-  <li>user agent</li>
-  <li>user interface component</li>
- </ul>
+<ul>
+<li>change of context</li>
+<li>dragging movements</li>
+<li>keyboard interface</li>
+<li>large scale</li>
+<li>set of web pages</li>
+<li>set of non-web documents</li>
+<li>set of software programs</li>
+<li>set of web pages</li>
+<li>user agent</li>
+<li>user interface component</li>
+</ul>
+</li>
 <li>Added to Glossary specifically for WCAG2Mobile:
- <ul>
-  <li>navigational mechanisms</li>
- </ul>
+<ul>
+<li>navigational mechanisms</li>
+</ul>
 </li>
 </ul>
 
@@ -195,7 +201,7 @@
 <p>“Content” and “user agent” are glossary terms from WCAG2ICT that need to be interpreted significantly differently when applied to mobile applications.</p>
 <p>The glossary terms “document” and “software” in WCAG2ICT are replaced with the defined terms “screen” and “view”. The glossary terms “set of web pages”, “set of documents” and “set of software programs” are replaced with the defined term “set of screens”.</p>
 <p>The term “accessibility services of platform software”, introduced by WCAG2ICT, has been modified to reflect its different use in mobile applications. Additionally, “closed functionality” has a different meaning in the context of mobile applications.</p>
-<p>The remaining glossary terms from WCAG2ICT and WCAG 2 are addressed in <a href="https://w3c.github.io/wcag2ict/#comments-on-definitions-in-wcag-2-glossary">WCAG2ICT: Comments on Definitions in WCAG 2 Glossary</a>.</p>
+<p>The remaining glossary terms from WCAG2ICT and WCAG 2 are addressed in <a href="https://www.w3.org/TR/wcag2ict-22/#comments-on-definitions-in-wcag-2-glossary">WCAG2ICT: Comments on Definitions in WCAG 2 Glossary</a>.</p>
 <p>Terms defined and used in WCAG2Mobile are applicable only to the interpretation of the guidance in this document. The particular definitions should not be interpreted as having applicability to situations beyond the scope of WCAG2Mobile. Further information on usage of these terms follows.</p>
 <p>
       <div class="note">
