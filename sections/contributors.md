@@ -11,7 +11,7 @@
 - Devanshu Chandra (Deque Systems, Inc.)
 - Gert-Jan Vercauteren (Invited Expert)
 - Gleidson Ramos (Invited Expert)
-- Hidde de Vries (Invited Expert)
+- Hidde de Vries (Logius)
 - Illai Zeevi (Invited Expert)
 - Jamie Herrera (Invited Expert)
 - Jan Jaap de Groot (Abra)
