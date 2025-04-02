@@ -5,16 +5,16 @@ var respecConfig = {
 	includePermalinks: true,
 	permalinkEdge: true,
 	permalinkHide: false,
-  noRecTrack: true,
+  	noRecTrack: true,
 
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-	specStatus: "ED",
+	specStatus: "DNOTE",
 	//crEnd:                "2012-04-30",
 	//perEnd:               "2013-07-23",
 	//publishDate:          "2024-05-28",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
-	shortName: "wcag2mobile",
+	shortName: "wcag2mobile-22",
 	
 	// if you wish the publication date to be other than today, set this
 	// publishDate:  "2009-08-06",
@@ -54,7 +54,22 @@ var respecConfig = {
       company: "Invited Expert"
     }
   ],
-	
+
+  formerEditors: [
+	{
+		name: "Kim Patch",
+		company: "Redstart Systems",
+	},
+	{
+		name: "Jeanne Spellman",
+		company: "W3C",
+	},
+	{
+		name: "Kathy Wahlbin",
+		company: "Interactive Accessibility",
+	},
+  ],
+
 	// authors, add as many as you like.
 	// This is optional, uncomment if you have authors as well as editors.
 	// only "name" is required. Same format as editors.
