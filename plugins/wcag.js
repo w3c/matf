@@ -79,6 +79,14 @@ export class WcagPlugin extends Plugin {
    * @returns {string} - The rendered HTML string.
    */
   render(token) {
+    // Add the tag as a prefix to avoid id conflicts
+    const $content = cheerio.load(token.content);
+    $content('[id]').each((_, element) => {
+      const currentId = $content(element).attr('id');
+      $content(element).attr('id', `${this.tag}-${currentId}`);
+    });
+    token.content = $content.html();
+
     return `
       <details class="wcag">
         <summary>
