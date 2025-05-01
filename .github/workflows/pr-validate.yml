@@ -1,0 +1,27 @@
+name: PR Validation
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install Node dependencies and run script
+        run: |
+          npm install
+
+      - name: Run Node script
+        run: |
+          node matf.js
+
+      - name: Run spec-prod
+        uses: w3c/spec-prod@v2
