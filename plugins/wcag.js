@@ -80,7 +80,7 @@ export class WcagPlugin extends Plugin {
    */
   render(token) {
     // Add the tag as a prefix to avoid id conflicts
-    const $content = cheerio.load(token.content);
+    const $content = cheerio.load(token.content, null, false);
     $content('[id]').each((_, element) => {
       const currentId = $content(element).attr('id');
       $content(element).attr('id', `${this.tag}-${currentId}`);
