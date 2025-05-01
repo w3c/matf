@@ -39,19 +39,23 @@ var respecConfig = {
 	  },
     {
       name: "Jamie Herrera",
-      company: "Invited Expert"
+      company: "Invited Expert",
+	  w3cid: 106410
     },
     {
       name: "Joe Humbert",
-      company: "Invited Expert"
+      company: "Invited Expert",
+	  w3cid: 128124
     },
     {
       name: "Julian Kittelson-Aldred",
-      company: "Invited Expert"
+      company: "Invited Expert",
+	  w3cid: 152973
     },
     {
       name: "Jon Gibbins",
-      company: "Invited Expert"
+      company: "Invited Expert",
+	  w3cid: 56789
     }
   ],
 
