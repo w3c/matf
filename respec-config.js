@@ -8,10 +8,10 @@ var respecConfig = {
   	noRecTrack: true,
 
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use ED.
-	specStatus: "DNOTE",
+	specStatus: "ED",
 	//crEnd:                "2012-04-30",
 	//perEnd:               "2013-07-23",
-	//publishDate:          "2024-05-28",
+	//publishDate:          "2025-05-06",
 	
 	// the specifications short name, as in https://www.w3.org/TR/short-name/
 	shortName: "wcag2mobile-22",
@@ -39,19 +39,23 @@ var respecConfig = {
 	  },
     {
       name: "Jamie Herrera",
-      company: "Invited Expert"
+      company: "Invited Expert",
+	  w3cid: 106410
     },
     {
       name: "Joe Humbert",
-      company: "Invited Expert"
+      company: "Invited Expert",
+	  w3cid: 128124
     },
     {
       name: "Julian Kittelson-Aldred",
-      company: "Invited Expert"
+      company: "Invited Expert",
+	  w3cid: 152973
     },
     {
       name: "Jon Gibbins",
-      company: "Invited Expert"
+      company: "Invited Expert",
+	  w3cid: 56789
     }
   ],
 
