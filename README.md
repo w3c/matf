@@ -5,6 +5,7 @@ This repository is used to work on guidance for mobile accessibility.
 - Our most recent [Editor's draft](https://www.w3.org/standards/types/#ED) is published at: [w3c.github.io/matf](https://w3c.github.io/matf/)
 - Discussions are tracked in [MATF issues](https://github.com/w3c/matf/issues)
 - Planning is handled in the [MATF project](https://github.com/orgs/w3c/projects/147)
+- Find more information in the [MATF wiki](https://github.com/w3c/matf/wiki)
 - Read more about the MATF on the [W3C website](https://www.w3.org/WAI/about/groups/task-forces/matf/)
 
 ## Setup
