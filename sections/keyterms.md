@@ -13,3 +13,28 @@ The remaining glossary terms from WCAG2ICT and WCAG 2 are addressed in [WCAG2ICT
 Terms defined and used in WCAG2Mobile are applicable only to the interpretation of the guidance in this document. The particular definitions should not be interpreted as having applicability to situations beyond the scope of WCAG2Mobile. Further information on usage of these terms follows.
 
 [note:**Work in Progress**. See [Issues labeled as 'definition' on GitHub](https://github.com/w3c/matf/issues?q=is%3Aissue%20state%3Aopen%20label%3Adefinition).]
+
+### Page
+
+The term **page**, as used in WCAG2Mobile, has the meaning below:
+
+<dl>
+<dt>page</dt>
+<dd>
+A page is a distinct part of a mobile application that presents specific content or functionality and is rendered together with its associated resources. Users navigate between pages to complete actions or access different features.
+
+[note:Interface elements that rely on the underlying page for context (such as dialogs, modals, navigation menus, and similar components) are typically considered part of that page rather than standalone pages. However, interface elements that significantly change the majority of screen content or function as independent navigational destinations may be considered separate pages.]
+
+<div class="example">
+<strong>Example 1:</strong> A native banking app's account overview screen that displays account balances, recent transactions and interactive charts. The screen includes native components for all interface elements, all rendered together as a single interface.
+</div>
+
+<div class="example">
+<strong>Example 2:</strong> A mobile web banking app's account overview page that displays account balances, recent transactions and interactive charts. The page includes web components for all interface elements, all rendered together in the mobile browser.
+</div>
+
+<div class="example">
+<strong>Example 3:</strong> A hybrid banking app's account overview screen that displays account balances, recent transactions and interactive charts. The screen includes native components for account balances and recent transactions, plus web components for interactive charts, all rendered together as a unified interface.
+</div>
+</dd>
+</dl>
