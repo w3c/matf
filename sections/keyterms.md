@@ -14,6 +14,18 @@ Terms defined and used in WCAG2Mobile are applicable only to the interpretation 
 
 [note:**Work in Progress**. See [Issues labeled as 'definition' on GitHub](https://github.com/w3c/matf/issues?q=is%3Aissue%20state%3Aopen%20label%3Adefinition).]
 
+### Content
+
+The term **content**, as used in WCAG2Mobile, has the meaning below:
+
+<dl>
+<dt>content</dt>
+<dd>
+(work in progress)
+</div>
+</dd>
+</dl>
+
 ### Page
 
 The term **page**, as used in WCAG2Mobile, has the meaning below:
