@@ -33,6 +33,7 @@
 - Rachele DiTullio (Invited Expert)
 - Rob Whitaker (Invited Expert)
 - Steve Faulkner (TetraLogical Services Ltd)
+- Steven Hoober (Invited Expert)
 - Tanya van Workum (Abra)
 - Tim Gravemaker (Invited Expert)
 - Victoria (Tori) Clark (Invited Expert)
