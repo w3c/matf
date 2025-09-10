@@ -1,16 +1,13 @@
-import { Plugin } from './plugin.js';
-import markdownit from 'markdown-it';
+import { AdmonitionPlugin } from './admonition.js';
 
 /**
  * The Note plugin adds a new markdown tag to render a Note.
+ * 
  * For example, the `[note:markdown]` markdown will render a Note containing the given `markdown`.
  */
-export class NotePlugin extends Plugin {
+export class NotePlugin extends AdmonitionPlugin {
   constructor() {
     super('note');
-    this.md = markdownit({ 
-      html: true 
-    })
   }
 
   /**
@@ -22,32 +19,15 @@ export class NotePlugin extends Plugin {
   }
 
   /**
-   * Defines the regex for matching `[note:<markdown>]`.
-   * @returns {RegExp} - The regex for matching the note syntax.
+   * Renders the content for the Note admonition.
+   * @param {string} html - The pre-rendered HTML string.
+   * @param {number|null} number - An optional number specifying the index.
+   * @returns {string} - The rendered content, embedded the HTML string.
    */
-  regex() {
-    return /\[note:(.*)?\]/;
-  }
-
-  /**
-   * Processes the matched content and populates the token with raw markdown.
-   * @param {Array} match - The regex match result.
-   * @param {object} token - The token to populate.
-   */
-  process(match, token) {
-    token.content = match[1].trim(); // Extract the markdown content from the match
-  }
-
-  /**
-   * Renders the token into HTML by converting markdown to HTML for the content.
-   * @param {object} token - The token to render.
-   * @returns {string} - The rendered HTML string.
-   */
-  render(token) {
-    // Use markdown-it to render the content into HTML
-    const html = this.md.render(token.content);
+  content(html, number) {
+    // TODO: Show number in title of note
     return `
-      <div class="note">
+      <div class="note wcag2mobile">
         ${html}
       </div>
     `;
