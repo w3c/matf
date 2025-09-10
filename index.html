@@ -97,7 +97,7 @@
 <li>New key terms introduced by WCAG2Mobile:
 <ul>
 <li>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Work In Progress. See <a href="#key-terms">Key Terms</a> section.</p>
 
       </div>
@@ -206,7 +206,7 @@
 <p>The remaining glossary terms from WCAG2ICT and WCAG 2 are addressed in <a href="https://www.w3.org/TR/wcag2ict-22/#comments-on-definitions-in-wcag-2-glossary">WCAG2ICT: Comments on Definitions in WCAG 2 Glossary</a>.</p>
 <p>Terms defined and used in WCAG2Mobile are applicable only to the interpretation of the guidance in this document. The particular definitions should not be interpreted as having applicability to situations beyond the scope of WCAG2Mobile. Further information on usage of these terms follows.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p><strong>Work in Progress</strong>. See <a href="https://github.com/w3c/matf/issues?q=is%3Aissue%20state%3Aopen%20label%3Adefinition">Issues labeled as 'definition' on GitHub</a>.</p>
 
       </div>
@@ -226,23 +226,35 @@
 <dt>page</dt>
 <dd>
 A page is a distinct part of a mobile application that presents specific content or functionality and is rendered together with its associated resources. Users navigate between pages to complete actions or access different features.
+</dd>
+</dl>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Interface elements that rely on the underlying page for context (such as dialogs, modals, navigation menus, and similar components) are typically considered part of that page rather than standalone pages. However, interface elements that significantly change the majority of screen content or function as independent navigational destinations may be considered separate pages.</p>
 
       </div>
     </p>
-<div class="example">
-<strong>Example 1:</strong> A native banking app's account overview screen that displays account balances, recent transactions and interactive charts. The screen includes native components for all interface elements, all rendered together as a single interface.
-</div>
-<div class="example">
-<strong>Example 2:</strong> A mobile web banking app's account overview page that displays account balances, recent transactions and interactive charts. The page includes web components for all interface elements, all rendered together in the mobile browser.
-</div>
-<div class="example">
-<strong>Example 3:</strong> A hybrid banking app's account overview screen that displays account balances, recent transactions and interactive charts. The screen includes native components for account balances and recent transactions, plus web components for interactive charts, all rendered together as a unified interface.
-</div>
-</dd>
-</dl>
+<p>
+      <div class="example wcag2mobile">
+        <div class="marker">Example</div>
+        <p>A native banking app's account overview screen that displays account balances, recent transactions and interactive charts. The screen includes native components for all interface elements, all rendered together as a single interface.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="example wcag2mobile">
+        <div class="marker">Example</div>
+        <p>A mobile web banking app's account overview page that displays account balances, recent transactions and interactive charts. The page includes web components for all interface elements, all rendered together in the mobile browser.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="example wcag2mobile">
+        <div class="marker">Example</div>
+        <p>A hybrid banking app's account overview screen that displays account balances, recent transactions and interactive charts. The screen includes native components for account balances and recent transactions, plus web components for interactive charts, all rendered together as a unified interface.</p>
+
+      </div>
+    </p>
 
   </section>
 
@@ -250,7 +262,7 @@ A page is a distinct part of a mobile application that presents specific content
     <h2>Comments by Principle, Guideline and Success Criterion</h2>
 <p>The sections that follow are organized according to the principles, guidelines and success criteria from WCAG 2.2. The text of each principle, guideline and success criterion from WCAG 2.2 is provided as quoted text. Following that, the WCAG2ICT guidance is provided as quoted text. Next, the WCAG2Mobile guidance itself is provided.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p><strong>Work in Progress</strong>. The document currently only includes guidance for success criteria. The guidance for principles and guidelines will be added at a later stage.</p>
 
       </div>
@@ -376,7 +388,7 @@ A page is a distinct part of a mobile application that presents specific content
     </p>
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content">Intent from Understanding Success Criterion 1.1.1</a>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Not all mobile platforms provide a way to programmatically associate a <a href="https://www.w3.org/TR/WCAG22/#dfn-labels">label</a> with <a href="https://www.w3.org/TR/WCAG22/#dfn-non-text-content">non-text content</a>.</p>
 
       </div>
@@ -460,7 +472,7 @@ A page is a distinct part of a mobile application that presents specific content
     </p>
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-only-and-video-only-prerecorded#intent">Intent from Understanding Success Criterion 1.2.1</a>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>The alternative can be provided directly on the <strong><a href="#page">page</a></strong> – or provided in an alternate version that meets the success criteria.</p>
 
       </div>
@@ -518,7 +530,7 @@ A page is a distinct part of a mobile application that presents specific content
     </p>
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded#intent">Intent from Understanding Success Criterion 1.2.2</a>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>The WCAG 2 definition of “<a href="https://www.w3.org/TR/WCAG22/#dfn-captions">captions</a>” notes that “in some countries, captions are called subtitles”. They are also sometimes referred to as “subtitles for the hearing impaired.” Per the definition in WCAG 2, to meet this success criterion, whether called captions or subtitles, they would have to provide “synchronized visual and / or text alternative for both speech and non-speech audio information needed to understand the media content” where non-speech information includes “sound effects, music, laughter, speaker identification and location”.</p>
 
       </div>
@@ -582,13 +594,13 @@ A page is a distinct part of a mobile application that presents specific content
     </p>
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded#intent">Intent from Understanding Success Criterion 1.2.3</a>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>The WCAG 2 definition of “<a href="https://www.w3.org/TR/WCAG22/#dfn-audio-descriptions">audio description</a>” says that “audio description” is “also called ‘video description’ and ‘descriptive narration’”.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Secondary or alternate audio tracks are commonly used for this purpose.</p>
 
       </div>
@@ -646,7 +658,7 @@ A page is a distinct part of a mobile application that presents specific content
     </p>
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/captions-live#intent">Intent from Understanding Success Criterion 1.2.4</a>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>The WCAG 2 definition of “<a href="https://www.w3.org/TR/WCAG22/#dfn-captions">captions</a>” notes that “In some countries, captions are called subtitles”. They are also sometimes referred to as “subtitles for the hearing impaired.” Per the definition in WCAG 2, to meet this success criterion, whether called captions or subtitles, they would have to provide “synchronized visual and / or text alternative for both speech and non-speech audio information needed to understand the media content” where non-speech information includes “sound effects, music, laughter, speaker identification and location”.</p>
 
       </div>
@@ -707,13 +719,13 @@ A page is a distinct part of a mobile application that presents specific content
     </p>
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded#intent">Intent from Understanding Success Criterion 1.2.5</a>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>The WCAG 2 definition of “<a href="https://www.w3.org/TR/WCAG22/#dfn-audio-descriptions">audio description</a>” says that audio description is “also called ‘video description’ and ‘descriptive narration’”.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Secondary or alternate audio tracks are commonly used for this purpose.</p>
 
       </div>
@@ -836,7 +848,7 @@ A page is a distinct part of a mobile application that presents specific content
     </p>
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence">Intent from Understanding Success Criterion 1.3.4</a>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Grouping related elements using semantic containers helps ensure a meaningful reading sequence.</p>
 
       </div>
@@ -951,13 +963,13 @@ A page is a distinct part of a mobile application that presents specific content
     </p>
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/orientation">Intent from Understanding Success Criterion 1.3.4</a>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Content that supports orientation changes must continue to meet all applicable success criteria in each supported orientation.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>It is considered a best practice to support all available orientations, such as as portrait, portrait (reversed), landscape, and landscape (reversed).</p>
 
       </div>
@@ -1087,7 +1099,7 @@ A page is a distinct part of a mobile application that presents specific content
     </p>
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color">Intent from Understanding Success Criterion 1.4.1</a>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>If a mobile platform’s built-in distinction relies only on color, additional visual means must convey the information.</p>
 
       </div>
@@ -1157,7 +1169,7 @@ A page is a distinct part of a mobile application that presents specific content
 <p>With these substitutions, it would read:</p>
 <p><strong>1.4.2 Audio Control:</strong> If any audio on a <strong><a href="#page">page</a></strong> plays automatically for more than 3 seconds, either a mechanism is available to pause or stop the audio, or a <a href="https://www.w3.org/TR/WCAG22/#dfn-mechanism">mechanism</a> is available to control audio volume independently from the overall system volume level.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Since any content that does not meet this success criterion can interfere with a user's ability to use the whole <strong><a href="#page">page</a></strong>, all content on the <strong><a href="#page">page</a></strong> (whether it is used to meet other success criteria or not) must meet this success criterion.</p>
 
       </div>
@@ -1671,19 +1683,19 @@ A page is a distinct part of a mobile application that presents specific content
 </ul>
 <p>Exception: <a href="https://www.w3.org/WAI/WCAG22/Understanding/text-spacing#dfn-human-language">Human languages</a> and scripts that do not make use of one or more of these text style properties in written text can conform using only the properties that exist for that combination of language and script.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Content is not required to use these text spacing values. The requirement is to ensure that when a user overrides the authored text spacing, content or functionality is not lost.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Writing systems for some languages use different text spacing settings, such as paragraph start indent. Authors are encouraged to follow locally available guidance for improving readability and legibility of text in their writing system.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>If a mobile platform does not include a way for users to override text style properties, this success criterion is not applicable.</p>
 
       </div>
@@ -2011,13 +2023,13 @@ A page is a distinct part of a mobile application that presents specific content
     </p>
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts">Intent from Understanding Success Criterion 2.1.4</a>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>The WCAG2ICT interpretation is that a long press of a key (2 seconds or more) and other accessibility features provided by the platform do not meet the WCAG definition of a keyboard shortcut. See the <a href="https://www.w3.org/TR/wcag2ict-22/#dfn-keyboard-shortcuts">keyboard shortcut</a> definition for more details.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>The WCAG2Mobile interpretation aligns with WCAG2ICT, emphasizing that long presses and other accessibility features are not addressed by this success criterion.</p>
 
       </div>
@@ -2169,7 +2181,7 @@ A page is a distinct part of a mobile application that presents specific content
 <li>20 Hour Exception: The time limit is longer than 20 hours.</li>
 </ul>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>This success criterion helps ensure that users can complete tasks without unexpected changes in content or context that are a result of a time limit. This success criterion should be considered in conjunction with <a href="https://www.w3.org/TR/WCAG22/#on-focus">Success Criterion 3.2.1</a>, which puts limits on changes of content or context as a result of user action.</p>
 
       </div>
@@ -2301,31 +2313,31 @@ A page is a distinct part of a mobile application that presents specific content
 <p><strong>Auto-updating</strong></p>
 <p>For any auto-updating information that (1) starts automatically and (2) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it or to control the frequency of the update unless the auto-updating is part of an activity where it is essential.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>For requirements related to flickering or flashing content, refer to <a href="https://www.w3.org/TR/WCAG22/#seizures-and-physical-reactions">Guideline 2.3</a>.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Since any content that does not meet this success criterion can interfere with a user's ability to use the whole <strong><a href="#page">page</a></strong>, all content on the <a href="#page">page</a> (whether it is used to meet other success criteria or not) must meet this success criterion.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Content that is updated periodically by software or that is streamed to the user agent is not required to preserve or present information that is generated or received between the initiation of the pause and resuming presentation, as this may not be technically possible, and in many situations could be misleading to do so.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>An animation that occurs as part of a preload phase or similar situation can be considered essential if interaction cannot occur during that phase for all users and if not indicating progress could confuse users or cause them to think that content was frozen or broken.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>While the success criterion uses the term “information”, the WCAG 2 Intent section makes it clear that this is to be applied to all content. Any content, whether informative or decorative, that is updated automatically, blinks, or moves may create an accessibility barrier.</p>
 
       </div>
@@ -2392,7 +2404,7 @@ A page is a distinct part of a mobile application that presents specific content
 <p>With these substitutions, it would read:</p>
 <p><strong>2.3.1 Three Flashes or Below Threshold:</strong> <strong><a href="#page">Pages</a></strong> do not contain anything that flashes more than three times in any one second period, or the <a href="https://www.w3.org/TR/WCAG22/#dfn-flashes">flash</a> is below the <a href="https://www.w3.org/TR/wcag2ict-22/#dfn-general-flash-and-red-flash-thresholds">general flash and red flash thresholds</a>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Since any content that does not meet this success criterion can interfere with a user's ability to use the whole <strong><a href="#page">page</a></strong>, all content on the <a href="#page">page</a> (whether it is used to meet other success criteria or not) must meet this success criterion.</p>
 
       </div>
@@ -2658,13 +2670,13 @@ A page is a distinct part of a mobile application that presents specific content
     </p>
 <p>This applies directly as written, and as described in Intent from <a href="https://www.w3.org/WAI/WCAG22/Understanding/link-purpose-in-context#intent">Understanding Success Criterion 2.4.4</a>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Examples of links in mobile applications include, but are not limited to: list items, menu items, navigation bar items, tab bar items and text hyperlinks.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>It is considered a best practice to ensure the purpose of all controls can be determined.</p>
 
       </div>
@@ -2801,13 +2813,13 @@ A page is a distinct part of a mobile application that presents specific content
     </p>
 <p>This applies directly as written, and as described in Intent from <a href="https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels#intent">Understanding Success Criterion 2.4.6</a>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Examples of headings in mobile applications include, but are not limited to: screen titles, dialog titles and section headers.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Examples of labels in mobile applications include, but are not limited to: button text, tab bar items, toggle labels and input field labels.</p>
 
       </div>
@@ -3864,13 +3876,13 @@ Sets of software that meet this definition appear to be extremely rare.</div></d
 <li>A fully automated contact mechanism.</li>
 </ul>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Help mechanisms may be provided directly on the <a href="#page">page</a>, or may be provided via a direct link to a different <a href="#page">page</a> containing the information.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>For this success criterion, &quot;the same order relative to other <a href="#page">page</a> content&quot; can be thought of as how the content is ordered when the <a href="#page">page</a> is serialized. The visual position of a help mechanism is likely to be consistent across <a href="#page">pages</a> for the same*<a href="#page">page</a> variation (e.g., <strong>break-point</strong>). The user can initiate a change, such as changing the <a href="#page">page</a>'s zoom or orientation, which may trigger a different <a href="#page">page</a> variation. This criterion is concerned with relative order across <a href="#page">pages</a> displayed in the same <a href="#page">page</a> variation (e.g., same zoom level and orientation).</p>
 
       </div>
@@ -4275,25 +4287,25 @@ The cognitive function test is to recognize objects.</p>
 <p><strong>Personal Content</strong>
 The cognitive function test is to identify <a href="https://www.w3.org/TR/WCAG22/#dfn-non-text-content">non-text content</a> the user provided to the <strong>application</strong>.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>“Object recognition” and “Personal content” may be represented by images, video, or audio.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Examples of mechanisms that satisfy this criterion include: support for password entry by password managers to reduce memory need, and copy and paste to reduce the cognitive burden of re-typing.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Any passwords used to unlock underlying <a href="https://www.w3.org/TR/wcag2ict-22/#platform-software">platform software</a> (running below the non-web software) are out of scope for this requirement since these are not under control of the non-web software’s author.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>There are cases where non-web software has an authentication process and no alternative or assistance mechanism is feasible, for example when entering a password when starting, powering on / turning on an ICT (device or otherwise). In such situations, it may not be possible for the non-web software to satisfy this success criterion.</p>
 
       </div>
@@ -4347,7 +4359,7 @@ The cognitive function test is to identify <a href="https://www.w3.org/TR/WCAG22
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/parsing">Intent from Understanding Success Criterion 4.1.1</a>, meaning that it has been marked as <strong>obsolete and removed</strong>.</p>
 <p>(Obsolete and removed)</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>WCAG 2.2 has made this success criterion obsolete and removed it as a requirement in the standard. Therefore, the interpretation of this success criterion for mobile applications has been removed.</p>
 
       </div>
@@ -4485,7 +4497,7 @@ The cognitive function test is to identify <a href="https://www.w3.org/TR/WCAG22
 <p>With these substitutions, it would read:</p>
 <p><strong>4.1.3 Status Messages:</strong> In <a href="#content">content</a>, <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages#dfn-status-message">status messages</a> can be <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages#dfn-programmatically-determined">programmatically determined</a> through <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages#dfn-role">role</a> or properties such that they can be presented to the user by <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages#dfn-assistive-technology">assistive technologies</a> without receiving focus.</p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>This is typically enabled through the use of accessibility services of the <a href="https://www.w3.org/TR/wcag2ict-22/#user-agent">user agent</a> or <a href="https://www.w3.org/TR/wcag2ict-22/#platform-software">platform software</a>.</p>
 
       </div>
