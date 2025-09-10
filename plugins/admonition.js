@@ -4,7 +4,9 @@ import markdownit from 'markdown-it';
 /**
  * The AdmonitionPlugin plugin adds a new markdown tag to render an Admonition.
  * 
- * For example, the `[tag:markdown]` markdown will render an Admonition containing the given `markdown`.
+ * For example:
+ * - `[tag:markdown]` renders an Admonition for the given markdown 
+ * - `[tag1:markdown]` renders an Admonition with the number 1 for the given markdown
  */
 export class AdmonitionPlugin extends Plugin {
   constructor(tag) {
@@ -15,11 +17,11 @@ export class AdmonitionPlugin extends Plugin {
   }
 
   /**
-   * Defines the regex for matching `[note:<markdown>]`.
-   * @returns {RegExp} - The regex for matching the note syntax.
+   * Defines the regex for matching `[tag<number?>:<markdown>]`.
+   * @returns {RegExp} - The regex for matching the admonition syntax.
    */
   regex() {
-    return new RegExp(`\\[${this.tag}:(.*)\\]`);
+    return new RegExp(`\\[${this.tag}(\\d*):(.*)\\]`);
   }
 
   /**
@@ -28,7 +30,10 @@ export class AdmonitionPlugin extends Plugin {
    * @param {object} token - The token to populate.
    */
   process(match, token) {
-    token.content = match[1].trim(); // Extract the markdown content from the match
+    // Extract the number, if available
+    token.number = match[1] ? parseInt(match[1], 10) : null;
+     // Extract the markdown content
+    token.content = match[2].trim();
   }
 
   /**
@@ -39,15 +44,16 @@ export class AdmonitionPlugin extends Plugin {
   render(token) {
     // Use markdown-it to render the content into HTML
     const html = this.md.render(token.content);
-    return this.content(html);
+    return this.content(html, token.number);
   }
 
   /**
    * Renders the content for the type of admonition.
    * @param {string} html - The pre-rendered HTML string.
+   * @param {number|null} number - An optional number specifying the index.
    * @returns {string} - The rendered content, embedded the HTML string.
    */
-  content(html) {
+  content(html, number) {
     throw new Error(`Subclass ${this.name} must implement 'content()'`);
   }
 }

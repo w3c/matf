@@ -18,7 +18,14 @@ export class NotePlugin extends AdmonitionPlugin {
     return new NotePlugin().plugin();
   }
 
-  content(html) {
+  /**
+   * Renders the content for the Note admonition.
+   * @param {string} html - The pre-rendered HTML string.
+   * @param {number|null} number - An optional number specifying the index.
+   * @returns {string} - The rendered content, embedded the HTML string.
+   */
+  content(html, number) {
+    // TODO: Show number in title of note
     return `
       <div class="note wcag2mobile">
         ${html}

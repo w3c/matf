@@ -18,10 +18,17 @@ export class ExamplePlugin extends AdmonitionPlugin {
     return new ExamplePlugin().plugin();
   }
 
-  content(html) {
+  /**
+   * Renders the content for the Example admonition.
+   * @param {string} html - The pre-rendered HTML string.
+   * @param {number|null} number - An optional number specifying the index.
+   * @returns {string} - The rendered content, embedded the HTML string.
+   */
+  content(html, number) {
+    const title = number !== null ? `Example ${number}` : 'Example';
     return `
       <div class="example wcag2mobile">
-        <div class="marker">Example</div>
+        <div class="marker">${title}</div>
         ${html}
       </div>
     `;
