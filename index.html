@@ -3143,30 +3143,33 @@ Completing the function on the down-event is essential.
 </dd>
 </dl>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>This requirement applies to mobile applications that interpret pointer actions (i.e., this does not apply to actions that are required to operate the platform software, operating system, or assistive technology). Each layer is responsible for its own pointer actions only, not for those in an underlying layer.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>Functions that emulate a keyboard or numeric keypad key press are considered essential.</p>
 
       </div>
     </p>
 <p>
-      <div class="note">
+      <div class="note wcag2mobile">
         <p>The determination of &quot;essential&quot; should focus on whether the function itself requires down-event activation, rather than solely on technological constraints. However, limitations of the underlying technology platform may also constitute valid exceptions where developers cannot provide alternative implementations.</p>
 
       </div>
     </p>
-<div class="example">
+<div class="example wcag2mobile">
 <strong>Example:</strong>
 <br/>
-Examples of essential functionality for mobile applications include:
+Examples of essential functionality in mobile applications include:
 <ul>
-  <li>Features required for meeting system requirements (such as waking a device from sleep, power management controls, and emergency functions)</li>
-  <li>Interactions that require pointer down to function, such as drawing or sketching tools</li>
+  <li>Drawing and sketching functionality where continuous pressure-sensitive input begins on the down-event.</li>
+  <li>Keyboard emulation functionality where keys activate on down-event to match expected physical keyboard behavior.</li>
+  <li>Musical instrument functionality where the down-event timing is essential to produce the intended sound at the correct moment.</li>
+  <li>Gaming functionality requiring precise down-event timing such as rhythm games, sports simulations and action games.
+  </li>
 </ul>
 </div>
 
