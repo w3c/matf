@@ -3010,14 +3010,18 @@ A page is a distinct part of a mobile application that presents specific content
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in Intent from <a href="https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures#intent">Understanding Success Criterion 2.5.1</a>.</p>
+<p><strong>2.5.1 Pointer Gestures:</strong> All <a href="https://www.w3.org/TR/WCAG22/#dfn-functionality">functionality</a> that uses multipoint or path-based gestures for operation can be operated with a <a href="https://www.w3.org/TR/WCAG22/#dfn-single-pointer">single pointer</a> without a path-based gesture, unless a multipoint or path-based gesture is <a href="https://www.w3.org/TR/WCAG22/#dfn-essential">essential</a>.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/37" target="_blank">
-            Read issue #37 on GitHub
-          </a>
-        </p>
+      <div class="note">
+        <p>This requirement applies to mobile applications that interpret pointer actions (i.e., this does not apply to actions that are required to operate the platform software, operating system, or assistive technology). Each layer is responsible for its own pointer actions only, not for those in an underlying layer.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note">
+        <p>Examples of multipoint gestures include pinch-to-zoom, two-finger scrolling, split-tap (where one finger rests on screen while another taps), and multi-finger swipes.<br/><br/>Examples of path-based gestures include swipe gestures requiring specific directional input such as carousels and sliders, custom drawing gestures, and pull-to-refresh actions.<br/><br/>Multipoint and path-based gestures handled by underlying layers (platform software, operating system, or assistive technology) are exempt under Note 1.</p>
+
       </div>
     </p>
 
