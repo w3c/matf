@@ -26,6 +26,28 @@ The term **content**, as used in WCAG2Mobile, has the meaning below:
 </dd>
 </dl>
 
+### Change of context
+
+The term **change of context**, as used in WCAG2Mobile, has the meaning below:
+
+<dl>
+<dt>changes of context</dt>
+<dd>
+Changes of context are major changes that, if made without user awareness, can disorient users who are not able to view the entire page simultaneously.
+Changes in context include changes of:
+
+- application;
+- [user agent](#user-agent);
+- viewport;
+- focus;
+- [content](#content) that changes the meaning of the page.
+</dd>
+</dl>
+
+[note:A change of content is not always a change of context. Changes in content, such as an expanding outline, dynamic menu, or a tab bar control do not necessarily change the context, unless they also change one of the above (e.g., focus).]
+
+[example1:Opening a new application, moving focus to a different component, going to a new page (including anything that would look to a user as if they had moved to a new page), or significantly re-arranging the content of a page are examples of changes of context.]
+
 ### Page
 
 The term **page**, as used in WCAG2Mobile, has the meaning below:
@@ -44,3 +66,15 @@ A page is a distinct part of a mobile application that presents specific content
 [example2:A mobile web banking app's account overview page that displays account balances, recent transactions and interactive charts. The page includes web components for all interface elements, all rendered together in the mobile browser.]
 
 [example3:A hybrid banking app's account overview screen that displays account balances, recent transactions and interactive charts. The screen includes native components for account balances and recent transactions, plus web components for interactive charts, all rendered together as a unified interface.]
+
+### User agent
+
+The term **user agent**, as used in WCAG2Mobile, has the meaning below:
+
+<dl>
+<dt>user agent</dt>
+<dd>
+(work in progress)
+</div>
+</dd>
+</dl>
