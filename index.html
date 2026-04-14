@@ -3613,14 +3613,19 @@ Examples of essential functionality in mobile applications include:
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in Intent from <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts#intent">Understanding Success Criterion 3.1.2</a>.</p>
+<p><strong>3.1.2 Language of Parts</strong> The <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts#dfn-human-language">human language</a> of each passage or phrase in the content can be <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts#dfn-programmatically-determined">programmatically determined</a> except for proper names, technical terms, words of indeterminate language, and words or phrases that have become part of the vernacular of the immediately surrounding <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts#dfn-text">text</a>.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/15" target="_blank">
-            Read issue #15 on GitHub
-          </a>
-        </p>
+      <div class="note wcag2mobile">
+        <p>The exception to this criterion applies when the underlying technology, platform, or operating system imposes technical limitations. In such cases, the requirement should be followed as closely as possible within the available technical capabilities. An example of the exception is where the underlying technology does not support marking up language of parts of text, or where it would require marking up all text in all locations within the software.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="example wcag2mobile">
+        <div class="marker">Example</div>
+        <p>A German mobile app includes the English phrase “Welcome back.” On Android, the phrase is programmatically determined as English using LocaleSpan, allowing TalkBack to use the correct English pronunciation. On iOS, the same phrase is programmatically determined using accessibilitySpeechLanguage, ensuring that VoiceOver also uses the correct English pronunciation rather than the German pronunciation.</p>
+
       </div>
     </p>
 
