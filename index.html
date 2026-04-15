@@ -3257,9 +3257,22 @@ Examples of essential functionality in mobile applications include:
       </details>
     </p>
 <p>This applies directly as written, and as described in Intent from <a href="https://www.w3.org/WAI/WCAG22/Understanding/label-in-name#intent">Understanding Success Criterion 2.5.3</a>.</p>
+<p><strong>2.5.3 Label in Name:</strong> For <a href="https://www.w3.org/TR/WCAG22/#dfn-user-interface-components">user interface components</a> with <a href="https://www.w3.org/TR/WCAG22/#dfn-labels">labels</a> that include <a href="https://www.w3.org/TR/WCAG22/#dfn-text">text</a> or <a href="https://www.w3.org/TR/WCAG22/#dfn-images-of-text">images of text</a>, the <a href="https://www.w3.org/TR/WCAG22/#dfn-name">name</a> contains the text that is presented visually.</p>
 <p>
-      <div class="note">
-        <p>When user interface components have nested controls, the name should include the primary visible label but is not required to contain all presented text.</p>
+      <div class="note wcag2mobile">
+        <p>A best practice is to have the text of the label at the start of the name. This is particularly important for voice control users who rely on speaking the visible text to interact with user interface components.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note wcag2mobile">
+        <p>Some user interface components such as tiles, cards, or list items may include multiple text components. The text that serves as the primary label must be contained in the name. Other visible text components must be exposed through other accessibility properties.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note wcag2mobile">
+        <p>Custom accessibility actions that group multiple functions may use descriptive names like &quot;actions available&quot; for assistive technologies.</p>
 
       </div>
     </p>
