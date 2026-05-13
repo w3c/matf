@@ -20,8 +20,8 @@ const initMarkdown = async () => {
     .use(await ExamplePlugin.init())
     .use(await GitHubPlugin.init('https://github.com/w3c/matf'))
     .use(await NotePlugin.init())
-    .use(await WcagPlugin.init('wcag', 'https://www.w3.org/TR/WCAG22/'))
-    .use(await WcagPlugin.init('wcag2ict', 'https://www.w3.org/TR/wcag2ict-22/'));
+    .use(await WcagPlugin.init('wcag', 'https://www.w3.org/TR/2024/REC-WCAG22-20241212/'))
+    .use(await WcagPlugin.init('wcag2ict', 'https://www.w3.org/TR/2025/NOTE-wcag2ict-22-20251211/'));
 };
 
 // Read files with given extension from given folder
