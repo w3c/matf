@@ -3410,14 +3410,19 @@ Examples of essential functionality in mobile applications include:
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html#intent">Intent from Understanding Success Criterion 2.5.7</a>, replacing &quot;user agent&quot; with &quot;user agent or other platform software&quot; and by making changes to the notes for non-web documents by replacing “web content” with &quot;content&quot;, and for non-web software by replacing &quot;web content that interprets&quot; with &quot;non-web software that interprets&quot; and &quot;user agent&quot; with &quot;underlying platform software&quot;.</p>
+<p>With these substitutions, it would read:</p>
+<p><strong>2.5.7 Dragging Movements:</strong> All <a href="https://www.w3.org/TR/wcag22/#dfn-functionality">functionality</a> that uses a <a href="https://www.w3.org/TR/wcag22/#dfn-dragging-movements">dragging movement</a> for operation can be achieved by a <a href="https://www.w3.org/TR/wcag22/#dfn-single-pointer">single pointer</a> without dragging, unless dragging is <a href="https://www.w3.org/TR/wcag22/#dfn-essential">essential</a> or the functionality is determined by the <a href="#">user agent</a> and not modified by the author.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/53" target="_blank">
-            Read issue #53 on GitHub
-          </a>
-        </p>
+      <div class="note wcag2mobile">
+        <p>This requirement applies to mobile applications that interpret pointer actions (i.e., this does not apply to actions that are required to operate the <a href="#">underlying platform software</a> or <a href="https://www.w3.org/TR/WCAG22/#dfn-assistive-technologies">assistive technology</a>).</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note wcag2mobile">
+        <p>This requirement also applies to platform software, such as user agents, assistive technology software, and operating systems. Each layer is responsible for its own pointer actions only, not for those in an underlying layer.</p>
+
       </div>
     </p>
 
