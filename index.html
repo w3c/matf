@@ -3581,14 +3581,19 @@ Examples of essential functionality in mobile applications include:
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-page#intent">Intent from Understanding Success Criterion 3.1.1</a>, replacing &quot;each web page&quot; with &quot;each page&quot;.</p>
+<p>With this substitution, it would read:</p>
+<p><strong>3.1.1 Language of Page:</strong> The default human language of each page can be <a href="https://www.w3.org/TR/WCAG22/#dfn-programmatically-determinable">programmatically determined</a>.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/14" target="_blank">
-            Read issue #14 on GitHub
-          </a>
-        </p>
+      <div class="note wcag2mobile">
+        <p>In mobile applications, the language is typically set at the app level through the app's locale and inherited by all pages. The locale must be compatible with the human language of the content. An incorrect or missing locale causes assistive technologies to use wrong pronunciation rules.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note wcag2mobile">
+        <p>This success criterion may not be applicable if the platform does not support setting the locale at the app level.</p>
+
       </div>
     </p>
 
