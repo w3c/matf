@@ -2613,14 +2613,20 @@ a part of the <a href="#content">content</a> that is perceived by users as a sin
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in Intent from Understanding Success Criterion 2.4.2, replacing &quot;Web pages&quot; with &quot;Pages&quot;.</p>
+<p>With this substitution, it would read:</p>
+<p><strong>2.4.2 Page Titled:</strong> Pages have titles that describe topic or purpose.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/9" target="_blank">
-            Read issue #9 on GitHub
-          </a>
-        </p>
+      <div class="note wcag2mobile">
+        <p>A page title must be provided through visible text. It must be specific to each page and not reused across distinct pages in a way that makes the user's location or purpose unclear.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="example wcag2mobile">
+        <div class="marker">Example</div>
+        <p>Examples of a page title include: (1) a title in a navigation bar; (2) a heading at the top of the page; (3) an active tab in a tab bar.</p>
+
       </div>
     </p>
 
@@ -3423,14 +3429,19 @@ Examples of essential functionality in mobile applications include:
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html#intent">Intent from Understanding Success Criterion 2.5.7</a>, replacing &quot;user agent&quot; with &quot;user agent or other platform software&quot; and by making changes to the notes for non-web documents by replacing “web content” with &quot;content&quot;, and for non-web software by replacing &quot;web content that interprets&quot; with &quot;non-web software that interprets&quot; and &quot;user agent&quot; with &quot;underlying platform software&quot;.</p>
+<p>With these substitutions, it would read:</p>
+<p><strong>2.5.7 Dragging Movements:</strong> All <a href="https://www.w3.org/TR/wcag22/#dfn-functionality">functionality</a> that uses a <a href="https://www.w3.org/TR/wcag22/#dfn-dragging-movements">dragging movement</a> for operation can be achieved by a <a href="https://www.w3.org/TR/wcag22/#dfn-single-pointer">single pointer</a> without dragging, unless dragging is <a href="https://www.w3.org/TR/wcag22/#dfn-essential">essential</a> or the functionality is determined by the <a href="#">user agent</a> and not modified by the author.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/53" target="_blank">
-            Read issue #53 on GitHub
-          </a>
-        </p>
+      <div class="note wcag2mobile">
+        <p>This requirement applies to mobile applications that interpret pointer actions (i.e., this does not apply to actions that are required to operate the <a href="#">underlying platform software</a> or <a href="https://www.w3.org/TR/WCAG22/#dfn-assistive-technologies">assistive technology</a>).</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note wcag2mobile">
+        <p>This requirement also applies to platform software, such as user agents, assistive technology software, and operating systems. Each layer is responsible for its own pointer actions only, not for those in an underlying layer.</p>
+
       </div>
     </p>
 
@@ -3588,14 +3599,26 @@ Examples of essential functionality in mobile applications include:
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-page#intent">Intent from Understanding Success Criterion 3.1.1</a>, replacing &quot;each web page&quot; with &quot;each page&quot;.</p>
+<p>With this substitution, it would read:</p>
+<p><strong>3.1.1 Language of Page:</strong> The default human language of each page can be <a href="https://www.w3.org/TR/WCAG22/#dfn-programmatically-determinable">programmatically determined</a>.</p>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/14" target="_blank">
-            Read issue #14 on GitHub
-          </a>
-        </p>
+      <div class="note wcag2mobile">
+        <p>In mobile applications, the language is typically set at the app level through the app's locale and inherited by all pages. The locale must be compatible with the human language of the content. An incorrect or missing locale causes assistive technologies to use incorrect pronunciation rules.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="example wcag2mobile">
+        <div class="marker">Example</div>
+        <p>If the platform language is set to Spanish but the app displays English content, the app's locale must be set to English so that the screen reader uses English pronunciation rules and announces roles such as &quot;Button&quot; rather than &quot;Botón&quot;.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note wcag2mobile">
+        <p>This success criterion applies at the platform level (e.g. Android, iOS) and may not be applicable if the platform does not support setting the locale at the app level.</p>
+
       </div>
     </p>
 
