@@ -1,6 +1,7 @@
 import { Plugin } from './plugin.js';
 import * as cheerio from 'cheerio';
-import * as puppeteer from 'puppeteer';
+import * as fs from 'fs';
+import * as path from 'path';
 
 /**
  * The WCAG plugin adds a new markdown tag which can render sections of WCAG.
@@ -15,10 +16,10 @@ export class WcagPlugin extends Plugin {
   }
 
   /**
-   * Initializes the WcagPlugin by fetching and preparing the HTML content from the provided URL.
+   * Initializes the WcagPlugin by fetching HTML from a local file derived from the provided URL.
    * @param {string} tag - The tag used in markdown (e.g., `wcag` or `wcag2ict`).
-   * @param {string} url - The URL to fetch content from (e.g., `https://www.w3.org/TR/WCAG22/`).
-   * @returns {Promise<{function}>} - An initialized `WcagPlugin` function.
+   * @param {string} url - The URL to derive filename from (e.g., `https://www.w3.org/TR/2024/REC-WCAG22-20241212/`).
+   * @returns {Promise<function>} - An initialized `WcagPlugin` function.
    */
   static async init(tag, url) {
     const html = await WcagPlugin.fetchHTML(url);
@@ -26,31 +27,33 @@ export class WcagPlugin extends Plugin {
   }
 
   /**
-   * Fetches the rendered HTML from the given URL using Puppeteer.
-   * @param {string} url - The URL to fetch.
-   * @returns {Promise<string>} - The rendered HTML content.
+   * Loads HTML from a local file derived from the URL.
+   * @param {string} url - The URL to derive filename from.
+   * @returns {Promise<string>} - The HTML content.
    */
   static async fetchHTML(url) {
-    console.log(`Fetching rendered HTML for: ${url}`);
-    const browser = await puppeteer.launch({ 
-      headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
-    });
-    const page = await browser.newPage();
-
+    const filename = new URL(url).pathname.split('/').filter(Boolean).pop();
+    const directory = path.dirname(new URL(import.meta.url).pathname);
+    
+    const filePath = path.join(directory, `${filename}.html`);
+    console.log(`Loading HTML from: ${filePath}`);
+    
     try {
-      await page.goto(url, { waitUntil: ['load', 'networkidle0'] });
-      const html = await page.content();
-      await browser.close();
+      const resolvedPath = path.resolve(filePath);
+      
+      if (!fs.existsSync(resolvedPath)) {
+        throw new Error(`File not found: ${resolvedPath}`);
+      }
+
+      const html = await fs.promises.readFile(resolvedPath, 'utf-8');
       return html;
     } catch (error) {
-      console.error(`Error fetching ${url}:`, error);
-      await browser.close();
-      throw new Error(`rror loading content from ${url}: ${error}`);
+      console.error(`Error loading ${filePath}:`, error);
+      throw new Error(`Error loading content from ${filePath}: ${error.message}`);
     }
   }
 
-   /**
+  /**
    * Defines the regex for matching `[<tag>:<identifier>]`.
    * @returns {RegExp} - The regex for matching the note syntax.
    */
@@ -105,7 +108,7 @@ export class WcagPlugin extends Plugin {
   }
 
   /**
-   * Renders the token into HTML by converting markdown to HTML for the content.
+   * Extracts a section by ID from the loaded HTML.
    * @param {string} id - The identifier for the section.
    * @returns {object} - An object containing the `header` and `content` of the section.
    */
@@ -121,6 +124,7 @@ export class WcagPlugin extends Plugin {
       const href = this.$(anchor).attr('href');
       if (href) {
         this.$(anchor).attr('target', '_blank');
+        // Skip if already absolute URL
         if (!/^[\w]+:\/\//.test(href)) {
           const fullUrl = new URL(href, this.url).href;
           this.$(anchor).attr('href', fullUrl);
