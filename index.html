@@ -2618,14 +2618,14 @@ a part of the <a href="#content">content</a> that is perceived by users as a sin
 <p><strong>2.4.2 Page Titled:</strong> Pages have titles that describe topic or purpose.</p>
 <p>
       <div class="note wcag2mobile">
-        <p>A page title should be provided through visible text. It must be specific to each page and not reused across distinct pages in a way that makes the user's location or purpose unclear.</p>
+        <p>A page title must be provided through visible text. It must be specific to each page and not reused across distinct pages in a way that makes the user's location or purpose unclear.</p>
 
       </div>
     </p>
 <p>
       <div class="example wcag2mobile">
         <div class="marker">Example</div>
-        <p>Examples of a page title include: (1) a title in a navigation bar; (2) a heading at the top of the page; (3) a highlighted tab in a tab bar</p>
+        <p>Examples of a page title include: (1) a title in a navigation bar; (2) a heading at the top of the page; (3) an active tab in a tab bar.</p>
 
       </div>
     </p>
@@ -3591,13 +3591,20 @@ Examples of essential functionality in mobile applications include:
 <p><strong>3.1.1 Language of Page:</strong> The default human language of each page can be <a href="https://www.w3.org/TR/WCAG22/#dfn-programmatically-determinable">programmatically determined</a>.</p>
 <p>
       <div class="note wcag2mobile">
-        <p>In mobile applications, the language is typically set at the app level through the app's locale and inherited by all pages. The locale must be compatible with the human language of the content. An incorrect or missing locale causes assistive technologies to use wrong pronunciation rules.</p>
+        <p>In mobile applications, the language is typically set at the app level through the app's locale and inherited by all pages. The locale must be compatible with the human language of the content. An incorrect or missing locale causes assistive technologies to use incorrect pronunciation rules.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="example wcag2mobile">
+        <div class="marker">Example</div>
+        <p>If the platform language is set to Spanish but the app displays English content, the app's locale must be set to English so that the screen reader uses English pronunciation rules and announces roles such as &quot;Button&quot; rather than &quot;Botón&quot;.</p>
 
       </div>
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>This success criterion may not be applicable if the platform does not support setting the locale at the app level.</p>
+        <p>This success criterion applies at the platform level (e.g. Android, iOS) and may not be applicable if the platform does not support setting the locale at the app level.</p>
 
       </div>
     </p>
