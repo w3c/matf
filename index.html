@@ -3521,14 +3521,47 @@ Examples of essential functionality in mobile applications include:
         </footer>
       </details>
     </p>
-<p>Placeholder</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum#intent">Intent from Understanding Success Criterion 2.5.8</a>, replacing &quot;user agent&quot; with &quot;application&quot;.</p>
+<p>With these substitutions, it would read:</p>
+<p><strong>2.5.8 Target Size (Minimum):</strong> The size of the <a href="https://www.w3.org/TR/2025/NOTE-wcag2ict-22-20251211/#dfn-targets">target</a> for <a href="https://www.w3.org/TR/WCAG22/#dfn-pointer-inputs">pointer inputs</a> is at least 24 by 24 <a href="https://www.w3.org/TR/2025/NOTE-wcag2ict-22-20251211/#dfn-css-pixels">CSS pixels</a>, except when:</p>
+<dl>
+<dt>Spacing</dt>
+<dd>
+Undersized targets (those less than 24 by 24 CSS pixels) are positioned so that if a 24 CSS pixel diameter circle is centered on the <a href="https://www.w3.org/TR/WCAG22/#dfn-bounding-boxes">bounding box</a> of each, the circles do not intersect another target or the circle for another undersized target;
+</dd>
+<dt>Equivalent</dt>
+<dd>
+The function can be achieved through a different control on the same <a href="#page">page</a> that meets this criterion;
+</dd>
+<dt>Inline</dt>
+<dd>
+The target is in a sentence or its size is otherwise constrained by the line-height of non-target text;
+</dd>
+<dt>Application control</dt>
+<dd>
+The size of the target is determined by the <strong><a href="#">application</a></strong> and is not modified by the author;
+</dd>
+<dt>Essential</dt>
+<dd>
+A particular <a href="https://www.w3.org/TR/WCAG22/#dfn-presentation">presentation</a> of the target is <a href="https://www.w3.org/TR/WCAG22/#dfn-essential">essential</a> or is legally required for the information being conveyed.
+</dd>
+</dl>
 <p>
-      <div class="note" title="Work In Progress">
-        <p>
-          <a href="https://github.com/w3c/matf/issues/10" target="_blank">
-            Read issue #10 on GitHub
-          </a>
-        </p>
+      <div class="note wcag2mobile">
+        <p>Targets that allow for values to be selected spatially based on position within the target are considered one target for the purpose of the success criterion. Examples include sliders, color pickers displaying a gradient of colors, or editable areas where you position the cursor.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note wcag2mobile">
+        <p>For inline targets the line-height should be interpreted as perpendicular to the flow of text. For example, in a language displayed vertically, the line-height would be horizontal.</p>
+
+      </div>
+    </p>
+<p>
+      <div class="note wcag2mobile">
+        <p>User interaction with touchscreens, especially on small mobile devices, is different than that with cursor-based systems such as mouse and trackpad. It requires different and larger sizes, and for the sizes to be specified in native units as well as CSS pixels. <a href="https://docs.google.com/document/d/1qbmifBKu_vTXOxbkj6gKOHwBsf-7NVtni0HUkFOgO6k/edit?usp=sharing">Read related research</a></p>
+
       </div>
     </p>
 
