@@ -2,7 +2,22 @@
 
 WCAG2Mobile defines key glossary terms to refine the broader scope of WCAG2ICT for mobile applications. It introduces terms that do not exist in WCAG2ICT or WCAG but are important to define for a mobile application context.
 
-“Content” and “user agent” are glossary terms from WCAG 2 that need to be interpreted significantly differently when applied to mobile applications. Similar to WCAG2ICT, the term "user agent" has a more limited meaning when applied to mobile apps. WCAG 2 assumes content is presented by a separate user agent, typically a web browser, which also exposes the content to assistive technologies. Mobile apps present their own content, and assistive technologies obtain programmatic information through the accessibility services of the platform software. In WCAG2Mobile, "user agent" therefore refers only to separate software that retrieves and presents web content, such as a mobile web browser; web content presented within an app through an embedded web view is treated as software. Where success criteria refer to functionality provided by the user agent, in mobile apps that functionality is typically provided by the platform software; in those cases the guidance reads "user agent" as "user agent or platform software".
+“Content” and “[user agent](user-agent)” are glossary terms from WCAG 2 that need to be interpreted significantly differently when applied to mobile applications. Similar to WCAG2ICT, the term "user agent" has a more limited meaning when applied to mobile apps. WCAG 2 assumes content is presented by a separate user agent, typically a web browser, which also exposes the content to assistive technologies. Mobile apps present their own content, and assistive technologies obtain programmatic information through the accessibility services of the platform software. In WCAG2Mobile, "user agent" therefore refers only to separate software that retrieves and presents web content, such as a mobile web browser; web content presented within an app through an embedded web view is treated as software. Where success criteria refer to functionality provided by the user agent, in mobile apps that functionality is typically provided by the platform software; in those cases the guidance reads "user agent" as "user agent or platform software".
+
+The software layers involved in mobile apps are shown in Figure 1. At the lowest layer is the underlying layer, consisting of the device hardware. The [platform software](platform-software)⁠￼ operates on the underlying layer and provides services used by [software⁠](software) running on the device, including the accessibility interface. Software includes native apps, cross platform apps, apps containing embedded web views, and separate user agents such as mobile web browsers. Software presents content and exposes semantic information through the accessibility interface, which assistive technologies use to obtain that information and perform user actions. Users interact with content either directly or through assistive technologies.
+
+Figure 1. Software layers and accessibility responsibility in mobile applications.
+
+<figure id="fig-software-layers">
+  <img
+    src="Software layers and accessibility responsibility in mobile apps.svg"
+    alt="Software layers in mobile applications and the corresponding accessibility responsibilities.">
+  <figcaption>
+    Software layers and accessibility responsibility in mobile applications.
+  </figcaption>
+</figure>
+
+Accessibility responsibilities correspond to these software layers. Authors are responsible for the accessibility of the content and software they provide, including native apps, cross platform apps, and appls containing embedded web views. Platform vendors are responsible for accessibility functionality provided by the platform software, including accessibility services and unmodified platform software components. User agent vendors are responsible for functionality provided by separate user agents, such as mobile web browsers. Assistive technology vendors are responsible for the accessibility of assistive technologies.
 
 The glossary terms “document” and “software” in WCAG2ICT are replaced with the defined terms “page”. The glossary terms “set of web pages”, “set of documents” and “set of software programs” are replaced with the defined term “set of pages”.
 
