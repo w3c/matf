@@ -2,7 +2,7 @@
 
 WCAG2Mobile defines key glossary terms to refine the broader scope of WCAG2ICT for mobile applications. It introduces terms that do not exist in WCAG2ICT or WCAG but are important to define for a mobile application context.
 
-“Content” and “user agent” are glossary terms from WCAG2ICT that need to be interpreted significantly differently when applied to mobile applications.
+“Content” and “user agent” are glossary terms from WCAG 2 that need to be interpreted significantly differently when applied to mobile applications. Similar to WCAG2ICT, the term "user agent" has a more limited meaning when applied to mobile apps. WCAG 2 assumes content is presented by a separate user agent, typically a web browser, which also exposes the content to assistive technologies. Mobile apps present their own content, and assistive technologies obtain programmatic information through the accessibility services of the platform software. In WCAG2Mobile, "user agent" therefore refers only to separate software that retrieves and presents web content, such as a mobile web browser; web content presented within an app through an embedded web view is treated as software. Where success criteria refer to functionality provided by the user agent, in mobile apps that functionality is typically provided by the platform software; in those cases the guidance reads "user agent" as "user agent or platform software".
 
 The glossary terms “document” and “software” in WCAG2ICT are replaced with the defined terms “page”. The glossary terms “set of web pages”, “set of documents” and “set of software programs” are replaced with the defined term “set of pages”.
 
@@ -31,7 +31,7 @@ The term **content**, as used in WCAG2Mobile, has the meaning below:
 The term **change of context**, as used in WCAG2Mobile, has the meaning below:
 
 <dl>
-<dt>changes of context</dt>
+<dt>change of context</dt>
 <dd>
 Changes of context are major changes that, if made without user awareness, can disorient users who are not able to view the entire page simultaneously.
 Changes in context include changes of:
@@ -44,9 +44,28 @@ Changes in context include changes of:
 </dd>
 </dl>
 
-[note:A change of content is not always a change of context. Changes in content, such as an expanding outline, dynamic menu, or a tab bar control do not necessarily change the context, unless they also change one of the above (e.g., focus).]
+[note1:A change of content is not always a change of context. Changes in content, such as an expanding outline, dynamic menu, or a tab bar control do not necessarily change the context, unless they also change one of the above (e.g., focus).]
 
 [example1:Opening a new application, moving focus to a different component, going to a new page (including anything that would look to a user as if they had moved to a new page), or significantly re-arranging the content of a page are examples of changes of context.]
+
+### Keyboard interface
+
+The term **keyboard interface**, as used in WCAG2Mobile, has the meaning below:
+
+<dl>
+<dt>keyboard interface</dt>
+<dd>
+Interface used by software to obtain keystroke input.
+</dd>
+</dl>
+
+[note1:A keyboard interface allows users to provide keystroke input to programs even if the native technology does not contain a keyboard.]
+
+[example1:A touchscreen device has an on-screen-keyboard (OSK) interface built into its operating system as well as a way to connect external keyboards. Applications can use the interface to obtain keystroke input either from the OSK, from an external keyboard or from other applications that provide simulated keyboard output, such as handwriting interpreters or speech-to-text applications with "keyboard emulation" functionality.]
+
+[note2:Using the keyboard, or a virtual keyboard, to replicate mouse input does not qualify as a keyboard interface.]
+
+[note3:For the purposes of mobile software, references to a keyboard interface include the accessibility interface. The accessibility interface is used by assistive technologies to obtain semantic information about content and interact with mobile applications. Although it provides broader capabilities than a keyboard interface, it fulfils the same purpose as a keyboard interface where it enables keyboard-equivalent operation.]
 
 ### Page
 
@@ -67,6 +86,54 @@ A page is a distinct part of a mobile application that presents specific content
 
 [example3:A hybrid banking app's account overview screen that displays account balances, recent transactions and interactive charts. The screen includes native components for account balances and recent transactions, plus web components for interactive charts, all rendered together as a unified interface.]
 
+### Platform software
+
+The term **platform software**, as used in WCAG2Mobile, has the meaning below:
+
+<dl>
+<dt>platform software</dt>
+<dd>
+Software that runs on an underlying software or hardware layer and that provides a set of software services to other software components.
+</dd>
+</dl>
+
+[note1:On mobile the platform is typically the operating system together with its system UI and the documented accessibility services that mobile apps use.]
+
+[note2:[User interface components](#user-interface-component) whose rendering is performed by platform software are considered platform software. This includes native user interface components provided by the operating system. Components whose rendering is performed by application-level rendering logic, including bundled frameworks, libraries, design systems, or custom components, are [software](#software) rather than platform software.]
+
+### Set of pages
+
+The term **Set of pages**, as used in WCAG2Mobile, has the meaning below:
+
+<dl>
+<dt>set of pages</dt>
+<dd>
+Any collection of [pages](#page) within a single mobile app that share a common purpose through their structure and interaction, and are employed within a software program to meet specific needs.
+
+Reusable page templates are the typical method that mobile apps use to enforce consistency and create a set of pages.
+</dd>
+</dl>
+
+[example1:An e-commerce application shows products in a set of pages that all share the same navigation and present information in the same way. When progressing to the checkout process, the template changes: the navigation is removed, the content replaced with inputs to enter or select information, and buttons to move through the process. The checkout is a set of pages that is distinct from the product viewing set of pages.]
+
+[example2:The settings for a mobile app. These pages are designed to be outside of the behavior of the rest of the software program itself, so have a completely different display template without banner ads, or the primary navigation, which is more optimized to view and change a large set of control inputs.]
+
+### Software
+
+The term **software**, as used in WCAG2Mobile, has the meaning below:
+
+<dl>
+<dt>software</dt>
+<dd>
+Software products, or software aspects of hardware-software products, that have a user interface and do not depend upon a separate user agent to present any of their content.
+</div>
+</dd>
+</dl>
+
+[note1:On mobile devices, software is typically the mobile app itself, whether native or cross-platform. The mobile app is responsible for presenting its content and user interface to users.]
+
+[note2:Web content presented through an embedded web view is treated as software. Although the embedded web view may rely on platform-provided browser technology to render the content, it is treated as software rather than a separate user agent because the content is presented within the mobile app. The mobile app author remains responsible for its accessibility.]
+
 ### User agent
 
 The term **user agent**, as used in WCAG2Mobile, has the meaning below:
@@ -74,10 +141,14 @@ The term **user agent**, as used in WCAG2Mobile, has the meaning below:
 <dl>
 <dt>user agent</dt>
 <dd>
-(work in progress)
+Any software that retrieves and presents web content for users.
 </div>
 </dd>
 </dl>
+
+[note1:In WCAG2Mobile the term user agent is limited to software that presents web content to the user - a separate user agent, such as a web browser. Software that only presents the content contained within it is treated as software rather than as a separate user agent. Everything else — native UI, and web content the app itself hosts, including web views — is covered by the term “software”.]
+
+[note2:When an application presents web content through an embedded web view (e.g. WKWebView or Android WebView), the embedded web view is treated as software because the content is presented within the application rather than by a separate user agent. Although it may rely on platform-provided browser technology to render the content, the application author remains responsible for its accessibility.]
 
 ### User interface component
 
