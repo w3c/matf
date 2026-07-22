@@ -28,15 +28,18 @@ details.wcag[open] summary {
   margin-bottom: 0.5em;
 }
 
+figure {
+  text-align: start !important;
+}
 figure img {
    display: block; 
    margin-inline: auto;
 }
-figcaption {
-  margin-top: 1em;
-  text-align: start;
+figure figcaption {
+  margin: 0.5em 0;
   font-style: italic;
 }
-figcaption details {
+figure details {
   font-style: normal;
+  font-size: 0.9em;
 }

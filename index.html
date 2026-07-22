@@ -209,75 +209,75 @@
     aria-details="layers-desc" />
   <figcaption>
     Software layers and accessibility responsibility in mobile apps.
-    <details id="layers-desc">
-      <summary>Diagram description</summary>
-      <p>
-        A top-to-bottom stack of six layers involved when a person interacts with an application.
-        Each layer contains one or more blocks, and every block is coloured to show who is responsible for it: author, vendor, assistive technology vendor, or out of scope. 
-        Arrows between the layers show that information flows both up and down the stack.
-      </p>
-      <p>
-      From top to bottom:
-      </p>
-      <dl>
-        <div>
-          <dt>1. User</dt>
-          <dd>
-            <dl>
-              <div><dt>Person</dt><dd>Out of scope.</dd></div>
-            </dl>
-          </dd>
-        </div>
-        <div>
-          <dt>2. Assistive technology</dt>
-          <dd>
-            <dl>
-              <div><dt>Assistive software</dt><dd>Assistive technology vendor.</dd></div>
-              <div><dt>Assistive hardware</dt><dd>Assistive technology vendor.</dd></div>
-            </dl>
-          </dd>
-        </div>
-        <div>
-          <dt>3. Content</dt>
-          <dd>
-            <dl>
-              <div><dt>Structure</dt><dd>Author.</dd></div>
-              <div><dt>Presentation</dt><dd>Author.</dd></div>
-              <div><dt>Interaction</dt><dd>Author.</dd></div>
-            </dl>
-          </dd>
-        </div>
-        <div>
-          <dt>4. Software (“the app”) or User Agent</dt>
-          <dd>
-            <dl>
-              <div><dt>Native program</dt><dd>Author.</dd></div>
-              <div><dt>Cross-platform program</dt><dd>Author.</dd></div>
-              <div><dt>Embedded web view</dt><dd>Author.</dd></div>
-              <div><dt>Browser</dt><dd>Vendor.</dd></div>
-            </dl>
-            <p>The embedded web view and browser together form the User Agent.</p>
-          </dd>
-        </div>
-        <div>
-          <dt>5. Platform software</dt>
-          <dd>
-            <dl>
-              <div><dt>Operating system</dt><dd>Vendor.</dd></div>
-            </dl>
-          </dd>
-        </div>
-        <div>
-          <dt>6. “Underlying layer”</dt>
-          <dd>
-            <dl>
-              <div><dt>Device</dt><dd>Out of scope.</dd></div>
-            </dl>
-          </dd>
-        </div>
-      </dl>
-    </details>
   </figcaption>
+  <details id="layers-desc">
+    <summary>Description of Figure 1</summary>
+    <p>
+      A top-to-bottom stack of six layers involved when a person interacts with an application.
+      Each layer contains one or more blocks, and every block is coloured to show who is responsible for it: author, vendor, assistive technology vendor, or out of scope. 
+      Arrows between the layers show that information flows both up and down the stack.
+    </p>
+    <p>
+    From top to bottom:
+    </p>
+    <dl>
+      <div>
+        <dt>1. User</dt>
+        <dd>
+          <dl>
+            <div><dt>Person</dt><dd>Out of scope.</dd></div>
+          </dl>
+        </dd>
+      </div>
+      <div>
+        <dt>2. Assistive technology</dt>
+        <dd>
+          <dl>
+            <div><dt>Assistive software</dt><dd>Assistive technology vendor.</dd></div>
+            <div><dt>Assistive hardware</dt><dd>Assistive technology vendor.</dd></div>
+          </dl>
+        </dd>
+      </div>
+      <div>
+        <dt>3. Content</dt>
+        <dd>
+          <dl>
+            <div><dt>Structure</dt><dd>Author.</dd></div>
+            <div><dt>Presentation</dt><dd>Author.</dd></div>
+            <div><dt>Interaction</dt><dd>Author.</dd></div>
+          </dl>
+        </dd>
+      </div>
+      <div>
+        <dt>4. Software (“the app”) or User Agent</dt>
+        <dd>
+          <dl>
+            <div><dt>Native program</dt><dd>Author.</dd></div>
+            <div><dt>Cross-platform program</dt><dd>Author.</dd></div>
+            <div><dt>Embedded web view</dt><dd>Author.</dd></div>
+            <div><dt>Browser</dt><dd>Vendor.</dd></div>
+          </dl>
+          <p>The embedded web view and browser together form the User Agent.</p>
+        </dd>
+      </div>
+      <div>
+        <dt>5. Platform software</dt>
+        <dd>
+          <dl>
+            <div><dt>Operating system</dt><dd>Vendor.</dd></div>
+          </dl>
+        </dd>
+      </div>
+      <div>
+        <dt>6. “Underlying layer”</dt>
+        <dd>
+          <dl>
+            <div><dt>Device</dt><dd>Out of scope.</dd></div>
+          </dl>
+        </dd>
+      </div>
+    </dl>
+  </details>
 </figure>
 <p>Accessibility responsibilities correspond to these software layers. Authors are responsible for the accessibility of the content and software they provide, including native apps, cross-platform apps, and apps containing embedded web views. Platform vendors are responsible for accessibility functionality provided by the platform software, including accessibility services and unmodified platform software components. User agent vendors are responsible for functionality provided by separate user agents, such as mobile web browsers. Assistive technology vendors are responsible for the accessibility of assistive technologies.</p>
 <p>The glossary terms “document” and “software” of WCAG2ICT are replaced with the defined term “<a href="#page">page</a>”. The glossary terms “set of web pages”, “set of documents” and “set of software programs” are replaced with the defined term “<a href="#set-of-pages">set of pages</a>”.</p>
