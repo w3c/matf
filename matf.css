@@ -27,3 +27,16 @@ details.wcag[open] summary {
   border-bottom: 0.1em solid var(--text);
   margin-bottom: 0.5em;
 }
+
+figure img {
+   display: block; 
+   margin-inline: auto;
+}
+figcaption {
+  margin-top: 1em;
+  text-align: start;
+  font-style: italic;
+}
+figcaption details {
+  font-style: normal;
+}
