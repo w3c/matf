@@ -6,14 +6,17 @@ WCAG2Mobile defines key glossary terms to refine the broader scope for mobile ap
 
 The software layers involved in mobile apps are shown in [Figure 1](#figure1). The lowest layer is the “underlying layer”, consisting of the device hardware. The [platform software](#platform-software)⁠ operates on the underlying layer and provides services used by [software⁠](#software) running on the device, including the accessibility interface. Software includes native apps, cross-platform apps, apps containing embedded web views, and separate user agents such as mobile web browsers. Software presents content and exposes semantic information through the accessibility interface, which assistive technologies use to obtain that information and perform user actions. Users interact with content either directly or through assistive technologies.
 
-<figure id="figure1">
-  <img
-    src="layers.svg"
-    alt="Diagram: six software layers connecting a user to a mobile app, with each layer's blocks coloured by who is responsible for them."
-    aria-details="layers-desc" />
-  <figcaption>
-    Software layers and accessibility responsibility in mobile apps.
-  </figcaption>
+<div class="figure">
+  <figure id="figure1">
+    <img
+      src="layers.svg"
+      alt="Diagram: six software layers connecting a user to a mobile app, with each layer's blocks coloured by who is responsible for them."
+      aria-details="layers-desc" />
+    <figcaption>
+      Software layers and accessibility responsibility in mobile apps.
+    </figcaption>
+  </figure>
+
   <details id="layers-desc">
     <summary>Description of Figure 1</summary>
     <p>
@@ -82,7 +85,7 @@ The software layers involved in mobile apps are shown in [Figure 1](#figure1). T
       </div>
     </dl>
   </details>
-</figure>
+</div>
 
 Accessibility responsibilities correspond to these software layers. Authors are responsible for the accessibility of the content and software they provide, including native apps, cross-platform apps, and apps containing embedded web views. Platform vendors are responsible for accessibility functionality provided by the platform software, including accessibility services and unmodified platform software components. User agent vendors are responsible for functionality provided by separate user agents, such as mobile web browsers. Assistive technology vendors are responsible for the accessibility of assistive technologies.
 
