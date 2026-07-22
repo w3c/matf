@@ -27,3 +27,8 @@ details.wcag[open] summary {
   border-bottom: 0.1em solid var(--text);
   margin-bottom: 0.5em;
 }
+
+.figure figure, .figure figcaption, .figure details {
+  margin: 0.5em 0;
+  text-align: start;
+}
