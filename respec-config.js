@@ -30,74 +30,60 @@ var respecConfig = {
 	// editors, add as many as you like
 	// only "name" is required
 	editors: [ 
-    {
-      name: "Jan Jaap de Groot",
-      mailto: "janjaap@abra.ai",
-      company: "Abra",
-      companyURI: "https://abra.ai",
-      w3cid: 137024
-	  },
-    {
-      name: "Jamie Herrera",
-      company: "Invited Expert",
-	  w3cid: 106410
-    },
-    {
-      name: "Joe Humbert",
-      company: "Invited Expert",
-	  w3cid: 128124
-    },
-    {
-      name: "Julian Kittelson-Aldred",
-      company: "Invited Expert",
-	  w3cid: 152973
-    },
-    {
-      name: "Jon Gibbins",
-      company: "Invited Expert",
-	  w3cid: 56789
-    }
-  ],
-
-  formerEditors: [
-	{
-		name: "Kim Patch",
-		company: "Redstart Systems",
-	},
-	{
-		name: "Jeanne Spellman",
-		company: "W3C",
-	},
-	{
-		name: "Kathy Wahlbin",
-		company: "Interactive Accessibility",
-	},
-  ],
-
-	// authors, add as many as you like.
-	// This is optional, uncomment if you have authors as well as editors.
-	// only "name" is required. Same format as editors.
-	
-	//authors:  [
-	//    { name: "Your Name", url: "http://example.org/",
-	//      company: "Your Company", companyURI: "http://example.com/" },
-	//],
-	
-	/*
-	alternateFormats: [
-	{ uri: 'aria-diff.html', label: "Diff from Previous Recommendation" } ,
-	{ uri: 'aria.ps', label: "PostScript version" },
-	{ uri: 'aria.pdf', label: "PDF version" }
+		{
+			name: "Jan Jaap de Groot",
+			mailto: "janjaap@abra.ai",
+			company: "Abra",
+			companyURI: "https://abra.ai",
+			w3cid: 137024
+		},
+		{
+			name: "Joe Humbert",
+			company: "Invited Expert",
+			w3cid: 128124
+		},
+		{
+			name: "Tanya van Workum",
+			mailto: "tanya@abra.ai",
+			company: "Abra",
+			companyURI: "https://abra.ai",
+			w3cid: 162609
+		},
 	],
-	 */
-	
-	// errata: 'https://www.w3.org/2010/02/rdfa/errata.html',
-	
+  	formerEditors: [
+		{
+			name: "Jamie Herrera",
+			company: "Invited Expert",
+			w3cid: 106410
+		},
+		{
+			name: "Julian Kittelson-Aldred",
+			company: "Invited Expert",
+			w3cid: 152973
+		},
+		{
+			name: "Jon Gibbins",
+			company: "Invited Expert",
+			w3cid: 56789
+		},
+		{
+			name: "Kim Patch",
+			company: "Redstart Systems",
+		},
+		{
+			name: "Jeanne Spellman",
+			company: "W3C",
+		},
+		{
+			name: "Kathy Wahlbin",
+			company: "Interactive Accessibility",
+		},
+	],
 	group: "ag",
 	github: "w3c/matf",
   
-  // name (without the @w3.org) of the public mailing to which comments are due
-  wgPublicList: "public-mobile-a11y-tf",
+  	// name (without the @w3.org) of the public mailing to which comments are due
+	wgPublicList: "public-mobile-a11y-tf",
 
 	maxTocLevel: 3,
 
