@@ -199,7 +199,7 @@ Reusable page templates are the typical method that mobile apps use to enforce c
 </dd>
 </dl>
 
-[example1:An e-commerce app shows products in a set of pages that all share the same navigation and present information in the same way. When progressing to the checkout process, the template changes: the navigation is removed, the content replaced with inputs to enter or select information, and buttons to move through the process. The set of pages used in the checkout process distinct from the set of pages used to show products.]
+[example1:An e-commerce app shows products in a set of pages that all share the same navigation and present information in the same way. When progressing to the checkout process, the template changes: the navigation is removed, the content replaced with inputs to enter or select information, and buttons to move through the process. The set of pages used in the checkout process is distinct from the set of pages used to show products.]
 
 [example2:The settings of a mobile app. These pages are typically designed to be outside of the behavior of the rest of the software program itself and usually have a completely different display template without banner ads, or the primary navigation, which is more optimized to view and change a large set of control inputs.]
 
