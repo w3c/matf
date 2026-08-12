@@ -219,131 +219,51 @@ Software products, or software aspects of hardware-software products, that have 
   <p>
   On mobile devices, software is typically the mobile app itself, whether built using native or cross-platform frameworks. The mobile app is responsible for presenting its content and user interface to users.
   </p>
-  <table>
+  <p>
+    Mobile apps differ in how they expose their user interface to the <a href="https://www.w3.org/TR/2025/NOTE-wcag2ict-22-20251211/#accessibility-services-of-platform-software">accessibility services of platform software</a>, an overview is provided in <a href="#table1">Table 1</a>.
+  </p>
+  <table id="table1">
+    <caption>
+      <a href="#table1">Table 1</a>: Accessibility implementation of different types of mobile apps
+    </caption>
     <thead>
-      <tr>
-        <th>Framework</th>
-        <th>Classification</th>
-        <th>Rendering Method</th>
-        <th>Accessibility Implementation</th>
-      </tr>
-    </thead>
-  <tbody>
     <tr>
-      <td><strong>Android Views</strong></td>
-      <td>Native</td>
-      <td>Native Android UI framework</td>
-      <td>AccessibilityNodeInfo</td>
+      <th scope="col">Type</th>
+      <th scope="col">Accessibility implementation</th>
+      <th scope="col">Examples</th>
     </tr>
     <tr>
-      <td><strong>Material Components</strong></td>
-      <td>Native</td>
-      <td>Native Android UI framework</td>
-      <td>AccessibilityNodeInfo</td>
+      <th scope="rowgroup" rowspan="2">Native app</th>
+      <td>Platform widgets</td>
+      <td>Android Views, UIKit</td>
     </tr>
     <tr>
-      <td><strong>Jetpack Compose</strong></td>
-      <td>Native</td>
-      <td>Native Android UI framework</td>
-      <td>Semantics</td>
+      <td>Semantics tree</td>
+      <td>Jetpack Compose, SwiftUI</td>
     </tr>
     <tr>
-      <td><strong>UIKit</strong></td>
-      <td>Native</td>
-      <td>Native iOS UI framework</td>
-      <td>UIAccessibility</td>
+      <th scope="rowgroup" rowspan="3">Cross-platform app</th>
+      <td>Platform widgets</td>
+      <td>React Native, .NET MAUI, NativeScript</td>
     </tr>
     <tr>
-      <td><strong>SwiftUI</strong></td>
-      <td>Native</td>
-      <td>Native iOS UI framework</td>
-      <td>Semantics</td>
+      <td>Semantics tree</td>
+      <td>Flutter, Compose Multiplatform, Skip, Unity</td>
     </tr>
     <tr>
-      <td><strong>Web</strong></td>
-      <td>Cross-platform</td>
-      <td>Native browser engine</td>
-      <td>HTML &amp; ARIA</td>
+      <td>Web engine</td>
+      <td>Capacitor, Cordova, Ionic</td>
     </tr>
     <tr>
-      <td><strong>React Native</strong></td>
-      <td>Cross-platform</td>
-      <td>JavaScript bridge → Native UI components</td>
-      <td>Accessibility bridge</td>
+      <th scope="rowgroup">Hybrid app</th>
+      <td>Web engine inside the web view; platform widgets or semantics tree outside it</td>
+      <td>A native or cross-platform app presenting part of its user interface in an embedded web view</td>
     </tr>
     <tr>
-    <td><strong>.NET MAUI</strong></td>
-      <td>Cross-platform</td>
-      <td>C# abstraction → Native UI components</td>
-      <td>Accessibility bridge</td>
+      <th scope="rowgroup">Mobile web app</th>
+      <td>Web engine</td>
+      <td>Websites and progressive web apps opened in a mobile browser</td>
     </tr>
-    <tr>
-      <td><strong>Xamarin</strong></td>
-      <td>Cross-platform</td>
-      <td>C# abstraction → Native UI components</td>
-      <td>Accessibility bridge</td>
-    </tr>
-    <tr>
-      <td><strong>NativeScript</strong></td>
-      <td>Cross-platform</td>
-      <td>JavaScript bridge → Native UI components</td>
-      <td>Accessibility bridge</td>
-    </tr>
-    <tr>
-      <td><strong>Skip</strong></td>
-      <td>Cross-platform</td>
-      <td>SwiftUI (native) → Jetpack Compose (native)</td>
-      <td>Semantics</td>
-    </tr>
-    <tr>
-      <td><strong>Compose Multiplatform</strong></td>
-      <td>Cross-platform</td>
-      <td>Native Android UI framework, custom renderer on iOS</td>
-      <td>Accessibility bridge</td>
-    </tr>
-    <tr>
-      <td><strong>Kotlin Multiplatform (KMP)</strong></td>
-      <td>Cross-platform</td>
-      <td>Platform UI frameworks</td>
-      <td>Platform accessibility</td>
-    </tr>
-    <tr>
-      <td><strong>Flutter</strong></td>
-      <td>Cross-platform</td>
-      <td>Custom rendering engine</td>
-      <td>Accessibility bridge</td>
-    </tr>
-    <tr>
-      <td><strong>Capacitor</strong></td>
-      <td>Cross-platform</td>
-      <td>WebView</td>
-      <td>Web accessibility APIs</td>
-    </tr>
-    <tr>
-      <td><strong>Cordova</strong></td>
-      <td>Cross-platform</td>
-      <td>WebView</td>
-      <td>Web accessibility APIs</td>
-    </tr>
-    <tr>
-      <td><strong>Unreal Engine</strong></td>
-      <td>Cross-platform</td>
-      <td>Custom game engine</td>
-      <td>Accessibility bridge</td>
-    </tr>
-    <tr>
-      <td><strong>Unity</strong></td>
-      <td>Cross-platform</td>
-      <td>Custom game engine</td>
-      <td>Accessibility via plugins</td>
-    </tr>
-    <tr>
-      <td><strong>Godot</strong></td>
-      <td>Cross-platform</td>
-      <td>Custom game engine</td>
-      <td>Accessibility via plugins</td>
-    </tr>
-    </tbody>
   </table>
 </div>
 
