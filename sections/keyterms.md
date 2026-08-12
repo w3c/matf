@@ -215,7 +215,137 @@ Software products, or software aspects of hardware-software products, that have 
 </dd>
 </dl>
 
-[note1:On mobile devices, software is typically the mobile app itself, whether built using native or cross-platform frameworks. The mobile app is responsible for presenting its content and user interface to users.]
+<div class="note wcag2mobile">
+  <p>
+  On mobile devices, software is typically the mobile app itself, whether built using native or cross-platform frameworks. The mobile app is responsible for presenting its content and user interface to users.
+  </p>
+  <table>
+    <thead>
+      <tr>
+        <th>Framework</th>
+        <th>Classification</th>
+        <th>Rendering Method</th>
+        <th>Accessibility Implementation</th>
+      </tr>
+    </thead>
+  <tbody>
+    <tr>
+      <td><strong>Android Views</strong></td>
+      <td>Native</td>
+      <td>Native Android UI framework</td>
+      <td>AccessibilityNodeInfo</td>
+    </tr>
+    <tr>
+      <td><strong>Material Components</strong></td>
+      <td>Native</td>
+      <td>Native Android UI framework</td>
+      <td>AccessibilityNodeInfo</td>
+    </tr>
+    <tr>
+      <td><strong>Jetpack Compose</strong></td>
+      <td>Native</td>
+      <td>Native Android UI framework</td>
+      <td>Semantics</td>
+    </tr>
+    <tr>
+      <td><strong>UIKit</strong></td>
+      <td>Native</td>
+      <td>Native iOS UI framework</td>
+      <td>UIAccessibility</td>
+    </tr>
+    <tr>
+      <td><strong>SwiftUI</strong></td>
+      <td>Native</td>
+      <td>Native iOS UI framework</td>
+      <td>Semantics</td>
+    </tr>
+    <tr>
+      <td><strong>Web</strong></td>
+      <td>Cross-platform</td>
+      <td>Native browser engine</td>
+      <td>HTML &amp; ARIA</td>
+    </tr>
+    <tr>
+      <td><strong>React Native</strong></td>
+      <td>Cross-platform</td>
+      <td>JavaScript bridge → Native UI components</td>
+      <td>Accessibility bridge</td>
+    </tr>
+    <tr>
+    <td><strong>.NET MAUI</strong></td>
+      <td>Cross-platform</td>
+      <td>C# abstraction → Native UI components</td>
+      <td>Accessibility bridge</td>
+    </tr>
+    <tr>
+      <td><strong>Xamarin</strong></td>
+      <td>Cross-platform</td>
+      <td>C# abstraction → Native UI components</td>
+      <td>Accessibility bridge</td>
+    </tr>
+    <tr>
+      <td><strong>NativeScript</strong></td>
+      <td>Cross-platform</td>
+      <td>JavaScript bridge → Native UI components</td>
+      <td>Accessibility bridge</td>
+    </tr>
+    <tr>
+      <td><strong>Skip</strong></td>
+      <td>Cross-platform</td>
+      <td>SwiftUI (native) → Jetpack Compose (native)</td>
+      <td>Semantics</td>
+    </tr>
+    <tr>
+      <td><strong>Compose Multiplatform</strong></td>
+      <td>Cross-platform</td>
+      <td>Native Android UI framework, custom renderer on iOS</td>
+      <td>Accessibility bridge</td>
+    </tr>
+    <tr>
+      <td><strong>Kotlin Multiplatform (KMP)</strong></td>
+      <td>Cross-platform</td>
+      <td>Platform UI frameworks</td>
+      <td>Platform accessibility</td>
+    </tr>
+    <tr>
+      <td><strong>Flutter</strong></td>
+      <td>Cross-platform</td>
+      <td>Custom rendering engine</td>
+      <td>Accessibility bridge</td>
+    </tr>
+    <tr>
+      <td><strong>Capacitor</strong></td>
+      <td>Cross-platform</td>
+      <td>WebView</td>
+      <td>Web accessibility APIs</td>
+    </tr>
+    <tr>
+      <td><strong>Cordova</strong></td>
+      <td>Cross-platform</td>
+      <td>WebView</td>
+      <td>Web accessibility APIs</td>
+    </tr>
+    <tr>
+      <td><strong>Unreal Engine</strong></td>
+      <td>Cross-platform</td>
+      <td>Custom game engine</td>
+      <td>Accessibility bridge</td>
+    </tr>
+    <tr>
+      <td><strong>Unity</strong></td>
+      <td>Cross-platform</td>
+      <td>Custom game engine</td>
+      <td>Accessibility via plugins</td>
+    </tr>
+    <tr>
+      <td><strong>Godot</strong></td>
+      <td>Cross-platform</td>
+      <td>Custom game engine</td>
+      <td>Accessibility via plugins</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
 
 [note2:Web content presented through an embedded web view is treated as software. Although the embedded web view may rely on platform-provided browser technology to render the content, it is treated as software rather than a separate user agent because the content is presented within the mobile app. The mobile app author remains responsible for its accessibility.]
 
