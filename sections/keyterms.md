@@ -116,39 +116,31 @@ Mobile apps differ in how they expose their user interface to the [accessibility
   <thead>
   <tr>
     <th scope="col">Type</th>
-    <th scope="col">Accessibility implementation</th>
     <th scope="col">Examples</th>
   </tr>
   <tr>
     <th scope="rowgroup" rowspan="2">Native app</th>
-    <td>Platform widgets</td>
     <td>Android Views, UIKit</td>
   </tr>
   <tr>
-    <td>Semantics tree</td>
     <td>Jetpack Compose, SwiftUI</td>
   </tr>
   <tr>
     <th scope="rowgroup" rowspan="3">Cross-platform app</th>
-    <td>Platform widgets</td>
     <td>React Native, .NET MAUI, NativeScript</td>
   </tr>
   <tr>
-    <td>Semantics tree</td>
     <td>Flutter, Compose Multiplatform, Skip, Unity</td>
   </tr>
   <tr>
-    <td>Web engine</td>
     <td>Capacitor, Cordova, Ionic</td>
   </tr>
   <tr>
     <th scope="rowgroup">Hybrid app</th>
-    <td>Web engine inside the web view; platform widgets or semantics tree outside it</td>
     <td>A native or cross-platform app presenting part of its user interface in an embedded web view</td>
   </tr>
   <tr>
     <th scope="rowgroup">Mobile web app</th>
-    <td>Web engine</td>
     <td>Websites and progressive web apps opened in a mobile browser</td>
   </tr>
 </table>
