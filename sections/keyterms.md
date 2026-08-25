@@ -160,10 +160,12 @@ The term **content**, as used in WCAG2Mobile, has the meaning below:
 <dl>
 <dt>content</dt>
 <dd>
-(work in progress)
+Information and sensory experience to be communicated to the user by means of <strong><ins>[<a href="#software">software</a>]</ins></strong>, including code or markup that defines the content's <a href="https://w3c.github.io/wcag2ict/#dfn-structure">structure</a>, <a href="https://www.w3.org/TR/WCAG22/#dfn-presentation">presentation</a>, and interactions 
 </div>
 </dd>
 </dl>
+
+[note1:Within WCAG2Mobile wherever “content” or “web content” appears in a success criterion it is replaced with “content” using the definition above.]
 
 ### Change of context
 
