@@ -1,3 +1,4 @@
+/* Details */
 details.wcag {
   border: 0.1em solid var(--text);
   padding: 0.5em 0.5em 0;
@@ -26,4 +27,39 @@ details.wcag[open] {
 details.wcag[open] summary {
   border-bottom: 0.1em solid var(--text);
   margin-bottom: 0.5em;
+}
+
+/* Figure */
+.figure figure, .figure figcaption, .figure details {
+  margin: 0.5em 0;
+  text-align: start;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  font-size: 1rem;
+}
+
+caption {
+  caption-side: top;
+  text-align: left;
+  padding-bottom: 1em;
+}
+
+th, td {
+  border: 1px solid var(--datacell-border);
+  padding: 0.5em;
+  text-align: left;
+  vertical-align: top;
+}
+
+thead th {
+  font-weight: bold;
+}
+
+th[scope="rowgroup"] {
+  font-weight: bold;
 }
