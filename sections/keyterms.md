@@ -4,16 +4,16 @@ WCAG2Mobile defines key glossary terms to refine the broader scope for mobile ap
 
 “[Content](#content)” and “[user agent](#user-agent)” are glossary terms from WCAG 2 that need to be interpreted significantly differently when applied to mobile applications. Similar to WCAG2ICT, the term “user agent” has a more limited meaning when applied to mobile apps. WCAG 2 assumes content is presented by a separate user agent, typically a web browser, which also exposes the content to assistive technologies. Mobile apps present their own content, and assistive technologies obtain programmatic information through the accessibility services of the platform software. In WCAG2Mobile, “user agent” therefore refers only to separate software that retrieves and presents web content, such as a mobile web browser; web content presented within an app through an embedded web view is treated as software. Where success criteria refer to functionality provided by the user agent, in mobile apps that functionality is typically provided by the platform software; in those cases the guidance reads “user agent” as “user agent or platform software”.
 
-The software layers involved in mobile apps are shown in [Figure 1](#figure1). The lowest layer is the “underlying layer”, consisting of the device hardware. The [platform software](#platform-software)⁠ operates on the underlying layer and provides services used by [software⁠](#software) running on the device, including the accessibility interface. Software includes native apps, cross-platform apps, apps containing embedded web views, and separate user agents such as mobile web browsers. Software presents content and exposes semantic information through the accessibility interface, which assistive technologies use to obtain that information and perform user actions. Users interact with content either directly or through assistive technologies.
+The layers involved in mobile apps are shown in [Figure 1](#figure1). The lowest layer is the hardware, consisting of the device. The [platform software](#platform-software)⁠ operates on the hardware and provides services used by [software⁠](#software) running on the device, including the accessibility interface. Software consists of [application software](#application-software), such as native apps and cross-platform apps, and <a href="#user-agent">user agents</a>, such as embedded web views and mobile web browsers. Software presents content and exposes semantic information through the accessibility interface, which assistive technologies use to obtain that information and perform user actions. Users interact with content either directly or through assistive technologies.
 
 <div class="figure">
   <figure id="figure1">
     <img
-      src="layers.svg"
-      alt="Diagram: six software layers connecting a user to a mobile app, with each layer's blocks coloured by who is responsible for them."
+      src="assets/layers.svg"
+      alt="Diagram: six layers connecting a user to a mobile application, with each layer's blocks coloured by who is responsible for them."
       aria-details="layers-desc" />
     <figcaption>
-      Software layers and accessibility responsibility in mobile apps.
+      Layers and responsibilities in mobile applications.
     </figcaption>
   </figure>
 
@@ -21,11 +21,12 @@ The software layers involved in mobile apps are shown in [Figure 1](#figure1). T
     <summary>Description of Figure 1</summary>
     <p>
       A top-to-bottom stack of six layers involved when a person interacts with an application.
-      Each layer contains one or more blocks, and every block is coloured to show who is responsible for it: author, vendor, assistive technology vendor, or out of scope. 
+      Each layer contains one or more blocks, and every block is coloured to show who is responsible for it: author, vendor, assistive technology vendor, or out of scope.
+      Within the software layer, the blocks are grouped into application software and user agent.
       Arrows between the layers show that information flows both up and down the stack.
     </p>
     <p>
-    From top to bottom:
+      From top to bottom:
     </p>
     <dl>
       <div>
@@ -56,7 +57,7 @@ The software layers involved in mobile apps are shown in [Figure 1](#figure1). T
         </dd>
       </div>
       <div>
-        <dt>4. Software (“the app”) or User Agent</dt>
+        <dt>4. Software</dt>
         <dd>
           <dl>
             <div><dt>Native program</dt><dd>Author.</dd></div>
@@ -64,7 +65,10 @@ The software layers involved in mobile apps are shown in [Figure 1](#figure1). T
             <div><dt>Embedded web view</dt><dd>Author.</dd></div>
             <div><dt>Browser</dt><dd>Vendor.</dd></div>
           </dl>
-          <p>The embedded web view and browser together form the User Agent.</p>
+          <p>
+            The native program and cross-platform program together form the application software.
+            The embedded web view and browser together form the user agent.
+          </p>
         </dd>
       </div>
       <div>
@@ -76,7 +80,7 @@ The software layers involved in mobile apps are shown in [Figure 1](#figure1). T
         </dd>
       </div>
       <div>
-        <dt>6. “Underlying layer”</dt>
+        <dt>6. Hardware</dt>
         <dd>
           <dl>
             <div><dt>Device</dt><dd>Out of scope.</dd></div>
@@ -99,6 +103,41 @@ Terms defined and used in WCAG2Mobile are applicable only to the interpretation 
 
 [note:**Work in Progress**. See [Issues labeled as 'definition' on GitHub](https://github.com/w3c/matf/issues?q=is%3Aissue%20state%3Aopen%20label%3Adefinition).]
 
+### Application software
+
+Software that runs on platform software and that provides a user interface for users to complete tasks.
+
+Mobile apps differ in how they expose their user interface to the [accessibility services of platform software](https://www.w3.org/TR/2025/NOTE-wcag2ict-22-20251211/#accessibility-services-of-platform-software). For example, native apps usually expose their user interface attributes directly to the accessibility layer. Apps built with other frameworks often use an accessibility bridge to expose their attributes.
+
+A non-exhaustive overview of mobile application categories and frameworks is provided in [Table 1](#table1).
+  
+<table id="table1">
+  <caption>
+    <a href="#table1">Table 1</a>: Mobile application categories and frameworks
+  </caption>
+  <thead>
+  <tr>
+    <th scope="col">Category</th>
+    <th scope="col">Frameworks</th>
+  </tr>
+  <tr>
+    <th scope="rowgroup">Native app</th>
+    <td>Jetpack Compose, SwiftUI, Android Views, UIKit</td>
+  </tr>
+  <tr>
+    <th scope="rowgroup">Cross-platform app</th>
+    <td>Flutter, React Native, .NET MAUI, NativeScript, Compose Multiplatform, Skip, Unity, Capacitor, Cordova, Ionic</td>
+  </tr>
+  <tr>
+    <th scope="rowgroup">Hybrid app</th>
+    <td>A native or cross-platform app presenting part of its user interface in an embedded web view</td>
+  </tr>
+  <tr>
+    <th scope="rowgroup">Mobile web app</th>
+    <td>Websites and progressive web apps opened in a mobile browser</td>
+  </tr>
+</table>
+
 ### Content
 
 The term **content**, as used in WCAG2Mobile, has the meaning below:
@@ -106,10 +145,12 @@ The term **content**, as used in WCAG2Mobile, has the meaning below:
 <dl>
 <dt>content</dt>
 <dd>
-(work in progress)
+Information and sensory experience to be communicated to the user by means of <strong><ins>[<a href="#software">software</a>]</ins></strong>, including code or markup that defines the content's <a href="https://w3c.github.io/wcag2ict/#dfn-structure">structure</a>, <a href="https://www.w3.org/TR/WCAG22/#dfn-presentation">presentation</a>, and interactions 
 </div>
 </dd>
 </dl>
+
+[note1:Within WCAG2Mobile wherever “content” or “web content” appears in a success criterion it is replaced with “content” using the definition above.]
 
 ### Change of context
 
@@ -199,7 +240,7 @@ Reusable page templates are the typical method that mobile apps use to enforce c
 </dd>
 </dl>
 
-[example1:An e-commerce app shows products in a set of pages that all share the same navigation and present information in the same way. When progressing to the checkout process, the template changes: the navigation is removed, the content replaced with inputs to enter or select information, and buttons to move through the process. The set of pages used in the checkout process distinct from the set of pages used to show products.]
+[example1:An e-commerce app shows products in a set of pages that all share the same navigation and present information in the same way. When progressing to the checkout process, the template changes: the navigation is removed, the content replaced with inputs to enter or select information, and buttons to move through the process. The set of pages used in the checkout process is distinct from the set of pages used to show products.]
 
 [example2:The settings of a mobile app. These pages are typically designed to be outside of the behavior of the rest of the software program itself and usually have a completely different display template without banner ads, or the primary navigation, which is more optimized to view and change a large set of control inputs.]
 
