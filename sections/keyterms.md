@@ -107,33 +107,26 @@ Terms defined and used in WCAG2Mobile are applicable only to the interpretation 
 
 Software that runs on platform software and that provides a user interface for users to complete tasks.
 
-Mobile apps differ in how they expose their user interface to the [accessibility services of platform software](https://www.w3.org/TR/2025/NOTE-wcag2ict-22-20251211/#accessibility-services-of-platform-software), an overview is provided in [Table 1](#table1).
+Mobile apps differ in how they expose their user interface to the [accessibility services of platform software](https://www.w3.org/TR/2025/NOTE-wcag2ict-22-20251211/#accessibility-services-of-platform-software). For example, native apps usually expose their user interface attributes directly to the accessibility layer. Apps built with other frameworks often use an accessibility bridge to expose their attributes.
+
+A non-exhaustive overview of mobile application categories and frameworks is provided in [Table 1](#table1).
   
 <table id="table1">
   <caption>
-    <a href="#table1">Table 1</a>: Accessibility implementation of different types of mobile apps
+    <a href="#table1">Table 1</a>: Mobile application categories and frameworks
   </caption>
   <thead>
   <tr>
-    <th scope="col">Type</th>
-    <th scope="col">Examples</th>
+    <th scope="col">Category</th>
+    <th scope="col">Frameworks</th>
   </tr>
   <tr>
-    <th scope="rowgroup" rowspan="2">Native app</th>
-    <td>Android Views, UIKit</td>
+    <th scope="rowgroup">Native app</th>
+    <td>Jetpack Compose, SwiftUI, Android Views, UIKit</td>
   </tr>
   <tr>
-    <td>Jetpack Compose, SwiftUI</td>
-  </tr>
-  <tr>
-    <th scope="rowgroup" rowspan="3">Cross-platform app</th>
-    <td>React Native, .NET MAUI, NativeScript</td>
-  </tr>
-  <tr>
-    <td>Flutter, Compose Multiplatform, Skip, Unity</td>
-  </tr>
-  <tr>
-    <td>Capacitor, Cordova, Ionic</td>
+    <th scope="rowgroup">Cross-platform app</th>
+    <td>Flutter, React Native, .NET MAUI, NativeScript, Compose Multiplatform, Skip, Unity, Capacitor, Cordova, Ionic</td>
   </tr>
   <tr>
     <th scope="rowgroup">Hybrid app</th>
