@@ -9,12 +9,12 @@ After 2018, the Mobile Accessibility Task Force (MATF) ensured that mobile consi
 - 2.5.1 Pointer Gestures (A), to provide single-pointer alternatives for touch gestures;
 - 2.5.4 Motion Actuation (A), to provide alternatives for device motion;
 - 2.5.7 Dragging Movements (AA), to provide single-pointer alternatives for dragging;
-- 2.5.8 Target Size (Minimum) (AA), to providing minimum touch target sizes;
+- 2.5.8 Target Size (Minimum) (AA), to provide minimum touch target sizes;
 - 3.3.7 Redundant Entry (A), to reduce the amount of repetitive typing.
 
 In January 2024, MATF regrouped and welcomed new participants to work on updated guidance for applying WCAG 2.2 to mobile applications.
 
-This current document, “Guidance on Applying WCAG 2.2 to Mobile Applications (WCAG2Mobile)” maps directly to the W3C supporting document, Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT) [[wcag2ict-22]], which was published as a Group Note in October 2024, describing how WCAG 2.2 could be applied to non-web documents and software.
+This current document, “Guidance on Applying WCAG 2.2 to Mobile Applications (WCAG2Mobile)” maps directly to the W3C supporting document, Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT) [[wcag2ict-22]], which was published as a Group Note in December 2025, describing how WCAG 2.2 could be applied to non-web documents and software.
 
 The intention of MATF is to publish WCAG2Mobile as a [Group Note](https://www.w3.org/standards/types/#x2-5-2-group-note), just like WCAG2ICT.
 
