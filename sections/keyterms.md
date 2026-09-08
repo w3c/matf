@@ -93,7 +93,7 @@ The layers involved in mobile applications are shown in [Figure 1](#figure1). Th
 
 Accessibility responsibilities correspond to these software layers. Authors are responsible for the accessibility of the content and software they provide, including native mobile apps, cross-platform mobile apps, and hybrid mobile apps containing embedded web views. Platform vendors are responsible for accessibility functionality provided by the platform software, including accessibility services and unmodified platform software components. User agent vendors are responsible for functionality provided by separate user agents, such as mobile web browsers. Assistive technology vendors are responsible for the accessibility of assistive technologies.
 
-The glossary terms “document” and “software” of WCAG2ICT are replaced with the defined term “[page](#page)”. The glossary terms “set of web pages”, “set of documents” and “set of software programs” are replaced with the defined term “[set of pages](#set-of-pages)”.
+Where WCAG2ICT uses “document” or “software” as the unit corresponding to a web page, WCAG2Mobile uses the defined term “[page](#page)”. The glossary terms “set of web pages”, “set of documents” and “set of software programs” are replaced with the defined term “[set of pages](#set-of-pages)”.
 
 The term “accessibility services of platform software”, introduced by WCAG2ICT, has been modified to reflect its different use in mobile applications. Additionally, “closed functionality” has a different meaning in the context of mobile applications.
 
