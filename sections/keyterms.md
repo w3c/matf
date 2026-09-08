@@ -2,7 +2,7 @@
 
 WCAG2Mobile defines key glossary terms to refine the broader scope for mobile applications. It introduces terms that do not exist in WCAG2ICT or WCAG but are important to define for a mobile application context.
 
-“[Content](#content)” and “[user agent](#user-agent)” are glossary terms from WCAG 2 that need to be interpreted significantly differently when applied to mobile applications. Similar to WCAG2ICT, the term “user agent” has a more limited meaning when applied to mobile applications. WCAG 2 assumes content is presented by a separate user agent, typically a web browser, which also exposes the content to assistive technologies. Mobile apps present their own content, and assistive technologies obtain programmatic information through the accessibility services of the platform software. In WCAG2Mobile, “user agent” therefore refers only to separate software that retrieves and presents web content, such as a mobile web browser; web content presented within application software through an embedded web view is treated as software. Where success criteria refer to functionality provided by the user agent, in mobile applications that functionality is typically provided by the platform software; in those cases the guidance reads “user agent” as “user agent or platform software”.
+“[Content](#content)” and “[user agent](#user-agent)” are glossary terms from WCAG 2 that need to be interpreted significantly differently when applied to mobile applications. Similar to WCAG2ICT, the term “user agent” has a more limited meaning when applied to mobile applications. WCAG 2 assumes content is presented by a separate user agent, typically a web browser, which also exposes the content to assistive technologies. Application software, such as native mobile apps and cross-platform mobile apps, present their own content, and assistive technologies obtain programmatic information through the accessibility services of the platform software. In WCAG2Mobile, “user agent” therefore refers only to separate software that retrieves and presents web content, such as a mobile web browser; web content presented within application software through an embedded web view is treated as software. Where success criteria refer to functionality provided by the user agent, in mobile applications that functionality is typically provided by the platform software; in those cases the guidance reads “user agent” as “user agent or platform software”.
 
 The layers involved in mobile applications are shown in [Figure 1](#figure1). The lowest layer is the hardware, consisting of the device. The [platform software](#platform-software)⁠ operates on the hardware and provides services used by [software⁠](#software) running on the device, including the accessibility interface. Software consists of [application software](#application-software), such as native apps and cross-platform apps, and <a href="#user-agent">user agents</a>, such as embedded web views and mobile web browsers. Software presents content and exposes semantic information through the accessibility interface, which assistive technologies use to obtain that information and perform user actions. Users interact with content either directly or through assistive technologies.
 
@@ -107,7 +107,9 @@ Terms defined and used in WCAG2Mobile are applicable only to the interpretation 
 
 Software that runs on platform software and that provides a user interface for users to complete tasks.
 
-Mobile applications differ in how they expose their user interface to the [accessibility services of platform software](https://www.w3.org/TR/2025/NOTE-wcag2ict-22-20251211/#accessibility-services-of-platform-software). For example, native mobile apps usually expose their user interface attributes directly to the accessibility layer. Apps built with other frameworks often use an accessibility bridge to expose their attributes.
+In WCAG2Mobile, application software includes native mobile apps, cross-platform mobile apps, and hybrid mobile apps. Hybrid mobile apps may present part of their content through one or more embedded web views.
+
+Application software differs in how it exposes its user interface to the [accessibility services of platform software](https://www.w3.org/TR/2025/NOTE-wcag2ict-22-20251211/#accessibility-services-of-platform-software). For example, native mobile apps usually expose their user interface attributes directly to the accessibility layer. Cross-platform mobile apps often use an accessibility bridge to expose their attributes.
 
 A non-exhaustive overview of mobile application categories and frameworks is provided in [Table 1](#table1).
   
@@ -187,7 +189,7 @@ Interface used by software to obtain keystroke input.
 
 [note1:A keyboard interface allows users to provide keystroke input to programs even if the native technology does not contain a keyboard.]
 
-[example1:A touchscreen device has an on-screen-keyboard (OSK) interface built into its operating system as well as a way to connect external keyboards. Applications can use the interface to obtain keystroke input either from the OSK, from an external keyboard or from other applications that provide simulated keyboard output, such as handwriting interpreters or speech-to-text applications with "keyboard emulation" functionality.]
+[example1:A touchscreen device has an on-screen-keyboard (OSK) interface built into its operating system as well as a way to connect external keyboards. [Application software](#application-software) can use the interface to obtain keystroke input either from the OSK, from an external keyboard or from other applications that provide simulated keyboard output, such as handwriting interpreters or speech-to-text applications with "keyboard emulation" functionality.]
 
 [note2:Using the keyboard, or a virtual keyboard, to replicate mouse input does not qualify as a keyboard interface.]
 
@@ -204,7 +206,7 @@ A page is a distinct part of a mobile application that presents specific content
 </dd>
 </dl>
 
-[note:Interface elements that rely on the underlying page for context (such as dialogs, modals, navigation menus, and similar components) are typically considered part of that page rather than standalone pages. However, interface elements that significantly change the majority of screen content or function as independent navigational destinations may be considered separate pages.]
+[note:Interface elements that rely on the underlying page for context (such as dialogs, modals, navigation menus, and similar components) are typically considered part of that page rather than standalone pages. However, interface elements that significantly change the majority of page content or function as independent navigational destinations may be considered separate pages.]
 
 [example1:A native mobile banking app's account overview page that displays account balances, recent transactions and interactive charts. The page includes native components for all interface elements, all rendered together as a single interface.]
 
@@ -225,7 +227,7 @@ Software that runs on an underlying software or hardware layer and that provides
 
 [note1:The platform software is typically the operating system of the mobile device together with its system user interface and the documented accessibility services that application software and user agents use.]
 
-[note2:[User interface components](#user-interface-component) whose rendering is performed by platform software are considered platform software. This includes native user interface components provided by the operating system. Components whose rendering is performed by application-level rendering logic, including bundled frameworks, libraries, design systems, or custom components, are [application software](#application-software) rather than platform software.]
+[note2:[User interface components](#user-interface-component) whose rendering is performed by platform software are considered platform software. This includes native user interface components provided by the operating system. Components whose rendering is performed by application-level rendering logic, including bundled frameworks, libraries, design systems, or custom components, are considered part of [application software](#application-software) rather than platform software.]
 
 ### Set of pages
 
@@ -272,9 +274,9 @@ Any software that retrieves and presents web content for users.
 </dd>
 </dl>
 
-[note1:In WCAG2Mobile the term user agent is limited to software that presents web content to the user, e.g. a separate user agent, such as a web browser. Software that only presents the content contained within it is treated as software rather than as a separate user agent. Everything else, such as the native user interface, and web content the app itself hosts, including web views, are covered by the term “software”.]
+[note1:In WCAG2Mobile the term user agent is limited to software that presents web content to the user, e.g. a separate user agent, such as a web browser. Software that only presents the content contained within it is treated as software rather than as a separate user agent. Everything else, such as the native user interface, and web content the app itself hosts, including web views, are covered by the term “[software](#software)”.]
 
-[note2:When an application presents web content through an embedded web view (e.g. <code>WebView</code> on Android or <code>WKWebView</code> on iOS), the embedded web view is treated as software because the content is presented within the application rather than by a separate user agent. Although it may rely on platform-provided browser technology to render the content, the application author remains responsible for its accessibility.]
+[note2:When an [application software](#application-software) presents web content through an embedded web view (e.g. <code>WebView</code> on Android or <code>WKWebView</code> on iOS), the embedded web view is treated as software because the content is presented within the application software rather than by a separate user agent. Although it may rely on platform-provided browser technology to render the content, the application author remains responsible for its accessibility.]
 
 ### User interface component
 
