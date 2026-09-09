@@ -48,9 +48,9 @@
     <h3>Guidance in this document</h3>
 <p>This document provides informative guidance (guidance that is not <a href="https://www.w3.org/TR/WCAG22/#dfn-normative">normative</a> and that does not set requirements) with regard to the interpretation and application of Web Content Accessibility Guidelines (WCAG) to mobile applications. Specifically, this document provides informative guidance on applying WCAG 2.2 Level A and AA success criteria to mobile applications, including native mobile apps, cross-platform mobile apps, hybrid mobile apps using web components, and mobile web apps.</p>
 <h4>Interpretation of Web Terminology in a Mobile Context</h4>
-<p>When certain Web-specific terms or phrases like “web page(s)” were used in success criteria, those were replaced with mobile terms or phrases like &quot;page(s)”. Additional notes were also provided to explain the terminology replacements.</p>
+<p>When certain Web-specific terms or phrases like “web page(s)” were used in success criteria, those were replaced with mobile terms or phrases like “page(s)”. Additional notes were also provided to explain the terminology replacements.</p>
 <p>A small number of success criteria are written to apply to “a set of web pages” or “multiple web pages” and depend upon all pages in the set to share some characteristic or behavior. Since the unit of conformance in WCAG 2 is a single web page, the task force agreed that the equivalent unit of conformance for mobile applications is a single page within the application. It follows that an equivalent unit of evaluation for a “set of web pages” would be a “set of pages”, not — as previously interpreted in WCAG2ICT — as a “set of software”. These terms are defined in the <a href="#key-terms">Key Terms</a> section of this document. See “set of pages” to determine when a group of pages in a mobile application is considered a set.</p>
-<p>The glossary terms were also reviewed and most of them applied to mobile applications, as written. Some applied with additional notes or edits (largely related to phrases like “Web page(s)”), and a small number of terms were only used in Level AAA success criteria, which are not addressed by the WCAG2Mobile Note at this time.</p>
+<p>The glossary terms were also reviewed and most of them applied to mobile applications, as written. Some applied with additional notes or edits (largely related to phrases like “Web page(s)”), and a small number of terms were only used in Level AAA success criteria, which are not addressed by WCAG2Mobile at this time.</p>
 
     <h3>Excluded from scope</h3>
 <p>The following are out of scope for this document:</p>
@@ -87,22 +87,26 @@
 <p>With this perspective in mind, the following list highlights where this current document differs from the 2015 Mobile Accessibility Mapping document to apply all success criteria of WCAG 2.0, WCAG 2.1, WCAG 2.2, and acknowledge the change to 4.1.1 Parsing to mobile applications:</p>
 <ul>
 <li>New Background section to explain the changes in scope for the current document</li>
+<li>Modifications to key terms introduced by WCAG:
+<ul>
+<li><a href="#content">content</a></li>
+<li><a href="#change-of-context">change of context</a></li>
+<li><a href="#keyboard-interface">keyboard interface</a></li>
+<li><a href="#user-agent">user agent</a></li>
+<li><a href="#user-interface-component">user interface component</a></li>
+</ul>
+</li>
 <li>Modifications to key terms introduced by WCAG2ICT:
 <ul>
-<li>closed functionality</li>
-<li>menu-driven interface</li>
-<li>platform software</li>
-<li>virtual keyboard</li>
+<li><a href="#platform-software">platform software</a></li>
+<li><a href="#software">software</a></li>
 </ul>
 </li>
 <li>New key terms introduced by WCAG2Mobile:
 <ul>
-<li>
-      <div class="note wcag2mobile">
-        <p>Work In Progress. See <a href="#key-terms">Key Terms</a> section.</p>
-
-      </div>
-    </li>
+<li><a href="#application-software">application software</a></li>
+<li><a href="#page">page</a></li>
+<li><a href="#set-of-pages">set of pages</a></li>
 </ul>
 </li>
 <li>Inclusion of all WCAG 2.2 Level A and AA success criteria and not just those specifically affected by mobile phone usage.</li>
@@ -181,20 +185,17 @@
 <li>dragging movements</li>
 <li>keyboard interface</li>
 <li>large scale</li>
-<li>set of web pages</li>
-<li>set of non-web documents</li>
-<li>set of software programs</li>
-<li>set of web pages</li>
 <li>user agent</li>
 <li>user interface component</li>
 </ul>
 </li>
-<li>Added to Glossary specifically for WCAG2Mobile:
-<ul>
-<li>navigational mechanisms</li>
 </ul>
-</li>
-</ul>
+<p>
+      <div class="note wcag2mobile">
+        <p>The glossary is not finished yet.</p>
+
+      </div>
+    </p>
 
   </section>
 
@@ -400,7 +401,7 @@ Interface used by software to obtain keystroke input.
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>For the purposes of applying WCAG 2 to mobile applications, references to operation through a keyboard interface also include equivalent operation through the accessibility interface where assistive technologies use that interface to operate application software. The accessibility interface  provides broader capabilities than a keyboard interface but fulfils the same purpose where it enables keyboard-equivalent operation.</p>
+        <p>For the purposes of applying WCAG 2 to mobile applications, references to operation through a keyboard interface also include equivalent operation through the accessibility interface where assistive technologies use that interface to operate <a href="#application-software">application software</a>. The accessibility interface  provides broader capabilities than a keyboard interface but fulfils the same purpose where it enables keyboard-equivalent operation.</p>
 
       </div>
     </p>
@@ -449,13 +450,13 @@ Software that runs on an underlying software or hardware layer and that provides
 </dl>
 <p>
       <div class="note wcag2mobile">
-        <p>The platform software is typically the operating system of the mobile device together with its system user interface and the documented accessibility services that application software and user agents use.</p>
+        <p>The platform software is typically the operating system of the mobile device together with its system user interface and the documented accessibility services that <a href="#application-software">application software</a> and <a href="#user-agent">user agents</a> use.</p>
 
       </div>
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p><a href="#user-interface-component">User interface components</a> whose rendering is performed by platform software are considered platform software. This includes native user interface components provided by the operating system. Components whose rendering is performed by application-level rendering logic, including bundled frameworks, libraries, design systems, or custom components, are considered part of <a href="#application-software">application software</a> rather than platform software.</p>
+        <p><a href="#user-interface-component">User interface components</a> whose rendering is performed by <a href="#platform-software">platform software</a> are considered <a href="#platform-software">platform software</a>. This includes native user interface components provided by the operating system. Components whose rendering is performed by application-level rendering logic, including bundled frameworks, libraries, design systems, or custom components, are considered part of <a href="#application-software">application software</a> rather than <a href="#platform-software">platform software</a>.</p>
 
       </div>
     </p>
@@ -471,14 +472,14 @@ Any collection of <a href="page">pages</a> within a single mobile app that share
 <p>
       <div class="example wcag2mobile">
         <div class="marker">Example 1</div>
-        <p>An e-commerce mobile application shows products in a set of pages that all share the same navigation and present information in the same way. When progressing to the checkout process, the template changes: the navigation is removed, the content replaced with inputs to enter or select information, and buttons to move through the process. The set of pages used in the checkout process is distinct from the set of pages used to show products.</p>
+        <p>A mobile application shows products in a set of pages that all share the same navigation and present information in the same way. When progressing to the checkout process, the template changes: the navigation is removed, the content replaced with inputs to enter or select information, and buttons to move through the process. The set of pages used in the checkout process is distinct from the set of pages used to show products.</p>
 
       </div>
     </p>
 <p>
       <div class="example wcag2mobile">
         <div class="marker">Example 2</div>
-        <p>The settings pages of a mobile application may form a distinct set of pages. These pages are typically designed to be outside of the behavior of the rest of the application software itself and usually have a completely different display template without banner ads, or the primary navigation, which is more optimized to view and change a large set of control inputs.</p>
+        <p>The settings pages of a mobile application may form a distinct set of pages. These pages are typically designed to be outside of the behavior of the rest of the <a href="#application-software">application software</a> itself and usually have a completely different display template without banner ads, or the primary navigation, which is more optimized to view and change a large set of control inputs.</p>
 
       </div>
     </p>
@@ -493,13 +494,13 @@ Software products, or software aspects of hardware-software products, that have 
 </dl>
 <p>
       <div class="note wcag2mobile">
-        <p>On mobile devices, software is typically application software, including native mobile apps, cross-platform mobile apps, and hybrid mobile apps. Application software is responsible for presenting its content and user interface to users.</p>
+        <p>On mobile devices, software is typically <a href="#application-software">application software</a>, including native mobile apps, cross-platform mobile apps, and hybrid mobile apps. <a href="#application-software">Application software</a> is responsible for presenting its content and user interface to users.</p>
 
       </div>
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>Web content presented through an embedded web view is treated as software. Although the embedded web view may rely on platform-provided browser technology to render the content, it is treated as software rather than a separate user agent because the content is presented within the application software. The author of the application software remains responsible for its accessibility.</p>
+        <p>Web content presented through an embedded web view is treated as software. Although the embedded web view may rely on platform-provided browser technology to render the content, it is treated as software rather than a separate user agent because the content is presented within the <a href="#application-software">application software</a>. The author of the <a href="#application-software">application software</a> remains responsible for its accessibility.</p>
 
       </div>
     </p>
@@ -520,7 +521,7 @@ Any software that retrieves and presents web content for users.
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>When an <a href="#application-software">application software</a> presents web content through an embedded web view (e.g. <code>WebView</code> on Android or <code>WKWebView</code> on iOS), the embedded web view is treated as software because the content is presented within the application software rather than by a separate user agent. Although it may rely on platform-provided browser technology to render the content, the application author remains responsible for its accessibility.</p>
+        <p>When <a href="#application-software">application software</a> presents web content through an embedded web view (e.g. <code>WebView</code> on Android or <code>WKWebView</code> on iOS), the embedded web view is treated as software because the content is presented within the <a href="#application-software">application software</a> rather than by a separate user agent. Although it may rely on platform-provided browser technology to render the content, the application author remains responsible for its accessibility.</p>
 
       </div>
     </p>
