@@ -3,6 +3,8 @@
 This repository is used to work on guidance for mobile accessibility.
 
 - Our most recent [Editor's draft](https://www.w3.org/standards/types/#ED) is published at: [w3c.github.io/matf](https://w3c.github.io/matf/)
+- Our most recent [Draft Group Note](https://www.w3.org/standards/types/#x2-5-1-draft-note) is published at: [w3.org/TR/wcag2mobile-22/](https://www.w3.org/TR/wcag2mobile-22/)
+- The difference between the Editor's Draft and Draft Group Note can be viewed at: [WCAG2Mobile htmldiff](https://services.w3.org/htmldiff?doc1=https%3A%2F%2Fwww.w3.org%2FTR%2Fwcag2mobile-22%2F&doc2=https%3A%2F%2Fw3c.github.io%2Fmatf%2F)
 - Discussions are tracked in [MATF issues](https://github.com/w3c/matf/issues)
 - Planning is handled in the [MATF project](https://github.com/orgs/w3c/projects/147)
 - Find more information in the [MATF wiki](https://github.com/w3c/matf/wiki)
