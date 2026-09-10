@@ -32,7 +32,7 @@
 - Paul J. Adam (CVS Pharmacy, Inc.)
 - Quintin Balsdon (Evinced Inc.)
 - Rachael Bradley Montgomery (Library of Congress)
-- Rachael Yomtoob (Invited Expert)
+- Rachael Yomtoob (Evinced Inc.)
 - Rachele DiTullio (Invited Expert)
 - Rob Whitaker (Invited Expert)
 - Samantha Estoesta (Level Access)
