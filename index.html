@@ -14,7 +14,7 @@
 </head>
 <body>
   <section id="abstract">
-    <p>This document describes how Web Content Accessibility Guidelines (WCAG) 2.2 [[WCAG22]] principles, guidelines, and success criteria can be applied to mobile applications, including native mobile apps, mobile web apps and hybrid apps using web components inside native mobile apps. It provides informative guidance (guidance that is not normative and does not set requirements).</p>
+    <p>This document describes how Web Content Accessibility Guidelines (WCAG) 2.2 [[WCAG22]] principles, guidelines, and success criteria can be applied to mobile applications, including native mobile apps, cross-platform mobile apps, hybrid mobile apps using web components, and mobile web apps. It provides informative guidance (guidance that is not normative and does not set requirements).</p>
 
   </section>
 
@@ -36,21 +36,21 @@
 <li>2.5.1 Pointer Gestures (A), to provide single-pointer alternatives for touch gestures;</li>
 <li>2.5.4 Motion Actuation (A), to provide alternatives for device motion;</li>
 <li>2.5.7 Dragging Movements (AA), to provide single-pointer alternatives for dragging;</li>
-<li>2.5.8 Target Size (Minimum) (AA), to providing minimum touch target sizes;</li>
+<li>2.5.8 Target Size (Minimum) (AA), to provide minimum touch target sizes;</li>
 <li>3.3.7 Redundant Entry (A), to reduce the amount of repetitive typing.</li>
 </ul>
 <p>In January 2024, MATF regrouped and welcomed new participants to work on updated guidance for applying WCAG 2.2 to mobile applications.</p>
-<p>This current document, “Guidance on Applying WCAG 2.2 to Mobile Applications (WCAG2Mobile)” maps directly to the W3C supporting document, Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT) [[wcag2ict-22]], which was published as a Group Note in October 2024, describing how WCAG 2.2 could be applied to non-web documents and software.</p>
+<p>This current document, “Guidance on Applying WCAG 2.2 to Mobile Applications (WCAG2Mobile)” maps directly to the W3C supporting document, Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT) [[wcag2ict-22]], which was published as a Group Note in December 2025, describing how WCAG 2.2 could be applied to non-web documents and software.</p>
 <p>The intention of MATF is to publish WCAG2Mobile as a <a href="https://www.w3.org/standards/types/#x2-5-2-group-note">Group Note</a>, just like WCAG2ICT.</p>
 <p>WCAG2ICT is organized to mirror the principle, guideline and success criterion structure of WCAG; this model is also used in WCAG2Mobile. WCAG2ICT clarifies when and how WCAG Level A and Level AA success criteria could be applied to non-web documents and software; WCAG2Mobile narrows the scope of this work to mobile applications.</p>
 <p>For information on related work, see <a href="https://www.w3.org/WAI/standards-guidelines/mobile/">Mobile Accessibility at W3C</a>.</p>
 
     <h3>Guidance in this document</h3>
-<p>This document provides informative guidance (guidance that is not <a href="https://www.w3.org/TR/WCAG22/#dfn-normative">normative</a> and that does not set requirements) with regard to the interpretation and application of Web Content Accessibility Guidelines (WCAG) to mobile applications. Specifically, this document provides informative guidance on applying WCAG 2.2 Level A and AA success criteria to mobile applications, including native mobile apps, mobile web apps and hybrid apps using web components inside native mobile apps.</p>
+<p>This document provides informative guidance (guidance that is not <a href="https://www.w3.org/TR/WCAG22/#dfn-normative">normative</a> and that does not set requirements) with regard to the interpretation and application of Web Content Accessibility Guidelines (WCAG) to mobile applications. Specifically, this document provides informative guidance on applying WCAG 2.2 Level A and AA success criteria to mobile applications, including native mobile apps, cross-platform mobile apps, hybrid mobile apps using web components, and mobile web apps.</p>
 <h4>Interpretation of Web Terminology in a Mobile Context</h4>
-<p>When certain Web-specific terms or phrases like “web page(s)” were used in success criteria, those were replaced with mobile terms or phrases like pages(s)”. Additional notes were also provided to explain the terminology replacements.</p>
-<p>A small number of success criteria are written to apply to “a set of web pages” or “multiple web pages” and depend upon all pages in the set to share some characteristic or behavior. Since the unit of conformance in WCAG 2 is a single web page, the task force agreed that the equivalent unit of conformance for mobile applications is a single page within the application. It follows that an equivalent unit of evaluation for a “set of web pages” would be a “set of pages”, not — as previously interpreted in WCAG2ICT — as a “set of software”. These terms are defined in the <a href="#key-terms">Key Terms</a> section of this document. See “set of pages” to determine when a group of screens in a mobile application are considered a set.</p>
-<p>The glossary terms were also reviewed and most of them applied to mobile applications, as written. Some applied with additional notes or edits (largely related to phrases like “Web page(s)”), and a small number of terms were only used in Level AAA success criteria, which are not addressed by the WCAG2Mobile Note at this time.</p>
+<p>When certain Web-specific terms or phrases like “web page(s)” were used in success criteria, those were replaced with mobile terms or phrases like “page(s)”. Additional notes were also provided to explain the terminology replacements.</p>
+<p>A small number of success criteria are written to apply to “a set of web pages” or “multiple web pages” and depend upon all pages in the set to share some characteristic or behavior. Since the unit of conformance in WCAG 2 is a single web page, the task force agreed that the equivalent unit of conformance for mobile applications is a single page within the application. It follows that an equivalent unit of evaluation for a “set of web pages” would be a “set of pages”, not — as previously interpreted in WCAG2ICT — as a “set of software”. These terms are defined in the <a href="#key-terms">Key Terms</a> section of this document. See “set of pages” to determine when a group of pages in a mobile application is considered a set.</p>
+<p>The glossary terms were also reviewed and most of them applied to mobile applications, as written. Some applied with additional notes or edits (largely related to phrases like “Web page(s)”), and a small number of terms were only used in Level AAA success criteria, which are not addressed by WCAG2Mobile at this time.</p>
 
     <h3>Excluded from scope</h3>
 <p>The following are out of scope for this document:</p>
@@ -58,7 +58,7 @@
 <li>This document does not name every operating system to which the guidance may apply; Android and iOS/iPadOS account for the large majority of mobile interactions, the guidance is written primarily with these platforms in mind.</li>
 <li>This document provides guidance specifically for mobile applications on phones and tablets; it does not include guidance for other types of mobile devices such as wearables and laptops.</li>
 <li>This document does not propose changes to WCAG 2 or its supporting documents; it does not include interpretations for implementing WCAG 2 in web technologies.</li>
-<li>This document is not sufficient by itself to ensure accessibility in mobile applications — as a web standard, WCAG does not fully cover all accessibility requirements for non-user interface aspects of platforms, user-interface components as individual items, or closed product software (where there is no assistive technology to communicate programmatic information).</li>
+<li>This document is not sufficient by itself to ensure accessibility in mobile applications — as a web standard, WCAG does not fully cover all accessibility requirements for non-user interface aspects of platform software, user interface components as individual items, or closed functionality (where there is no assistive technology to communicate programmatic information).</li>
 <li>This document does not comment on hardware aspects of products, because the basic constructs on which WCAG 2 is built do not apply to these.</li>
 <li>This document does not comment on WCAG Level AAA success criteria.</li>
 <li>This document does not provide supporting techniques for implementing WCAG 2 in mobile applications.</li>
@@ -87,22 +87,26 @@
 <p>With this perspective in mind, the following list highlights where this current document differs from the 2015 Mobile Accessibility Mapping document to apply all success criteria of WCAG 2.0, WCAG 2.1, WCAG 2.2, and acknowledge the change to 4.1.1 Parsing to mobile applications:</p>
 <ul>
 <li>New Background section to explain the changes in scope for the current document</li>
+<li>Modifications to key terms introduced by WCAG:
+<ul>
+<li><a href="#content">content</a></li>
+<li><a href="#change-of-context">change of context</a></li>
+<li><a href="#keyboard-interface">keyboard interface</a></li>
+<li><a href="#user-agent">user agent</a></li>
+<li><a href="#user-interface-component">user interface component</a></li>
+</ul>
+</li>
 <li>Modifications to key terms introduced by WCAG2ICT:
 <ul>
-<li>closed functionality</li>
-<li>menu-driven interface</li>
-<li>platform software</li>
-<li>virtual keyboard</li>
+<li><a href="#platform-software">platform software</a></li>
+<li><a href="#software">software</a></li>
 </ul>
 </li>
 <li>New key terms introduced by WCAG2Mobile:
 <ul>
-<li>
-      <div class="note wcag2mobile">
-        <p>Work In Progress. See <a href="#key-terms">Key Terms</a> section.</p>
-
-      </div>
-    </li>
+<li><a href="#application-software">application software</a></li>
+<li><a href="#page">page</a></li>
+<li><a href="#set-of-pages">set of pages</a></li>
 </ul>
 </li>
 <li>Inclusion of all WCAG 2.2 Level A and AA success criteria and not just those specifically affected by mobile phone usage.</li>
@@ -181,28 +185,25 @@
 <li>dragging movements</li>
 <li>keyboard interface</li>
 <li>large scale</li>
-<li>set of web pages</li>
-<li>set of non-web documents</li>
-<li>set of software programs</li>
-<li>set of web pages</li>
 <li>user agent</li>
 <li>user interface component</li>
 </ul>
 </li>
-<li>Added to Glossary specifically for WCAG2Mobile:
-<ul>
-<li>navigational mechanisms</li>
 </ul>
-</li>
-</ul>
+<p>
+      <div class="note wcag2mobile">
+        <p>The glossary is not finished yet.</p>
+
+      </div>
+    </p>
 
   </section>
 
   <section id="key-terms">
     <h2>Key Terms</h2>
 <p>WCAG2Mobile defines key glossary terms to refine the broader scope for mobile applications. It introduces terms that do not exist in WCAG2ICT or WCAG but are important to define for a mobile application context.</p>
-<p>“<a href="#content">Content</a>” and “<a href="#user-agent">user agent</a>” are glossary terms from WCAG 2 that need to be interpreted significantly differently when applied to mobile applications. Similar to WCAG2ICT, the term “user agent” has a more limited meaning when applied to mobile apps. WCAG 2 assumes content is presented by a separate user agent, typically a web browser, which also exposes the content to assistive technologies. Mobile apps present their own content, and assistive technologies obtain programmatic information through the accessibility services of the platform software. In WCAG2Mobile, “user agent” therefore refers only to separate software that retrieves and presents web content, such as a mobile web browser; web content presented within an app through an embedded web view is treated as software. Where success criteria refer to functionality provided by the user agent, in mobile apps that functionality is typically provided by the platform software; in those cases the guidance reads “user agent” as “user agent or platform software”.</p>
-<p>The layers involved in mobile apps are shown in <a href="#figure1">Figure 1</a>. The lowest layer is the hardware, consisting of the device. The <a href="#platform-software">platform software</a>⁠ operates on the hardware and provides services used by <a href="#software">software⁠</a> running on the device, including the accessibility interface. Software consists of <a href="#application-software">application software</a>, such as native apps and cross-platform apps, and <a href="#user-agent">user agents</a>, such as embedded web views and mobile web browsers. Software presents content and exposes semantic information through the accessibility interface, which assistive technologies use to obtain that information and perform user actions. Users interact with content either directly or through assistive technologies.</p>
+<p>“<a href="#content">Content</a>” and “<a href="#user-agent">user agent</a>” are glossary terms from WCAG 2 that need to be interpreted significantly differently when applied to mobile applications. Similar to WCAG2ICT, the term “user agent” has a more limited meaning when applied to mobile applications. WCAG 2 assumes content is presented by a separate user agent, typically a web browser, which also exposes the content to assistive technologies. Application software, such as native mobile apps and cross-platform mobile apps, present their own content, and assistive technologies obtain programmatic information through the accessibility services of the platform software. In WCAG2Mobile, “user agent” therefore refers only to separate software that retrieves and presents web content, such as a mobile web browser; web content presented within application software through an embedded web view is treated as software. Where success criteria refer to functionality provided by the user agent, in mobile applications that functionality is typically provided by the platform software; in those cases the guidance reads “user agent” as “user agent or platform software”.</p>
+<p>The layers involved in mobile applications are shown in <a href="#figure1">Figure 1</a>. The lowest layer is the hardware, consisting of the device. The <a href="#platform-software">platform software</a>⁠ operates on the hardware and provides services used by <a href="#software">software⁠</a> running on the device, including the accessibility interface. Software consists of <a href="#application-software">application software</a>, such as native apps and cross-platform apps, and <a href="#user-agent">user agents</a>, such as embedded web views and mobile web browsers. Software presents content and exposes semantic information through the accessibility interface, which assistive technologies use to obtain that information and perform user actions. Users interact with content either directly or through assistive technologies.</p>
 <div class="figure">
   <figure id="figure1">
     <img
@@ -286,9 +287,8 @@
     </dl>
   </details>
 </div>
-<p>Accessibility responsibilities correspond to these software layers. Authors are responsible for the accessibility of the content and software they provide, including native apps, cross-platform apps, and apps containing embedded web views. Platform vendors are responsible for accessibility functionality provided by the platform software, including accessibility services and unmodified platform software components. User agent vendors are responsible for functionality provided by separate user agents, such as mobile web browsers. Assistive technology vendors are responsible for the accessibility of assistive technologies.</p>
-<p>The glossary terms “document” and “software” of WCAG2ICT are replaced with the defined term “<a href="#page">page</a>”. The glossary terms “set of web pages”, “set of documents” and “set of software programs” are replaced with the defined term “<a href="#set-of-pages">set of pages</a>”.</p>
-<p>The term “accessibility services of platform software”, introduced by WCAG2ICT, has been modified to reflect its different use in mobile applications. Additionally, “closed functionality” has a different meaning in the context of mobile applications.</p>
+<p>Accessibility responsibilities correspond to these software layers. Authors are responsible for the accessibility of the content and software they provide, including native mobile apps, cross-platform mobile apps, and hybrid mobile apps containing embedded web views. Platform vendors are responsible for accessibility functionality provided by the platform software, including accessibility services and unmodified platform software components. User agent vendors are responsible for functionality provided by separate user agents, such as mobile web browsers. Assistive technology vendors are responsible for the accessibility of assistive technologies.</p>
+<p>Where WCAG2ICT uses “document” or “software” as the unit corresponding to a web page, WCAG2Mobile uses the defined term “<a href="#page">page</a>”. The glossary terms “set of web pages”, “set of documents” and “set of software programs” are replaced with the defined term “<a href="#set-of-pages">set of pages</a>”.</p>
 <p>The remaining glossary terms from WCAG2ICT and WCAG 2 are addressed in <a href="https://www.w3.org/TR/wcag2ict-22/#comments-on-definitions-in-wcag-2-glossary">WCAG2ICT: Comments on Definitions in WCAG 2 Glossary</a>.</p>
 <p>Terms defined and used in WCAG2Mobile are applicable only to the interpretation of the guidance in this document. The particular definitions should not be interpreted as having applicability to situations beyond the scope of WCAG2Mobile. Further information on usage of these terms follows.</p>
 <p>
@@ -299,7 +299,8 @@
     </p>
 <h3>Application software</h3>
 <p>Software that runs on platform software and that provides a user interface for users to complete tasks.</p>
-<p>Mobile apps differ in how they expose their user interface to the <a href="https://www.w3.org/TR/2025/NOTE-wcag2ict-22-20251211/#accessibility-services-of-platform-software">accessibility services of platform software</a>. For example, native apps usually expose their user interface attributes directly to the accessibility layer. Apps built with other frameworks often use an accessibility bridge to expose their attributes.</p>
+<p>In WCAG2Mobile, application software includes native mobile apps, cross-platform mobile apps, and hybrid mobile apps. Hybrid mobile apps may present part of their content through one or more embedded web views.</p>
+<p>Application software differs in how it exposes its user interface to the <a href="https://www.w3.org/TR/2025/NOTE-wcag2ict-22-20251211/#accessibility-services-of-platform-software">accessibility services of platform software</a>. For example, native mobile apps usually expose their user interface attributes directly to the accessibility layer. Cross-platform mobile apps often use an accessibility bridge to expose their attributes.</p>
 <p>A non-exhaustive overview of mobile application categories and frameworks is provided in <a href="#table1">Table 1</a>.</p>
 <table id="table1">
   <caption>
@@ -311,16 +312,16 @@
     <th scope="col">Frameworks</th>
   </tr>
   <tr>
-    <th scope="rowgroup">Native app</th>
+    <th scope="rowgroup">Native mobile app</th>
     <td>Jetpack Compose, SwiftUI, Android Views, UIKit</td>
   </tr>
   <tr>
-    <th scope="rowgroup">Cross-platform app</th>
+    <th scope="rowgroup">Cross-platform mobile app</th>
     <td>Flutter, React Native, .NET MAUI, NativeScript, Compose Multiplatform, Skip, Unity, Capacitor, Cordova, Ionic</td>
   </tr>
   <tr>
-    <th scope="rowgroup">Hybrid app</th>
-    <td>A native or cross-platform app presenting part of its user interface in an embedded web view</td>
+    <th scope="rowgroup">Hybrid mobile app</th>
+    <td>A native or cross-platform mobile app presenting part of its user interface in an embedded web view</td>
   </tr>
   <tr>
     <th scope="rowgroup">Mobile web app</th>
@@ -367,7 +368,7 @@ Changes in context include changes of:
 <p>
       <div class="example wcag2mobile">
         <div class="marker">Example 1</div>
-        <p>Opening a new application, moving focus to a different component, going to a new page (including anything that would look to a user as if they had moved to a new page), or significantly re-arranging the content of a page are examples of changes of context.</p>
+        <p>Opening a new application, moving focus to a different <a href="#user-interface-component">user interface component</a>, going to a new page (including anything that would look to a user as if they had moved to a new page), or significantly re-arranging the content of a page are examples of changes of context.</p>
 
       </div>
     </p>
@@ -388,7 +389,7 @@ Interface used by software to obtain keystroke input.
 <p>
       <div class="example wcag2mobile">
         <div class="marker">Example 1</div>
-        <p>A touchscreen device has an on-screen-keyboard (OSK) interface built into its operating system as well as a way to connect external keyboards. Applications can use the interface to obtain keystroke input either from the OSK, from an external keyboard or from other applications that provide simulated keyboard output, such as handwriting interpreters or speech-to-text applications with &quot;keyboard emulation&quot; functionality.</p>
+        <p>A touchscreen device has an on-screen-keyboard (OSK) interface built into its operating system as well as a way to connect external keyboards. <a href="#application-software">Application software</a> can use the interface to obtain keystroke input either from the OSK, from an external keyboard or from other applications that provide simulated keyboard output, such as handwriting interpreters or speech-to-text applications with &quot;keyboard emulation&quot; functionality.</p>
 
       </div>
     </p>
@@ -400,7 +401,7 @@ Interface used by software to obtain keystroke input.
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>For the purposes of mobile software, references to a keyboard interface include the “accessibility interface”. The accessibility interface is used by assistive technologies to obtain semantic information about content and interact with mobile applications. Although it provides broader capabilities than a keyboard interface, it fulfils the same purpose as a keyboard interface where it enables keyboard-equivalent operation.</p>
+        <p>For the purposes of applying WCAG 2 to mobile applications, references to operation through a keyboard interface also include equivalent operation through the accessibility interface where assistive technologies use that interface to operate <a href="#application-software">application software</a>. The accessibility interface  provides broader capabilities than a keyboard interface but fulfils the same purpose where it enables keyboard-equivalent operation.</p>
 
       </div>
     </p>
@@ -414,14 +415,14 @@ A page is a distinct part of a mobile application that presents specific content
 </dl>
 <p>
       <div class="note wcag2mobile">
-        <p>Interface elements that rely on the underlying page for context (such as dialogs, modals, navigation menus, and similar components) are typically considered part of that page rather than standalone pages. However, interface elements that significantly change the majority of screen content or function as independent navigational destinations may be considered separate pages.</p>
+        <p>Interface elements that rely on the underlying page for context (such as dialogs, modals, navigation menus, and similar components) are typically considered part of that page rather than standalone pages. However, interface elements that significantly change the majority of page content or function as independent navigational destinations may be considered separate pages.</p>
 
       </div>
     </p>
 <p>
       <div class="example wcag2mobile">
         <div class="marker">Example 1</div>
-        <p>A native banking app's account overview screen that displays account balances, recent transactions and interactive charts. The screen includes native components for all interface elements, all rendered together as a single interface.</p>
+        <p>A native mobile banking app's account overview page that displays account balances, recent transactions and interactive charts. The page includes native components for all interface elements, all rendered together as a single interface.</p>
 
       </div>
     </p>
@@ -435,7 +436,7 @@ A page is a distinct part of a mobile application that presents specific content
 <p>
       <div class="example wcag2mobile">
         <div class="marker">Example 3</div>
-        <p>A hybrid banking app's account overview screen that displays account balances, recent transactions and interactive charts. The screen includes native components for account balances and recent transactions, plus web components for interactive charts, all rendered together as a unified interface.</p>
+        <p>A hybrid mobile banking app's account overview page that displays account balances, recent transactions and interactive charts. The page includes native components for account balances and recent transactions, plus web components for interactive charts, all rendered together as a unified interface.</p>
 
       </div>
     </p>
@@ -449,13 +450,13 @@ Software that runs on an underlying software or hardware layer and that provides
 </dl>
 <p>
       <div class="note wcag2mobile">
-        <p>The platform software is typically the operating system of the mobile device together with its system user interface and the documented accessibility services that mobile apps use.</p>
+        <p>The platform software is typically the operating system of the mobile device together with its system user interface and the documented accessibility services that <a href="#application-software">application software</a> and <a href="#user-agent">user agents</a> use.</p>
 
       </div>
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p><a href="#user-interface-component">User interface components</a> whose rendering is performed by platform software are considered platform software. This includes native user interface components provided by the operating system. Components whose rendering is performed by application-level rendering logic, including bundled frameworks, libraries, design systems, or custom components, are <a href="#software">software</a> rather than platform software.</p>
+        <p><a href="#user-interface-component">User interface components</a> whose rendering is performed by <a href="#platform-software">platform software</a> are considered <a href="#platform-software">platform software</a>. This includes native user interface components provided by the operating system. Components whose rendering is performed by application-level rendering logic, including bundled frameworks, libraries, design systems, or custom components, are considered part of <a href="#application-software">application software</a> rather than <a href="#platform-software">platform software</a>.</p>
 
       </div>
     </p>
@@ -471,14 +472,14 @@ Any collection of <a href="page">pages</a> within a single mobile app that share
 <p>
       <div class="example wcag2mobile">
         <div class="marker">Example 1</div>
-        <p>An e-commerce app shows products in a set of pages that all share the same navigation and present information in the same way. When progressing to the checkout process, the template changes: the navigation is removed, the content replaced with inputs to enter or select information, and buttons to move through the process. The set of pages used in the checkout process is distinct from the set of pages used to show products.</p>
+        <p>A mobile application shows products in a set of pages that all share the same navigation and present information in the same way. When progressing to the checkout process, the template changes: the navigation is removed, the content replaced with inputs to enter or select information, and buttons to move through the process. The set of pages used in the checkout process is distinct from the set of pages used to show products.</p>
 
       </div>
     </p>
 <p>
       <div class="example wcag2mobile">
         <div class="marker">Example 2</div>
-        <p>The settings of a mobile app. These pages are typically designed to be outside of the behavior of the rest of the software program itself and usually have a completely different display template without banner ads, or the primary navigation, which is more optimized to view and change a large set of control inputs.</p>
+        <p>The settings pages of a mobile application may form a distinct set of pages. These pages are typically designed to be outside of the behavior of the rest of the <a href="#application-software">application software</a> itself and usually have a completely different display template without banner ads, or the primary navigation, which is more optimized to view and change a large set of control inputs.</p>
 
       </div>
     </p>
@@ -493,13 +494,13 @@ Software products, or software aspects of hardware-software products, that have 
 </dl>
 <p>
       <div class="note wcag2mobile">
-        <p>On mobile devices, software is typically the mobile app itself, whether built using native or cross-platform frameworks. The mobile app is responsible for presenting its content and user interface to users.</p>
+        <p>On mobile devices, software is typically <a href="#application-software">application software</a>, including native mobile apps, cross-platform mobile apps, and hybrid mobile apps. <a href="#application-software">Application software</a> is responsible for presenting its content and user interface to users.</p>
 
       </div>
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>Web content presented through an embedded web view is treated as software. Although the embedded web view may rely on platform-provided browser technology to render the content, it is treated as software rather than a separate user agent because the content is presented within the mobile app. The mobile app author remains responsible for its accessibility.</p>
+        <p>Web content presented through an embedded web view is treated as software. Although the embedded web view may rely on platform-provided browser technology to render the content, it is treated as software rather than a separate user agent because the content is presented within the <a href="#application-software">application software</a>. The author of the <a href="#application-software">application software</a> remains responsible for its accessibility.</p>
 
       </div>
     </p>
@@ -514,13 +515,13 @@ Any software that retrieves and presents web content for users.
 </dl>
 <p>
       <div class="note wcag2mobile">
-        <p>In WCAG2Mobile the term user agent is limited to software that presents web content to the user, e.g. a separate user agent, such as a web browser. Software that only presents the content contained within it is treated as software rather than as a separate user agent. Everything else, such as the native user interface, and web content the app itself hosts, including web views, are covered by the term “software”.</p>
+        <p>In WCAG2Mobile the term user agent is limited to software that presents web content to the user, e.g. a separate user agent, such as a web browser. Software that only presents the content contained within it is treated as software rather than as a separate user agent. Everything else, such as the native user interface, and web content the app itself hosts, including web views, are covered by the term “<a href="#software">software</a>”.</p>
 
       </div>
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>When an application presents web content through an embedded web view (e.g. <code>WebView</code> on Android or <code>WKWebView</code> on iOS), the embedded web view is treated as software because the content is presented within the application rather than by a separate user agent. Although it may rely on platform-provided browser technology to render the content, the application author remains responsible for its accessibility.</p>
+        <p>When <a href="#application-software">application software</a> presents web content through an embedded web view (e.g. <code>WebView</code> on Android or <code>WKWebView</code> on iOS), the embedded web view is treated as software because the content is presented within the <a href="#application-software">application software</a> rather than by a separate user agent. Although it may rely on platform-provided browser technology to render the content, the application author remains responsible for its accessibility.</p>
 
       </div>
     </p>
@@ -691,7 +692,7 @@ A part of the <a href="#content">content</a> that is perceived by users as a sin
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content">Intent from Understanding Success Criterion 1.1.1</a>.</p>
 <p>
       <div class="note wcag2mobile">
-        <p>Not all mobile platforms provide a way to programmatically associate a <a href="https://www.w3.org/TR/WCAG22/#dfn-labels">label</a> with <a href="https://www.w3.org/TR/WCAG22/#dfn-non-text-content">non-text content</a>.</p>
+        <p>Not all <a href="#platform-software">platform software</a> provide a way to programmatically associate a <a href="https://www.w3.org/TR/WCAG22/#dfn-labels">label</a> with <a href="https://www.w3.org/TR/WCAG22/#dfn-non-text-content">non-text content</a>.</p>
 
       </div>
     </p>
@@ -1142,7 +1143,7 @@ A part of the <a href="#content">content</a> that is perceived by users as a sin
         </footer>
       </details>
     </p>
-<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence">Intent from Understanding Success Criterion 1.3.4</a>.</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/meaningful-sequence">Intent from Understanding Success Criterion 1.3.2</a>.</p>
 <p>
       <div class="note wcag2mobile">
         <p>Grouping related elements using semantic containers helps ensure a meaningful reading sequence.</p>
@@ -1404,7 +1405,7 @@ A part of the <a href="#content">content</a> that is perceived by users as a sin
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/use-of-color">Intent from Understanding Success Criterion 1.4.1</a>.</p>
 <p>
       <div class="note wcag2mobile">
-        <p>If a mobile platform’s built-in distinction relies only on color, additional visual means must convey the information.</p>
+        <p>If a distinction provided by <a href="#platform-software">platform software</a> relies only on color, additional visual means must convey the information.</p>
 
       </div>
     </p>
@@ -1975,7 +1976,7 @@ A part of the <a href="#content">content</a> that is perceived by users as a sin
     </p>
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/text-spacing">Intent from Understanding Success Criterion 1.4.12</a>, replacing &quot;content implemented using markup languages&quot; with &quot;content&quot;.</p>
 <p>With these substitutions, it would read:</p>
-<p><strong>1.4.12 Text Spacing:</strong> In <strong><a href="#content">content</a></strong> that support the following text style properties, no loss of <a href="#content">content</a> or functionality occurs by setting all of the following and by changing no other style property:</p>
+<p><strong>1.4.12 Text Spacing:</strong> In <strong><a href="#content">content</a></strong> that supports the following text style properties, no loss of <a href="#content">content</a> or functionality occurs by setting all of the following and by changing no other style property:</p>
 <ul>
 <li>Line height (line spacing) to at least 1.5 times the font size;</li>
 <li>Spacing following paragraphs to at least 2 times the font size;</li>
@@ -1997,7 +1998,7 @@ A part of the <a href="#content">content</a> that is perceived by users as a sin
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>If a mobile platform does not include a way for users to override text style properties, this success criterion is not applicable.</p>
+        <p>If the <a href="#platform-software">platform software</a> does not include a way for users to override text style properties, this success criterion is not applicable.</p>
 
       </div>
     </p>
@@ -2325,7 +2326,7 @@ A part of the <a href="#content">content</a> that is perceived by users as a sin
 <p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/character-key-shortcuts">Intent from Understanding Success Criterion 2.1.4</a>.</p>
 <p>
       <div class="note wcag2mobile">
-        <p>The WCAG2ICT interpretation is that a long press of a key (2 seconds or more) and other accessibility features provided by the platform do not meet the WCAG definition of a keyboard shortcut. See the <a href="https://www.w3.org/TR/wcag2ict-22/#dfn-keyboard-shortcuts">keyboard shortcut</a> definition for more details.</p>
+        <p>The WCAG2ICT interpretation is that a long press of a key (2 seconds or more) and other accessibility features provided by the <a href="#platform-software">platform software</a> do not meet the WCAG definition of a keyboard shortcut. See the <a href="https://www.w3.org/TR/wcag2ict-22/#dfn-keyboard-shortcuts">keyboard shortcut</a> definition for more details.</p>
 
       </div>
     </p>
@@ -2627,7 +2628,7 @@ A part of the <a href="#content">content</a> that is perceived by users as a sin
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>Content that is updated periodically by software or that is streamed to the user agent is not required to preserve or present information that is generated or received between the initiation of the pause and resuming presentation, as this may not be technically possible, and in many situations could be misleading to do so.</p>
+        <p>Content that is updated periodically by <a href="#application-software">application software</a> or that is streamed to the user agent is not required to preserve or present information that is generated or received between the initiation of the pause and resuming presentation, as this may not be technically possible, and in many situations could be misleading to do so.</p>
 
       </div>
     </p>
@@ -3120,7 +3121,7 @@ A part of the <a href="#content">content</a> that is perceived by users as a sin
 <p>This applies directly as written, and as described in Intent from <a href="https://www.w3.org/WAI/WCAG22/Understanding/headings-and-labels#intent">Understanding Success Criterion 2.4.6</a>.</p>
 <p>
       <div class="note wcag2mobile">
-        <p>Examples of headings in mobile applications include, but are not limited to: screen titles, dialog titles and section headers.</p>
+        <p>Examples of headings in mobile applications include, but are not limited to: page titles, dialog titles and section headers.</p>
 
       </div>
     </p>
@@ -3320,7 +3321,7 @@ A part of the <a href="#content">content</a> that is perceived by users as a sin
 <p><strong>2.5.1 Pointer Gestures:</strong> All <a href="https://www.w3.org/TR/WCAG22/#dfn-functionality">functionality</a> that uses multipoint or path-based gestures for operation can be operated with a <a href="https://www.w3.org/TR/WCAG22/#dfn-single-pointer">single pointer</a> without a path-based gesture, unless a multipoint or path-based gesture is <a href="https://www.w3.org/TR/WCAG22/#dfn-essential">essential</a>.</p>
 <p>
       <div class="note wcag2mobile">
-        <p>This requirement applies to mobile applications that interpret pointer actions (i.e., this does not apply to actions that are required to operate the platform software, operating system, or assistive technology). Each layer is responsible for its own pointer actions only, not for those in an underlying layer.</p>
+        <p>This requirement applies to <a href="#application-software">application software</a>, such as mobile applications that interpret pointer actions (i.e., this does not apply to actions that are required to operate the <a href="#platform-software">platform software</a>, such as the operating system, or assistive technology). Each layer is responsible for its own pointer actions only, not for those in an underlying layer.</p>
 
       </div>
     </p>
@@ -3450,7 +3451,7 @@ Completing the function on the down-event is essential.
 </dl>
 <p>
       <div class="note wcag2mobile">
-        <p>This requirement applies to mobile applications that interpret pointer actions (i.e., this does not apply to actions that are required to operate the platform software, operating system, or assistive technology). Each layer is responsible for its own pointer actions only, not for those in an underlying layer.</p>
+        <p>This requirement applies to <a href="#application-software">application software</a>, such as mobile applications that interpret pointer actions (i.e., this does not apply to actions that are required to operate the <a href="#platform-software">platform software</a>, such as the operating system, or assistive technology). Each layer is responsible for its own pointer actions only, not for those in an underlying layer.</p>
 
       </div>
     </p>
@@ -3660,18 +3661,18 @@ Examples of essential functionality in mobile applications include:
         </footer>
       </details>
     </p>
-<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html#intent">Intent from Understanding Success Criterion 2.5.7</a>, with the notes for non-web documents from <a href="https://www.w3.org/TR/wcag2ict/#dragging-movements">WCAG2ICT</a> removed, by replacing &quot;user agent&quot; with &quot;user agent or platform software&quot; and by making changes to the notes non-web software by replacing &quot;web content that interprets&quot; with &quot;<a href="#software">software</a> that interprets&quot;.</p>
+<p>This applies directly as written, and as described in <a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html#intent">Intent from Understanding Success Criterion 2.5.7</a>, with the notes for non-web documents from <a href="https://www.w3.org/TR/wcag2ict/#dragging-movements">WCAG2ICT</a> removed, by replacing &quot;user agent&quot; with &quot;user agent or platform software&quot; and by making changes to the notes non-web software by replacing &quot;web content that interprets&quot; with &quot;<a href="#application-software">application software</a> that interprets&quot;.</p>
 <p>With these substitutions, it would read:</p>
 <p><strong>2.5.7 Dragging Movements:</strong> All <a href="https://www.w3.org/TR/wcag22/#dfn-functionality">functionality</a> that uses a <a href="https://www.w3.org/TR/wcag22/#dfn-dragging-movements">dragging movement</a> for operation can be achieved by a <a href="https://www.w3.org/TR/wcag22/#dfn-single-pointer">single pointer</a> without dragging, unless dragging is <a href="https://www.w3.org/TR/wcag22/#dfn-essential">essential</a> or the functionality is determined by the <a href="#user-agent">user agent</a> or <a href="#platform-software">platform software</a> and not modified by the author.</p>
 <p>
       <div class="note wcag2mobile">
-        <p>This requirement applies to software, such as mobile applications, that interprets pointer actions (i.e., this does not apply to actions that are required to operate the <a href="#platform-software">underlying platform software</a> or <a href="https://www.w3.org/TR/WCAG22/#dfn-assistive-technologies">assistive technology</a>).</p>
+        <p>This requirement applies to <a href="#application-software">application software</a>, such as mobile applications, that interprets pointer actions (i.e., this does not apply to actions that are required to operate the underlying <a href="#platform-software">platform software</a> or <a href="https://www.w3.org/TR/WCAG22/#dfn-assistive-technologies">assistive technology</a>).</p>
 
       </div>
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>This requirement also applies to platform software, such as user agents, assistive technology software, and operating systems. Each layer is responsible for its own pointer actions only, not for those in an underlying layer. See <a href="#figure1">Figure 1</a> for a description of the responsibility layers in mobile applications.</p>
+        <p>This requirement also applies to <a href="#platform-software">platform software</a>, <a href="#user-agent">user agents</a> and <a href="https://www.w3.org/TR/WCAG22/#dfn-assistive-technologies">assistive technology</a>. Each layer is responsible for its own pointer actions only, not for those in an underlying layer. See <a href="#figure1">Figure 1</a> for a description of the responsibility layers in mobile applications.</p>
 
       </div>
     </p>
@@ -3781,7 +3782,7 @@ The function can be achieved through a different control on the same <a href="#p
 <dd>
 The target is in a sentence or its size is otherwise constrained by the line-height of non-target text;
 </dd>
-<dt>Application control</dt>
+<dt>User agent or platform software control</dt>
 <dd>
 The size of the target is determined by the <a href="#user-agent">user agent</a> or <a href="#platform-software">platform software</a> and is not modified by the author;
 </dd>
@@ -3868,20 +3869,20 @@ A particular <a href="https://www.w3.org/TR/WCAG22/#dfn-presentation">presentati
 <p><strong>3.1.1 Language of Page:</strong> The default human language of each page can be <a href="https://www.w3.org/TR/WCAG22/#dfn-programmatically-determinable">programmatically determined</a>.</p>
 <p>
       <div class="note wcag2mobile">
-        <p>In mobile applications, the language is typically set at the app level through the app's locale and inherited by all pages. The locale must be compatible with the human language of the content. An incorrect or missing locale causes assistive technologies to use incorrect pronunciation rules.</p>
+        <p>In mobile applications, the language is typically set at the <a href="#application-software">application software</a> level through the app's locale and inherited by all pages. The locale must be compatible with the human language of the <a href="#content">content</a>. An incorrect or missing locale causes assistive technologies to use incorrect pronunciation rules.</p>
 
       </div>
     </p>
 <p>
       <div class="example wcag2mobile">
         <div class="marker">Example</div>
-        <p>If the platform language is set to Spanish but the app displays English content, the app's locale must be set to English so that the screen reader uses English pronunciation rules and announces roles such as &quot;Button&quot; rather than &quot;Botón&quot;.</p>
+        <p>If the <a href="#platform-software">platform software</a> language is set to Spanish but the app displays English content, the app's locale must be set to English so that the screen reader uses English pronunciation rules and announces roles such as &quot;Button&quot; rather than &quot;Botón&quot;.</p>
 
       </div>
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>This success criterion applies at the platform level (e.g. Android, iOS) and may not be applicable if the platform does not support setting the locale at the app level.</p>
+        <p>This success criterion applies at the <a href="#platform-software">platform software</a> level (e.g. Android, iOS) and may not be applicable if the <a href="#platform-software">platform software</a> does not support setting the locale at the <a href="#application-software">application software</a> level.</p>
 
       </div>
     </p>
@@ -3949,14 +3950,14 @@ A particular <a href="https://www.w3.org/TR/WCAG22/#dfn-presentation">presentati
 <p><strong>3.1.2 Language of Parts</strong> The <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts#dfn-human-language">human language</a> of each passage or phrase in the content can be <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts#dfn-programmatically-determined">programmatically determined</a> except for proper names, technical terms, words of indeterminate language, and words or phrases that have become part of the vernacular of the immediately surrounding <a href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-parts#dfn-text">text</a>.</p>
 <p>
       <div class="note wcag2mobile">
-        <p>The exception to this criterion applies when the underlying technology, platform, or operating system imposes technical limitations. In such cases, the requirement should be followed as closely as possible within the available technical capabilities. An example of the exception is where the underlying technology does not support marking up language of parts of text, or where it would require marking up all text in all locations within the software.</p>
+        <p>The exception to this criterion applies when the <a href="#platform-software">platform software</a>, such as the operating system, imposes technical limitations. In such cases, the requirement should be followed as closely as possible within the available technical capabilities. An example of the exception is where the underlying technology does not support marking up language of parts of text, or where it would require marking up all text in all locations within the software.</p>
 
       </div>
     </p>
 <p>
       <div class="example wcag2mobile">
         <div class="marker">Example</div>
-        <p>A German mobile app includes the English phrase “Welcome back.” On Android, the phrase is programmatically determined as English using LocaleSpan, allowing TalkBack to use the correct English pronunciation. On iOS, the same phrase is programmatically determined using accessibilitySpeechLanguage, ensuring that VoiceOver also uses the correct English pronunciation rather than the German pronunciation.</p>
+        <p>A German mobile app includes the English phrase “Welcome back.” On Android, the phrase is programmatically determined as English using <code>LocaleSpan</code>, allowing TalkBack to use the correct English pronunciation. On iOS, the same phrase is programmatically determined using <code>accessibilitySpeechLanguage</code>, ensuring that VoiceOver also uses the correct English pronunciation rather than the German pronunciation.</p>
 
       </div>
     </p>
@@ -4311,7 +4312,7 @@ Sets of software that meet this definition appear to be extremely rare.</div></d
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>For this success criterion, &quot;the same order relative to other <a href="#page">page</a> content&quot; can be thought of as how the content is ordered when the <a href="#page">page</a> is serialized. The visual position of a help mechanism is likely to be consistent across <a href="#page">pages</a> for the same*<a href="#page">page</a> variation (e.g., <strong>break-point</strong>). The user can initiate a change, such as changing the <a href="#page">page</a>'s zoom or orientation, which may trigger a different <a href="#page">page</a> variation. This criterion is concerned with relative order across <a href="#page">pages</a> displayed in the same <a href="#page">page</a> variation (e.g., same zoom level and orientation).</p>
+        <p>For this success criterion, &quot;the same order relative to other <a href="#page">page</a> content&quot; can be thought of as how the content is ordered when the <a href="#page">page</a> is serialized. The visual position of a help mechanism is likely to be consistent across <a href="#page">pages</a> for the same <a href="#page">page</a> variation (e.g., <strong>break-point</strong>). The user can initiate a change, such as changing the <a href="#page">page</a>'s zoom or orientation, which may trigger a different <a href="#page">page</a> variation. This criterion is concerned with relative order across <a href="#page">pages</a> displayed in the same <a href="#page">page</a> variation (e.g., same zoom level and orientation).</p>
 
       </div>
     </p>
@@ -4713,7 +4714,7 @@ A <a href="https://www.w3.org/TR/WCAG22/#dfn-mechanism">mechanism</a> is availab
 <p><strong>Object Recognition</strong>
 The cognitive function test is to recognize objects.</p>
 <p><strong>Personal Content</strong>
-The cognitive function test is to identify <a href="https://www.w3.org/TR/WCAG22/#dfn-non-text-content">non-text content</a> the user provided to the <strong>application</strong>.</p>
+The cognitive function test is to identify <a href="https://www.w3.org/TR/WCAG22/#dfn-non-text-content">non-text content</a> the user provided to the <strong><a href="#application-software">application software</a></strong>.</p>
 <p>
       <div class="note wcag2mobile">
         <p>“Object recognition” and “Personal content” may be represented by images, video, or audio.</p>
@@ -4728,13 +4729,13 @@ The cognitive function test is to identify <a href="https://www.w3.org/TR/WCAG22
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>Any passwords used to unlock underlying <a href="https://www.w3.org/TR/wcag2ict-22/#platform-software">platform software</a> (running below the non-web software) are out of scope for this requirement since these are not under control of the non-web software’s author.</p>
+        <p>Any passwords used to unlock underlying <a href="https://www.w3.org/TR/wcag2ict-22/#platform-software">platform software</a> itself are out of scope for this requirement since these are not under control of the <a href="#application-software">application software</a>’s author.</p>
 
       </div>
     </p>
 <p>
       <div class="note wcag2mobile">
-        <p>There are cases where non-web software has an authentication process and no alternative or assistance mechanism is feasible, for example when entering a password when starting, powering on / turning on an ICT (device or otherwise). In such situations, it may not be possible for the non-web software to satisfy this success criterion.</p>
+        <p>There are cases where <a href="#application-software">application software</a> has an authentication process and no alternative or assistance mechanism is feasible, for example when entering a password when starting, powering on / turning on an ICT (device or otherwise). In such situations, it may not be possible for the <a href="#application-software">application software</a> to satisfy this success criterion.</p>
 
       </div>
     </p>

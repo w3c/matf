@@ -5,13 +5,19 @@ In this Draft Note, most of the existing sections have undergone significant rev
 With this perspective in mind, the following list highlights where this current document differs from the 2015 Mobile Accessibility Mapping document to apply all success criteria of WCAG 2.0, WCAG 2.1, WCAG 2.2, and acknowledge the change to 4.1.1 Parsing to mobile applications:
 
 - New Background section to explain the changes in scope for the current document
+- Modifications to key terms introduced by WCAG:
+  - [content](#content)
+  - [change of context](#change-of-context)
+  - [keyboard interface](#keyboard-interface)
+  - [user agent](#user-agent)
+  - [user interface component](#user-interface-component)
 - Modifications to key terms introduced by WCAG2ICT:
-  - closed functionality
-  - menu-driven interface
-  - platform software
-  - virtual keyboard
+  - [platform software](#platform-software)
+  - [software](#software)
 - New key terms introduced by WCAG2Mobile:
-  - [note:Work In Progress. See [Key Terms](#key-terms) section.]
+  - [application software](#application-software)
+  - [page](#page)
+  - [set of pages](#set-of-pages)
 - Inclusion of all WCAG 2.2 Level A and AA success criteria and not just those specifically affected by mobile phone usage.
 
 The prior 2015 Mobile Working Draft Note included specific guidance on the following WCAG 2.0 success criteria for mobile, primarily for a mobile web context:
@@ -82,11 +88,7 @@ New terms:
   - dragging movements
   - keyboard interface
   - large scale
-  - set of web pages
-  - set of non-web documents
-  - set of software programs
-  - set of web pages
   - user agent
   - user interface component
-- Added to Glossary specifically for WCAG2Mobile:
-  - navigational mechanisms
+
+[note:The glossary is not finished yet.]
