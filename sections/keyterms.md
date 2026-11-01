@@ -1,4 +1,4 @@
-## Key Terms
+## Key terms
 
 WCAG2Mobile defines key glossary terms to refine the broader scope for mobile applications. It introduces terms that do not exist in WCAG2ICT or WCAG but are important to define for a mobile application context.
 

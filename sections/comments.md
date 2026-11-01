@@ -1,4 +1,4 @@
-## Comments by Principle, Guideline and Success Criterion
+## Comments by principle, guideline and success criterion
 
 The sections that follow are organized according to the principles, guidelines and success criteria from WCAG 2.2. The text of each principle, guideline and success criterion from WCAG 2.2 is provided as quoted text. Following that, the WCAG2ICT guidance is provided as quoted text. Next, the WCAG2Mobile guidance itself is provided.
 
