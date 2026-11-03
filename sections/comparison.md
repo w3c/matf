@@ -64,7 +64,7 @@ This document includes all the relevant success criteria in WCAG 2.2 Level A and
 - Success Criterion 3.3.7 Redundant Entry
 - Success Criterion 3.3.8 Accessible Authentication (Minimum)
 
-WCAG2Mobile also addresses obsolete and removed success criteria, such as Success Criterion 4.1.1 Parsing, which was removed from WCAG 2.2 and marked as obsolete in WCAG 2.0 and 2.1.
+This document also addresses obsolete and removed success criteria, such as Success Criterion 4.1.1 Parsing, which was removed from WCAG 2.2 and marked as obsolete in WCAG 2.0 and 2.1.
 
 #### Changes to terminology and definitions
 
