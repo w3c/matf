@@ -2,7 +2,7 @@
 
 The following stylistic conventions are used in this document:
 
-- Quotes from WCAG 2.2 immediately follow the heading for the principle, guideline, or success criterion and are visually styled with a border in `<details>` elements that can be expanded or collapsed.
+- Quotes from WCAG 2.2 immediately follow the heading for the principle, guideline, or success criterion. They are marked up with `<details>` elements and visually styled with a border.
 - Quotes from WCAG2ICT 2.2 immediately follow the WCAG quote and are visually styled with a border in `<details>` elements that can be expanded or collapsed.
 - Additional guidance provided by this document begins with the phrase “Applying” and has no special visual styling.
 - In headings, the term “Success Criterion” has been shortened to “SC” for brevity.
