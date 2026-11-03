@@ -17,7 +17,7 @@ This document now:
 
 ##### WCAG 2.0
 
-The 2015 Mobile Accessibility document included specific guidance on applying the following WCAG 2.0 success criteria, primarily in a mobile web context:
+The previous version included specific guidance on the following WCAG 2.0 success criteria, primarily in a mobile web context:
 
 - Success Criterion 1.4.3 Contrast (Minimum) (Level AA)
 - Success Criterion 1.4.4 Resize Text (Level AA)
