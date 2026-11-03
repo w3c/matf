@@ -1,10 +1,10 @@
-### Comparison with the 2015 Mobile Accessibility Working Draft Note
+### Comparison with the 2015 Mobile Accessibility document
 
-In this Draft Note, most of the existing sections have undergone significant review and updates.
+In WCAG2Mobile, most of the existing sections have undergone significant review and updates.
 
 #### Scope and structure
 
-WCAG2Mobile no longer follows the structure and format of the 2015 Mobile Accessibility Working Draft. 
+WCAG2Mobile no longer follows the structure and format of the 2015 Mobile Accessibility document. 
 
 This document now:
 
@@ -18,7 +18,7 @@ This document now:
 
 ##### WCAG 2.0
 
-The 2015 Mobile Accessibility Working Draft Note included specific guidance on applying the following WCAG 2.0 success criteria, primarily in a mobile web context:
+The 2015 Mobile Accessibility document included specific guidance on applying the following WCAG 2.0 success criteria, primarily in a mobile web context:
 
 - Success Criterion 1.4.3 Contrast (Minimum) (Level AA)
 - Success Criterion 1.4.4 Resize Text (Level AA)
@@ -38,7 +38,7 @@ The supporting document, [WCAG 2.0 Techniques that Apply to Mobile](https://www.
 
 ##### WCAG 2.1
 
-This document includes all the relevant success criteria and guidelines in WCAG 2.1 Level A and AA:
+This document includes all the relevant success criteria and guidelines in WCAG 2.1 Level A and Level AA:
 
 - Success Criterion 1.3.4 Orientation
 - Success Criterion 1.3.5 Identify Input Purpose
@@ -56,7 +56,7 @@ This document includes all the relevant success criteria and guidelines in WCAG 
 
 ##### WCAG 2.2
 
-This document includes all the relevant success criteria in WCAG 2.2 Level A and AA:
+This document includes all the relevant success criteria in WCAG 2.2 Level A and Level AA:
 
 - Success Criterion 2.4.11 Focus Not Obscured (Minimum)
 - Success Criterion 2.5.7 Dragging Movements

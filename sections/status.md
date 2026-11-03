@@ -2,4 +2,4 @@ This is a W3C Group Note on "Guidance on Applying WCAG 2.2 to Mobile Application
 
 To comment, [file an issue in the W3C MATF GitHub repository](https://github.com/w3c/matf/issues/new). Create separate GitHub issues for each comment, rather than commenting on multiple topics in a single issue. It is free to create a GitHub account to file issues. If filing issues in GitHub is not feasible, email [public-agwg-comments@w3.org](mailto:public-agwg-comments@w3.org?subject=WCAG2Mobile%20public%20comment) ([comment archive](https://lists.w3.org/Archives/Public/public-agwg-comments/)).
 
-To view in-progress updates to this document, see [public editors’ draft](https://w3c.github.io/matf/).
+To view in-progress updates to this document, see the public [Editor's Draft](https://w3c.github.io/matf/).
