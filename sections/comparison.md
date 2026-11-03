@@ -1,4 +1,4 @@
-### Comparison with the 2015 Mobile Accessibility document
+### Comparison with the previous version
 
 In WCAG2Mobile, most of the existing sections have undergone significant review and updates.
 
