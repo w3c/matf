@@ -14,7 +14,7 @@ After 2018, the Mobile Accessibility Task Force (MATF) ensured that mobile consi
 
 In January 2024, MATF regrouped and welcomed new participants to work on updated guidance for applying WCAG 2.2 to mobile applications.
 
-This current document, “Guidance on Applying WCAG 2.2 to Mobile Applications (WCAG2Mobile)” maps directly to the W3C supporting document, Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT) [[wcag2ict-22]], which was published as a Group Note in December 2025, describing how WCAG 2.2 could be applied to non-web documents and software.
+This document, “Guidance on Applying WCAG 2.2 to Mobile Applications (WCAG2Mobile)” maps directly to "Guidance on Applying WCAG 2 to Non-Web Information and Communications Technologies (WCAG2ICT)" [[wcag2ict-22]], a Group Note published in December 2025 that describes how WCAG 2.2 could be applied to non-web documents and software.
 
 The intention of MATF is to publish WCAG2Mobile as a [Group Note](https://www.w3.org/standards/types/#x2-5-2-group-note), just like WCAG2ICT.
 
