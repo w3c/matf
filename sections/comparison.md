@@ -68,7 +68,7 @@ This document also addresses obsolete and removed success criteria, such as Succ
 
 #### Changes to terminology and definitions
 
-WCAG2Mobile includes modifications to existing terms and introduces terms specific to mobile applications.
+This document includes modifications to existing terms and introduces terms specific to mobile applications.
 
 ##### Modified terms from WCAG
 
