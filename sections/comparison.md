@@ -4,7 +4,6 @@ Most of the existing sections have undergone significant review and updates.
 
 #### Scope and structure
 
-WCAG2Mobile no longer follows the structure and format of the 2015 Mobile Accessibility document. 
 
 This document now:
 
